@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archive status</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Research notes on Tyler McVicker's HLX coverage. Derived analysis only.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-bar">
+<a class="brand" href="../index.html">HLX Research Database</a>
+<nav>
+<a href="../claims.html">Claims</a>
+<a href="../appendix-video-stats.html">Stats</a>
+<a href="../sources/README.html">Sources</a>
+<a href="../data.html">Data</a>
+</nav>
+</header>
+<p class="site-note">Derived analysis only. No transcripts, subtitle files or
+source video are hosted here; quotations are short and attributed, and every
+summary links to the original video.</p>
+<main>
+<h1 id="archive-status">Archive status</h1>
+
+<p>Coverage snapshot for every archived source.</p>
+
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th align="right">Count</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>URLs tracked</td>
+<td align="right">32</td>
+</tr>
+
+<tr>
+<td>Snapshotted</td>
+<td align="right">31</td>
+</tr>
+
+<tr>
+<td>Failed / rate-limited</td>
+<td align="right">0</td>
+</tr>
+
+<tr>
+<td>Blocked by site policy</td>
+<td align="right">1</td>
+</tr>
+
+<tr>
+<td>No receipt yet</td>
+<td align="right">0</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="blocked-by-site-policy">Blocked by site policy</h2>
+
+<p>The archive recorded a capture, but the site refuses replay (HTTP 403).
+For the Miro board, the board export is the durable copy.</p>
+
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Kind</th>
+<th>Note</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>SRC-MIRO-01</td>
+<td>board</td>
+<td>archive replay returned 403; site blocks playback. See sources/README.md.</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="notes">Notes</h2>
+
+<ul>
+<li>A web archive cannot preserve build evidence (strings, VData, FGDs).
+See <code>source-manifest.tsv</code> and <code>sources/README.md</code>.</li>
+<li>Miro refuses archived replay (HTTP 403); the board export is the durable copy.</li>
+</ul>
+
+<h2 id="evidence-profile">Evidence profile</h2>
+
+<table>
+<thead>
+<tr>
+<th>Evidence type</th>
+<th align="right">Events</th>
+<th align="right">Wayback-eligible</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>build</td>
+<td align="right">331</td>
+<td align="right">0</td>
+</tr>
+
+<tr>
+<td>other</td>
+<td align="right">135</td>
+<td align="right">0</td>
+</tr>
+
+<tr>
+<td>press</td>
+<td align="right">81</td>
+<td align="right">81</td>
+</tr>
+
+<tr>
+<td>official</td>
+<td align="right">37</td>
+<td align="right">37</td>
+</tr>
+
+<tr>
+<td>community</td>
+<td align="right">13</td>
+<td align="right">13</td>
+</tr>
+
+<tr>
+<td>resume</td>
+<td align="right">13</td>
+<td align="right">13</td>
+</tr>
+
+<tr>
+<td><strong>Total</strong></td>
+<td align="right"><strong>610</strong></td>
+<td align="right"><strong>144</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Of the 126 fully verified events, 48 rest on build evidence that a
+web archive cannot preserve. Archiving the video page preserves the report,
+not the artifact. Most of the remaining verified events do not have a source
+URL recorded in the summary, so <code>source-manifest.tsv</code> marks them <code>unlocated</code>.</p>
+</main>
+<footer class="site-foot">
+<p>Independent research notes on Tyler McVicker's HLX coverage. Not affiliated
+with Valve or with Tyler McVicker.</p>
+<p><strong>HLX is a datamined codename.</strong> Tyler identifies it as
+Half-Life 3; Valve has never confirmed that, and no official release date,
+window or announcement exists.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Gameplay Mechanics of Half-Life 3: Every Last Detail - Ep2</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Research notes on Tyler McVicker's HLX coverage. Derived analysis only.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-bar">
+<a class="brand" href="index.html">HLX Research Database</a>
+<nav>
+<a href="claims.html">Claims</a>
+<a href="appendix-video-stats.html">Stats</a>
+<a href="sources/README.html">Sources</a>
+<a href="data.html">Data</a>
+</nav>
+</header>
+<p class="site-note">Derived analysis only. No transcripts, subtitle files or
+source video are hosted here; quotations are short and attributed, and every
+summary links to the original video.</p>
+<main>
+<h1 id="the-gameplay-mechanics-of-half-life-3-every-last-detail---ep2">The Gameplay Mechanics of Half-Life 3: Every Last Detail - Ep2</h1>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Video ID</td>
+<td><code>34uDQ-I7Oec</code></td>
+</tr>
+
+<tr>
+<td>URL</td>
+<td><a href="https://www.youtube.com/watch?v=34uDQ-I7Oec">https://www.youtube.com/watch?v=34uDQ-I7Oec</a></td>
+</tr>
+
+<tr>
+<td>Release date</td>
+<td>2026-03-01</td>
+</tr>
+
+<tr>
+<td>Duration</td>
+<td>10:51</td>
+</tr>
+
+<tr>
+<td>Series</td>
+<td>Every Last Detail, Episode 2</td>
+</tr>
+</tbody>
+</table>
+<p>| Summary status | <code>complete</code> |</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>Tyler presents the second episode of his &ldquo;Miro board&rdquo; series, cataloging gameplay and mechanics that he says have been found in Source 2 data mines over the previous five years and that he expects to appear in HLX. The episode covers HEV suit and gravity gun evidence, dynamic fire and liquid systems, waterfall helpers and fans, the weapon system&rsquo;s VData rewrite, spawn-volume and director-style world variation, level streaming, breakable props, gravity shifting, and an extensive vehicle system. Most claims rest on datamined engine, FGD, and VData files rather than an official Valve statement; Tyler explicitly marks his HEV voice-line expectation and the accidental release of the vehicle VData file as speculation, and hedges on whether unused systems will actually ship in HLX. He closes by describing HLX as a single-player game &ldquo;as far as we understand&rdquo; and previews a spoiler-focused next episode followed by one on AI.</p>
+
+<h2 id="mentioned-events">Mentioned events</h2>
+
+<h3 id="hev-suit-referenced-by-sound-effects-in-the-engine">HEV suit referenced by sound effects in the engine</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says the HEV suit will appear in HLX because a number of HEV sound effect references were found in the engine. He cites a weapon pickup sound from Half-Life 2 added to the engine core on December 6th, 2024, a plug detachment sound effect, and a test for the sound effects container system (discussed in the engine section of his coverage) that references the HEV suit with entries counting from 1 to 9. These sound effects are labeled as legacy sounds.</li>
+<li><strong>Confidence:</strong> Mixed — the sound files, the December 6th, 2024 engine-core addition, and the &ldquo;legacy&rdquo; labeling are presented as datamined findings; the conclusion that the HEV suit &ldquo;will appear in the game&rdquo; is Tyler&rsquo;s inference from those files.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of Source 2 engine sound files, including an engine-core change dated December 6th, 2024.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — inspect Source 2 engine sound manifests and changelists for the HEV suit entries, the December 6th, 2024 weapon pickup sound, and the &ldquo;legacy&rdquo; folder labeling.</li>
+</ul>
+
+<h3 id="claim-that-new-hev-suit-voice-lines-were-recorded">Claim that new HEV suit voice lines were recorded</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler speculates that Valve recorded new voice lines for the HEV suit, reasoning that the studio specifically created a folder for the legacy HEV sounds rather than reusing them in place.</li>
+<li><strong>Confidence:</strong> Speculation — Tyler labels the point &ldquo;Speculation&rdquo; and offers the existence of a legacy-sounds folder as his only basis.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Tyler&rsquo;s inference from the datamined legacy HEV sound folder.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> unverified — would require voice-actor credits, résumé or union listings, or HEV voice files dated after the legacy set.</li>
+</ul>
+
+<h3 id="gravity-gun-support-visible-in-source-2-fgd-files">Gravity gun support visible in Source 2 FGD files</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says the gravity gun will return based on modifications to the FGD files in Source 2. He describes FGD files as the list of available game elements in the level design tools, and says the findings let level designers set whether an object can be picked up with the gravity gun, whether it can be punted, and whether the gravity gun can interact with an object regardless of its mass.</li>
+<li><strong>Confidence:</strong> Mixed — the FGD modifications and the per-object flags are described as datamined; the conclusion that the gravity gun &ldquo;will be making a return&rdquo; is Tyler&rsquo;s interpretation of those flags.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of Source 2 FGD (level-design entity definition) files.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — review current Source 2 FGD definitions for gravity-gun pickup, punt, and mass-independent interaction keys.</li>
+</ul>
+
+<h3 id="dynamic-fire-spreading-implemented-in-source-2">Dynamic fire spreading implemented in Source 2</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says fire has been made significantly more dynamic in Source 2: it can spread to other objects, objects can be set on fire based on their temperature, and they can be heated based on their distance from the fire. He stresses that this is &ldquo;technically not thermodynamics&rdquo; but a rudimentary system that is a fancier version of Half-Life 2&rsquo;s fire spreading, because full thermodynamics is too expensive to run in a video game.</li>
+<li><strong>Confidence:</strong> Fact — Tyler describes specific datamined engine behavior and states his own caveat about its scope rather than presenting the system as a full simulation.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of Source 2 engine fire and temperature systems.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — inspect Source 2 fire-spread and temperature entity code for ignition thresholds and distance-based heating.</li>
+</ul>
+
+<h3 id="half-life-2s-cut-dynamic-fire-system-and-gas-station-encounter">Half-Life 2&rsquo;s cut dynamic fire system and gas station encounter</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler quotes Half-Life 2&rsquo;s developer commentary, which describes plans for an encounter built around a gas station that the player would fight around, &ldquo;likely igniting the gas tanks and setting fire to everything,&rdquo; with the player driving away from a raging fire. The commentary says budget and performance constraints in 2003 forced the station to keep getting smaller and simpler, that &ldquo;our plans for a dynamic fire system didn&rsquo;t materialize and building it no longer made sense,&rdquo; and that the only remnants are the explosive gas tanks.</li>
+<li><strong>Confidence:</strong> Fact — the claim is supported by a direct quotation from Half-Life 2&rsquo;s in-game developer commentary.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Half-Life 2 developer commentary, quoted in the video.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the passage can be checked against Half-Life 2&rsquo;s developer commentary nodes for the Coast chapters.</li>
+</ul>
+
+<h3 id="water-buoyancy-and-player-water-interaction-added-to-source-2">Water buoyancy and player-water interaction added to Source 2</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says Source 2 famously lacked water support for a long time and that even Counter-Strike 2 does not properly support water, using only materials on flat surfaces. He reports that proper water buoyancy and player interactions with water have now been implemented in Source 2, though the system is not officially included in any public Source 2 game. He notes that individuals got it working in Counter-Strike 2 at least as of May 2025, and that it is &ldquo;pretty broken&rdquo; but does allow the player to drown.</li>
+<li><strong>Confidence:</strong> Mixed — the implementation and its absence from public Source 2 titles are presented as datamined findings, while the community demonstration is a dated, separately sourced observation; Tyler&rsquo;s &ldquo;pretty broken&rdquo; assessment is his own.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of Source 2 water systems plus a community demonstration in Counter-Strike 2 dated to May 2025.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — locate the Source 2 buoyancy and drowning code and reproduce the May 2025 Counter-Strike 2 demonstration.</li>
+</ul>
+
+<h3 id="liquid-spills-as-spawned-puddles">Liquid spills as spawned puddles</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler describes spills as puddles that can spawn when water or oil leaks from a container such as a pipe or a barrel. He says this was technically also something cut from Half-Life 2.</li>
+<li><strong>Confidence:</strong> Mixed — the spill system is described as datamined, while the Half-Life 2 cut-content comparison is Tyler&rsquo;s historical assertion without a cited document.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of Source 2 liquid and spill entities; Tyler&rsquo;s comparison to cut Half-Life 2 content.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — check Source 2 entity definitions for spill/puddle spawning tied to leaking containers, and document the Half-Life 2 cut-feature claim.</li>
+</ul>
+
+<h3 id="waterfall-helpers-as-a-level-design-tool">Waterfall helpers as a level-design tool</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler describes waterfall helpers as a tool that helps level designers easily add waterfalls to their levels. He says they are not used in any public Source 2 game, which is why he believes they might appear in HLX.</li>
+<li><strong>Confidence:</strong> Mixed — the tool&rsquo;s existence and its absence from public Source 2 titles are presented as datamined; the HLX appearance is Tyler&rsquo;s inference.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of Source 2 level-design tool entities.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — search Source 2 map-authoring entities for waterfall helper definitions and confirm they are unused in shipped Source 2 titles.</li>
+</ul>
+
+<h3 id="fan-gameplay-mechanic-with-three-particle-types">Fan gameplay mechanic with three particle types</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler calls fans a &ldquo;weird&rdquo; gameplay mechanic that is also unused in public Source 2 games. He says fans can blow in a set direction, pull things in, and block players and NPCs, and that there are three fan particle types: fans, rotor wash for helicopters, and radial.</li>
+<li><strong>Confidence:</strong> Mixed — the fan entity parameters and particle types are described as datamined, while the expectation that HLX uses them is inference.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of Source 2 fan entities and particle definitions.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — inspect Source 2 fan entity keys and particle types, and check whether any shipped Source 2 game uses them.</li>
+</ul>
+
+<h3 id="weapons-rewritten-around-the-vdata-system">Weapons rewritten around the VData system</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says weapons were rewritten to take advantage of the VData system discussed in the first episode, and that HLX will probably use a weapon selection system similar to previous Half-Life games. Weapons can carry set flags that alter handling: some may be exhaustible, usable once and then gone, or may never have their ammo refilled, so the player uses the current ammo count and then drops them. He notes sound effects for primary attacks, secondary attacks, melee attacks, and special weapon actions. He explicitly clarifies that he is not saying all HLX weapons are single-use, only that the system supports it.</li>
+<li><strong>Confidence:</strong> Mixed — the VData weapon rewrite, flags, and sound-event categories are presented as datamined; the &ldquo;probably&rdquo; weapon-selection similarity and the HLX application are Tyler&rsquo;s inference.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of Source 2 VData weapon definitions and sound-event entries.</li>
+<li><strong>Earlier mentions:</strong> Explicitly references the first episode&rsquo;s discussion of the VData system; no earlier claim is revised here.</li>
+<li><strong>Verification:</strong> needs follow-up — review Source 2 weapon VData schemas for exhaustible/no-refill flags and the four sound-event categories.</li>
+</ul>
+
+<h3 id="spawn-volume-tool-material-from-the-2013-half-life-3-attempt-updated">Spawn-volume tool material from the 2013 Half-Life 3 attempt updated</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says one of the tool materials used in the original 2013 Half-Life 3 attempt was updated recently — specifically the tool material used for spawn volumes. He compares the resulting system to &ldquo;a souped-up version of the director from Left 4 Dead,&rdquo; which slightly alters the world around the player based on performance to increase replayability. In his example, a small open hut might be blocked off or have open windows, and might contain a crate, an enemy, or a citizen depending on what the game decides, so each visit differs.</li>
+<li><strong>Confidence:</strong> Mixed — the recently updated tool material is a datamined finding; the director comparison and the hut example are Tyler&rsquo;s explanation of how he expects the system to behave.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of Source 2 tool materials, linked by Tyler to the 2013 Half-Life 3 project.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — identify the spawn-volume tool material, its modification date, and the associated 2013 project files; confirm the dynamic-spawn parameters.</li>
+</ul>
+
+<h3 id="work-in-progress-level-streaming-system-in-source-2">Work-in-progress level streaming system in Source 2</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says a work-in-progress level streaming system has been implemented in Source 2. He notes that Source 2 can already load multiple maps at once, mostly for UI elements and small things such as team intros in Counter-Strike 2, but that the systems he is discussing are intended to remove the loading screens that have appeared in nearly every Half-Life game.</li>
+<li><strong>Confidence:</strong> Mixed — the streaming system&rsquo;s existence is presented as a datamined work-in-progress feature, while the intent to eliminate Half-Life loading screens is Tyler&rsquo;s inference.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of Source 2 level-streaming code and comparison with Counter-Strike 2 map loading.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — inspect Source 2 streaming code paths for full-map transitions beyond UI and intro map loading.</li>
+</ul>
+
+<h3 id="breakable-props-spawn-sub-props-and-contained-items">Breakable props spawn sub-props and contained items</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says breakable props have improved breaking behavior: they can spawn a bunch of little props when broken, and physics props can contain items inside them that spawn on break. He compares this to Half-Life 1 crates spawning tech components when broken, Half-Life 1 crates containing medkits or suit batteries, and the packing peanuts that spawn from broken crates in Half-Life: Alyx, but says the new system is far more customizable. Any physics prop with a breakable component could contain items that spawn dynamically.</li>
+<li><strong>Confidence:</strong> Mixed — the breakable behavior and item-container capability are described as datamined; the Half-Life 1 and Alyx comparisons are Tyler&rsquo;s.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of Source 2 breakable prop and physics prop entity definitions.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — review Source 2 prop entity keys for spawned sub-props and contained-item lists.</li>
+</ul>
+
+<h3 id="gravity-shifting-for-players-and-npcs">Gravity shifting for players and NPCs</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler describes gravity shifting as tech that lets players and NPCs traverse gravity-bending environments, walking on ceilings, warping around surfaces, or orbiting around things. He compares it to mechanics in Super Mario Galaxy and Prey (2006) and to the vault sections of Half-Life: Alyx, but says this would be fully dynamic and part of active combat gameplay.</li>
+<li><strong>Confidence:</strong> Mixed — the existence of the tech is presented as datamined, while the Alyx and Mario Galaxy comparisons and the claim that it will be combat-integrated are Tyler&rsquo;s inference.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of Source 2 gravity and player-movement systems.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — locate gravity-shifting movement code and test whether NPC navigation supports altered gravity volumes.</li>
+</ul>
+
+<h3 id="modular-physics-based-vehicle-system">Modular physics-based vehicle system</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says a very modular, physics-based vehicle system is now part of Source 2. Vehicles can carry multiple passengers, passengers can use their weapons while riding, and the field of view adjusts with vehicle speed. The system includes tire friction, vehicle suspensions, and wheel dragging; hitting an NPC with a vehicle can turn them into a temporary ragdoll and send them flying. Vehicles also support assists for controller users. Tyler adds that the majority of the underlying schema data is very low level, taking surface types into account so that every surface feels different to drive on, and that vehicles steer differently depending on speed.</li>
+<li><strong>Confidence:</strong> Mixed — the feature list is presented as datamined VData schema and engine code; the emphasis on depth and &ldquo;every surface will feel different&rdquo; is Tyler&rsquo;s characterization of that data.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of Source 2 vehicle VData schema and vehicle entities.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — review the vehicle VData schema for passenger, FOV, friction, suspension, wheel-drag, ragdoll, and assist parameters.</li>
+</ul>
+
+<h3 id="forza-motorsport-physics-developer-hired-by-valve">Forza Motorsport physics developer hired by Valve</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says a long-time Forza Motorsport physics developer was hired by Valve around the time the vehicle system first appeared and leaked within the engine, and calls this worth noting in his opinion.</li>
+<li><strong>Confidence:</strong> Speculation — Tyler presents the hiring as context for the vehicle system but does not name the developer, a date, or a source, and the connection to HLX is inferential.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Tyler&rsquo;s observation of a reported hiring, tied by timing to the vehicle-system leak.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — confirm the developer&rsquo;s identity, Valve start date, and Forza credits, and compare with the vehicle system&rsquo;s first appearance in engine files.</li>
+</ul>
+
+<h3 id="vehicle-vdata-added-in-a-june-9th-2022-dota-2-update">Vehicle VData added in a June 9th, 2022 Dota 2 update</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says the majority of the vehicle schema data he discusses was added on June 9th, 2022 in a Dota 2 update, and that vehicle-related entities were deleted in subsequent engine updates after it was reported that the file had been found. He speculates that the release of the vehicle VData file was a mistake on Valve&rsquo;s part.</li>
+<li><strong>Confidence:</strong> Mixed — the June 9th, 2022 date, the Dota 2 update, and the later deletion of vehicle entities are presented as datamined facts; the &ldquo;mistake&rdquo; explanation is explicitly labeled speculation.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Datamine of a Dota 2 update dated June 9th, 2022 and subsequent Source 2 engine updates.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — check the June 9th, 2022 Dota 2 build contents for vehicle schema files and inspect later engine updates for removal of the related entities.</li>
+</ul>
+
+<h3 id="vehicle-entry-exit-rollover-and-hit-group-rules">Vehicle entry, exit, rollover, and hit-group rules</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler describes vehicle configuration options: whether exits are allowed midair or when both sides of the vehicle are blocked, and a parameter for the maximum speed at which a player can enter or exit a moving vehicle. Vehicles can be overturned or flipped onto their heads similarly to Half-Life 2, wheels are highly customizable and can emit smoke under friction, and passenger use can be allowed or disallowed. Vehicles have separate hit groups — driver, driver-side entry, passenger, passenger-side entry, rear entry, front entry, and top entry — which Tyler says exist so occupants can still take damage; he deduces that drivers and passengers can be hurt while the vehicle is moving. Depending on vehicle type, vehicles may have rear, front, and top entries, and enemies can seemingly enter vehicles.</li>
+<li><strong>Confidence:</strong> Mixed — the parameters, hit groups, and entry types are presented as datamined schema; the deduction about occupant damage and enemy entry is Tyler&rsquo;s reading of that schema.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of Source 2 vehicle VData schema and hit-group definitions.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — inspect the vehicle schema for exit-blocking, entry-speed, rollover, wheel, passenger, and hit-group fields, and test occupant damage in-engine.</li>
+</ul>
+
+<h3 id="npc-animation-parameters-and-unresolved-vehicle-combat-questions">NPC animation parameters and unresolved vehicle-combat questions</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler lists possible NPC animation parameters, from which he says NPCs can be stunned, play a death animation based on the final hit location, react to an attacker&rsquo;s strength, open doors by pressing the handle, have a flight speed (which he says confirms flying enemies), detect enemies while inside vehicles, and use melee weapons while in vehicles. He says it is unknown whether enemies can actually enter the player&rsquo;s vehicles or whether NPCs will fight each other inside a vehicle driven by an NPC or the player. He states this does not suggest a co-op system and that HLX is &ldquo;a single-player game as far as we understand.&rdquo;</li>
+<li><strong>Confidence:</strong> Mixed — the animation parameter list is presented as datamined schema; the interpretation of flight speed as confirming flying enemies and the single-player conclusion are Tyler&rsquo;s, and he explicitly marks the vehicle-combat behavior as unknown.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of Source 2 NPC animation and vehicle-related parameter lists.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — review NPC animation parameter sets for stun, death hit-location, attacker-strength reaction, door interaction, flight speed, and in-vehicle detection/melee entries.</li>
+</ul>
+
+<h2 id="new-or-changed-in-this-video">New or changed in this video</h2>
+
+<ul>
+<li>The episode is a structured catalog of gameplay findings accumulated across roughly five years of Source 2 data mines rather than a report on a single new build or leak; Tyler dates few of the findings.</li>
+<li>Dated anchors offered: a Half-Life 2 weapon pickup sound added to the engine core on December 6th, 2024; the vehicle schema added on June 9th, 2022 in a Dota 2 update and later deleted; a community water implementation in Counter-Strike 2 working at least as of May 2025.</li>
+<li>Newly detailed systems in this episode include the fire and temperature model, water buoyancy, spills, waterfall helpers, fans, breakable prop sub-spawning, gravity shifting, spawn-volume world variation, work-in-progress level streaming, and the full vehicle schema with hit groups and NPC parameters.</li>
+<li>Tyler explicitly flags the HEV voice-line expectation and the accidental release of the vehicle VData file as speculation, and clarifies that the weapon system&rsquo;s single-use flag does not mean all HLX weapons are single-use.</li>
+<li>He reiterates that HLX is understood to be single-player, while noting the unknown question of whether NPCs can fight inside driven vehicles.</li>
+<li>He announces that the next episode covers spoilers (enemy, NPC, and location types) and that the episode after that covers artificial intelligence, advising viewers who want to avoid spoilers to skip the next one.</li>
+</ul>
+
+<h2 id="notable-quotes">Notable quotes</h2>
+
+<ul>
+<li>&ldquo;Speculation, since they specifically made a folder for the legacy HEV sounds, it&rsquo;s fair to assume that they have recorded new voice lines for the HEV suit.&rdquo; — On the HEV suit voice-line inference.</li>
+<li>&ldquo;Fire has been made significantly more dynamic in Source 2.&rdquo; — On the new fire-spreading system.</li>
+<li>&ldquo;I cannot stress this enough, however, this is technically not thermodynamics.&rdquo; — On the limits of the fire simulation.</li>
+<li>&ldquo;Our plans for a dynamic fire system didn&rsquo;t materialize and building it no longer made sense.&rdquo; — From the Half-Life 2 developer commentary on the cut gas station encounter.</li>
+<li>&ldquo;Proper water buoyancy and player interactions with the water have finally all been implemented in Source 2.&rdquo; — On the water system.</li>
+<li>&ldquo;These are not used in any of the public Source 2 games, which is why we believe it might appear in HLX.&rdquo; — On waterfall helpers.</li>
+<li>&ldquo;By the way, I&rsquo;m not saying that all of HLX&rsquo;s weapons are one use and then drop. I&rsquo;m saying that the weapon system supports it.&rdquo; — Clarifying the exhaustible-weapon flag.</li>
+<li>&ldquo;This system can be compared to a souped-up version of the director from Left 4 Dead.&rdquo; — On spawn-volume world variation.</li>
+<li>&ldquo;The release of this file, the vehicle V data file, is speculated to be a mistake on Valve&rsquo;s part.&rdquo; — On the June 2022 vehicle data.</li>
+<li>&ldquo;This is not, however, suggesting a co-op system. This is a single-player game as far as we understand.&rdquo; — On vehicle occupants and multiplayer expectations.</li>
+</ul>
+
+<h2 id="open-questions">Open questions</h2>
+
+<ul>
+<li>Which specific Source 2, Dota 2, Deadlock, or Counter-Strike 2 builds contained each finding; most entries lack build numbers or filenames.</li>
+<li>Whether new HEV suit voice lines were actually recorded, and who would voice them.</li>
+<li>Whether the gravity gun returns as a usable weapon or only as level-design entity flags.</li>
+<li>Whether water buoyancy, waterfall helpers, fans, spills, and gravity shifting will actually be used in HLX or remain unused engine features.</li>
+<li>Whether enemies can enter the player&rsquo;s vehicle and whether NPCs can fight each other inside a moving vehicle.</li>
+<li>Whether controller assists for vehicles indicate planned console support.</li>
+<li>Whether the level streaming system removes all loading screens or only some transitions.</li>
+<li>What the next spoiler-focused episode will cover regarding enemies, NPCs, and locations.</li>
+</ul>
+</main>
+<footer class="site-foot">
+<p>Independent research notes on Tyler McVicker's HLX coverage. Not affiliated
+with Valve or with Tyler McVicker.</p>
+<p><strong>HLX is a datamined codename.</strong> Tyler identifies it as
+Half-Life 3; Valve has never confirmed that, and no official release date,
+window or announcement exists.</p>
+</footer>
+</body>
+</html>

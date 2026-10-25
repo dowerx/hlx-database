@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Source archive layer</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Research notes on Tyler McVicker's HLX coverage. Derived analysis only.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site-bar">
+<a class="brand" href="../index.html">HLX Research Database</a>
+<nav>
+<a href="../claims.html">Claims</a>
+<a href="../appendix-video-stats.html">Stats</a>
+<a href="../sources/README.html">Sources</a>
+<a href="../data.html">Data</a>
+</nav>
+</header>
+<p class="site-note">Derived analysis only. No transcripts, subtitle files or
+source video are hosted here; quotations are short and attributed, and every
+summary links to the original video.</p>
+<main>
+<h1 id="source-archive-layer">Source archive layer</h1>
+
+<p>This directory documents how the database&rsquo;s claims could be re-checked after the
+original pages, videos, or builds disappear. It contains <strong>receipts</strong>, not copies:
+the Internet Archive stores the page content; this database stores the snapshot URL
+and the time it was requested.</p>
+
+<h2 id="files">Files</h2>
+
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Role</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>source-urls.tsv</code></td>
+<td>The URLs eligible for snapshotting: 31 videos, the Miro board, and any manually added press/official pages.</td>
+</tr>
+
+<tr>
+<td><code>source-archive.tsv</code></td>
+<td>Receipts: one row per requested URL with the Wayback snapshot URL, HTTP status, and notes.</td>
+</tr>
+
+<tr>
+<td><code>source-manifest.tsv</code></td>
+<td>One row per event (610), classifying what the claim rests on and whether a web snapshot can help.</td>
+</tr>
+
+<tr>
+<td><code>sources/README.md</code></td>
+<td>This policy document.</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="what-is-archived-today">What is archived today</h2>
+
+<ul>
+<li><strong>All 31 YouTube videos.</strong> These are the primary record for everything in the
+database. If a video is deleted or made private, the snapshot preserves the
+title, description, and whatever YouTube rendered at capture time. All 31
+snapshots were re-checked and returned HTTP 200.</li>
+<li><strong>The Miro board.</strong> A capture was recorded, but Miro refuses archived replay
+(HTTP 403), so the snapshot is marked <code>blocked</code>. the board export remains the
+durable copy of its contents.</li>
+<li><strong>Nothing else yet.</strong> The event summaries rarely record URLs for the press
+articles, patch notes, store pages, or datamine posts they cite. Those rows are
+marked <code>unlocated</code> in <code>source-manifest.tsv</code> rather than given invented links.</li>
+</ul>
+
+<p>Current counts and the list of blocked or failed rows: <a href="archive-status.html"><code>sources/archive-status.md</code></a>.</p>
+
+<h2 id="what-a-web-archive-cannot-do">What a web archive cannot do</h2>
+
+<p>Most of the corpus is <strong>build evidence</strong>: strings, VData schemas, FGD entries,
+shaders, entity names, and patch diffs. Wayback cannot archive a Steam depot.
+Verifying those claims requires:</p>
+
+<ol>
+<li>the game build ID and date,</li>
+<li>the specific file path or string token,</li>
+<li>a local, unmodified copy of that build or a trustworthy diff, and</li>
+<li>a note of what changed in the next build.</li>
+</ol>
+
+<p>Do not redistribute Valve game files. Record the build ID, file
+path, and observation; keep any extracted evidence minimal and factual.</p>
+
+<p><code>source-manifest.tsv</code> separates the two worlds:</p>
+
+<ul>
+<li><code>evidence_type=build</code> → needs a build snapshot.</li>
+<li><code>evidence_type=press</code>, <code>official</code>, <code>resume</code>, <code>community</code> → Wayback-eligible if
+a URL is recorded.</li>
+<li><code>evidence_type=other</code> → Tyler&rsquo;s inference or uncited analysis; no artifact to
+archive.</li>
+</ul>
+
+<h2 id="privacy">Privacy</h2>
+
+<p>Casting and résumé evidence must never include an individual&rsquo;s name, photo, or
+profile URL. Archive the <em>fact</em> of a listing only if it can be redacted; otherwise
+record &ldquo;was public on <date>, not archived&rdquo; and treat it as follow-up. See
+<code>index.md</code> §8.3, item 3.</p>
+</main>
+<footer class="site-foot">
+<p>Independent research notes on Tyler McVicker's HLX coverage. Not affiliated
+with Valve or with Tyler McVicker.</p>
+<p><strong>HLX is a datamined codename.</strong> Tyler identifies it as
+Half-Life 3; Valve has never confirmed that, and no official release date,
+window or announcement exists.</p>
+</footer>
+</body>
+</html>

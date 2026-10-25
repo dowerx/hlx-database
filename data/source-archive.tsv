@@ -1,0 +1,33 @@
+id	kind	url	requested_at	snapshot_url	http_status	status	note
+SRC-MIRO-01	board	https://miro.com/app/board/uXjVINqBTwM=/	2026-10-25T20:37:47+00:00	http://web.archive.org/web/20261025203735/https://miro.com/app/board/uXjVINqBTwM=/	302	blocked	archive replay returned 403; site blocks playback. See sources/README.md.
+SRC-VID--rs7LHtODh4	video	https://www.youtube.com/watch?v=-rs7LHtODh4	2026-10-25T20:34:06+00:00	http://web.archive.org/web/20261025203405/https://www.youtube.com/watch?v=-rs7LHtODh4	302	archived	
+SRC-VID-34uDQ-I7Oec	video	https://www.youtube.com/watch?v=34uDQ-I7Oec	2026-10-25T20:35:36+00:00	http://web.archive.org/web/20261025203530/https://www.youtube.com/watch?v=34uDQ-I7Oec	302	archived	
+SRC-VID-36gF6eiCsqU	video	https://www.youtube.com/watch?v=36gF6eiCsqU	2026-10-25T20:28:57+00:00	https://web.archive.org/web/20261025202849/https://www.youtube.com/watch?v=36gF6eiCsqU	200	archived	
+SRC-VID-3f20EdGSxwQ	video	https://www.youtube.com/watch?v=3f20EdGSxwQ	2026-10-25T20:30:20+00:00	https://web.archive.org/web/20261025203012/https://www.youtube.com/watch?v=3f20EdGSxwQ	200	archived	
+SRC-VID-5nR6GfshoYw	video	https://www.youtube.com/watch?v=5nR6GfshoYw	2026-10-25T20:37:26+00:00	http://web.archive.org/web/20261025202312/https://www.youtube.com/watch?v=5nR6GfshoYw	302	archived	
+SRC-VID-8Fi44EB4hjk	video	https://www.youtube.com/watch?v=8Fi44EB4hjk	2026-10-25T20:40:37+00:00	http://web.archive.org/web/20261025203221/https://www.youtube.com/watch?v=8Fi44EB4hjk	302	archived	
+SRC-VID-Bx400IBgZVo	video	https://www.youtube.com/watch?v=Bx400IBgZVo	2026-10-25T20:37:07+00:00	http://web.archive.org/web/20261025203231/https://www.youtube.com/watch?v=Bx400IBgZVo	302	archived	
+SRC-VID-E09c6YSfWWc	video	https://www.youtube.com/watch?v=E09c6YSfWWc	2026-10-25T20:38:41+00:00	http://web.archive.org/web/20261025203112/https://www.youtube.com/watch?v=E09c6YSfWWc	302	archived	
+SRC-VID-FNNZUjkN3Qg	video	https://www.youtube.com/watch?v=FNNZUjkN3Qg	2026-10-25T20:29:10+00:00	https://web.archive.org/web/20261025202902/https://www.youtube.com/watch?v=FNNZUjkN3Qg	200	archived	
+SRC-VID-FT-fH7ZVqKo	video	https://www.youtube.com/watch?v=FT-fH7ZVqKo	2026-10-25T20:39:54+00:00	http://web.archive.org/web/20261025203948/https://www.youtube.com/watch?v=FT-fH7ZVqKo	302	archived	
+SRC-VID-FUj4iMRKGqM	video	https://www.youtube.com/watch?v=FUj4iMRKGqM	2026-10-25T20:34:25+00:00	http://web.archive.org/web/20261025203423/https://www.youtube.com/watch?v=FUj4iMRKGqM	302	archived	
+SRC-VID-HWlRkzwHLwI	video	https://www.youtube.com/watch?v=HWlRkzwHLwI	2026-10-25T20:29:41+00:00	https://web.archive.org/web/20261025202934/https://www.youtube.com/watch?v=HWlRkzwHLwI	200	archived	
+SRC-VID-Jd95JQ_oZpM	video	https://www.youtube.com/watch?v=Jd95JQ_oZpM	2026-10-25T20:36:20+00:00	http://web.archive.org/web/20261025203613/https://www.youtube.com/watch?v=Jd95JQ_oZpM	302	archived	
+SRC-VID-JrCIxd1JiAo	video	https://www.youtube.com/watch?v=JrCIxd1JiAo	2026-10-25T20:34:15+00:00	http://web.archive.org/web/20261025203409/https://www.youtube.com/watch?v=JrCIxd1JiAo	302	archived	
+SRC-VID-Q9ug2VyTPlo	video	https://www.youtube.com/watch?v=Q9ug2VyTPlo	2026-10-25T20:35:46+00:00	http://web.archive.org/web/20261025203540/https://www.youtube.com/watch?v=Q9ug2VyTPlo	302	archived	
+SRC-VID-TyrlxYsMHYg	video	https://www.youtube.com/watch?v=TyrlxYsMHYg	2026-10-25T20:30:07+00:00	https://web.archive.org/web/20261025203000/https://www.youtube.com/watch?v=TyrlxYsMHYg	200	archived	
+SRC-VID-W7fLurNQT8U	video	https://www.youtube.com/watch?v=W7fLurNQT8U	2026-10-25T20:37:59+00:00	http://web.archive.org/web/20261025203753/https://www.youtube.com/watch?v=W7fLurNQT8U	302	archived	
+SRC-VID-WjRHZxbSEHE	video	https://www.youtube.com/watch?v=WjRHZxbSEHE	2026-10-25T20:36:39+00:00	http://web.archive.org/web/20261025203633/https://www.youtube.com/watch?v=WjRHZxbSEHE	302	archived	
+SRC-VID-_lGdUBMdQ94	video	https://www.youtube.com/watch?v=_lGdUBMdQ94	2026-10-25T20:30:31+00:00	https://web.archive.org/web/20261025203024/https://www.youtube.com/watch?v=_lGdUBMdQ94	200	archived	
+SRC-VID-bv0sMeb2Vp4	video	https://www.youtube.com/watch?v=bv0sMeb2Vp4	2026-10-25T20:29:29+00:00	https://web.archive.org/web/20261025202922/https://www.youtube.com/watch?v=bv0sMeb2Vp4	200	archived	
+SRC-VID-cH71Bn8VUAg	video	https://www.youtube.com/watch?v=cH71Bn8VUAg	2026-10-25T20:35:17+00:00	http://web.archive.org/web/20261025203122/https://www.youtube.com/watch?v=cH71Bn8VUAg	302	archived	
+SRC-VID-f9cLbSumFO4	video	https://www.youtube.com/watch?v=f9cLbSumFO4	2026-10-25T20:33:47+00:00	http://web.archive.org/web/20261025203341/https://www.youtube.com/watch?v=f9cLbSumFO4	302	archived	
+SRC-VID-htC-u80xs_Q	video	https://www.youtube.com/watch?v=htC-u80xs_Q	2026-10-25T20:38:20+00:00	http://web.archive.org/web/20261025203814/https://www.youtube.com/watch?v=htC-u80xs_Q	302	archived	
+SRC-VID-irI02zjaSlM	video	https://www.youtube.com/watch?v=irI02zjaSlM	2026-10-25T20:35:27+00:00	http://web.archive.org/web/20261025203521/https://www.youtube.com/watch?v=irI02zjaSlM	302	archived	
+SRC-VID-jpvsGr1sQAk	video	https://www.youtube.com/watch?v=jpvsGr1sQAk	2026-10-25T20:37:16+00:00	http://web.archive.org/web/20261025203710/https://www.youtube.com/watch?v=jpvsGr1sQAk	302	archived	
+SRC-VID-qKR-G1EuYyg	video	https://www.youtube.com/watch?v=qKR-G1EuYyg	2026-10-25T20:31:07+00:00	https://web.archive.org/web/20261025203100/https://www.youtube.com/watch?v=qKR-G1EuYyg	200	archived	
+SRC-VID-tBWfvvsDSxQ	video	https://www.youtube.com/watch?v=tBWfvvsDSxQ	2026-10-25T20:39:33+00:00	http://web.archive.org/web/20261025203927/https://www.youtube.com/watch?v=tBWfvvsDSxQ	302	archived	
+SRC-VID-u0qd-T1Z8fI	video	https://www.youtube.com/watch?v=u0qd-T1Z8fI	2026-10-25T20:33:57+00:00	http://web.archive.org/web/20261025203351/https://www.youtube.com/watch?v=u0qd-T1Z8fI	302	archived	
+SRC-VID-w14ZUG1EKio	video	https://www.youtube.com/watch?v=w14ZUG1EKio	2026-10-25T20:36:29+00:00	http://web.archive.org/web/20261025203623/https://www.youtube.com/watch?v=w14ZUG1EKio	302	archived	
+SRC-VID-yQSdohLVa20	video	https://www.youtube.com/watch?v=yQSdohLVa20	2026-10-25T20:33:38+00:00	http://web.archive.org/web/20261025203332/https://www.youtube.com/watch?v=yQSdohLVa20	302	archived	
+SRC-VID-zs9LdkbOzHg	video	https://www.youtube.com/watch?v=zs9LdkbOzHg	2026-10-25T20:40:16+00:00	http://web.archive.org/web/20261025203210/https://www.youtube.com/watch?v=zs9LdkbOzHg	302	archived	

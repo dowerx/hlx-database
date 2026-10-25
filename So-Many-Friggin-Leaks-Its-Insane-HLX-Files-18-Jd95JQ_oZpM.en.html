@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>So Many Friggin’ Leaks, It’s Insane - HLX Files #18</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Research notes on Tyler McVicker's HLX coverage. Derived analysis only.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-bar">
+<a class="brand" href="index.html">HLX Research Database</a>
+<nav>
+<a href="claims.html">Claims</a>
+<a href="appendix-video-stats.html">Stats</a>
+<a href="sources/README.html">Sources</a>
+<a href="data.html">Data</a>
+</nav>
+</header>
+<p class="site-note">Derived analysis only. No transcripts, subtitle files or
+source video are hosted here; quotations are short and attributed, and every
+summary links to the original video.</p>
+<main>
+<h1 id="so-many-friggin-leaks-its-insane---hlx-files-18">So Many Friggin&rsquo; Leaks, It&rsquo;s Insane - HLX Files #18</h1>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Video ID</td>
+<td><code>Jd95JQ_oZpM</code></td>
+</tr>
+
+<tr>
+<td>URL</td>
+<td><a href="https://www.youtube.com/watch?v=Jd95JQ_oZpM">https://www.youtube.com/watch?v=Jd95JQ_oZpM</a></td>
+</tr>
+
+<tr>
+<td>Release date</td>
+<td>2026-03-31</td>
+</tr>
+
+<tr>
+<td>Duration</td>
+<td>16:25</td>
+</tr>
+
+<tr>
+<td>Series</td>
+<td>HLX Files #18</td>
+</tr>
+</tbody>
+</table>
+<p>| Summary status | <code>complete</code> |</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>Tyler walks through two 2026 Source 2 updates — a Deadlock update from February 5 and a Dota 2 update from March 24 — that together produced an unusually large volume of HLX-related engine and tooling strings. The Deadlock build contains a particle-based volumetric smoke system that names HLX explicitly, while the Dota 2 build is described as the largest dump of HLX-adjacent Source 2 back-end data he has seen, including new tool asset icons, a Fountain screenplay-format tool, GPU particle-lighting features reserved for HLX, and expanded vehicle, prop-physics, and companion-system entities. Threaded through the datamine is Tyler&rsquo;s argument that heavy choreography/cutscene tooling does not necessarily mean the game is early, supported by the Half-Life 2 leak timeline. The back half covers community mods (John&rsquo;s Campaign, Gore Agulation, the Raising the Bar family) and a short note that Eric Wolpaw gave interviews he had not yet reviewed. Confidence is high on the datamined strings and icons themselves, lower on what they imply about the game&rsquo;s content or schedule.</p>
+
+<h2 id="mentioned-events">Mentioned events</h2>
+
+<h3 id="deadlock-update-2026-02-05-explicitly-references-hlx-for-smoke-refraction">Deadlock update (2026-02-05) explicitly references HLX for smoke refraction</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler states that HLX was explicitly referenced in the February 5, 2026 Deadlock update, specifically in connection with refracting smoke-based particle effects. The build adds a new volumetric emitter for particles, described as volumetric smokes, and a &ldquo;smoke grid V data&rdquo; file containing different smoke types — a file Tyler says the datamine does not have.</li>
+<li><strong>Confidence:</strong> Fact — the reference and the volumetric emitter are read directly from the Deadlock build; Tyler notes only the smoke-grid data file is missing.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of the Deadlock update of 2026-02-05.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the strings could be re-checked in the Deadlock build of that date.</li>
+</ul>
+
+<h3 id="volumetric-smoke-emitter-parameters-and-protobufs">Volumetric smoke emitter parameters and protobufs</h3>
+
+<ul>
+<li><strong>Description:</strong> The new particle-based volumetric smoke system exposes three interaction types — emission, sink, and repel — and two creation types — continuous injection from particles and instant impulse on each particle event. Particle parameters listed include position, velocity, radius, density, temperature, fuel source, dust, lifespan, magnitude, kill radius, and falloff. Tyler describes these as protobufs for particle-based volumetric smoke, similar to the CS2 system but game-specific and particle-driven.</li>
+<li><strong>Confidence:</strong> Fact — enumerated from the datamined protobuf definitions; the CS2 comparison is Tyler&rsquo;s.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of the Deadlock update of 2026-02-05.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — confirming the CS2 behavioural similarity would require comparing the two systems&rsquo; implementations.</li>
+</ul>
+
+<h3 id="dota-2-update-2026-03-24-described-as-the-largest-hlxsource-2-back-end-dump-in-years">Dota 2 update (2026-03-24) described as the largest HLX/Source 2 back-end dump in years</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler calls the March 24, 2026 Dota 2 update &ldquo;genuinely the largest dump of strings and information related to Source 2 back-end development associated with HLX that we have seen in years, if ever,&rdquo; and says it gave him &ldquo;2024 flashbacks.&rdquo;</li>
+<li><strong>Confidence:</strong> Speculation — a volume judgement by Tyler, though the individual strings behind it are datamined.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Tyler&rsquo;s assessment of the datamined Dota 2 update of 2026-03-24.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — a diff of HLX-tagged strings per Source 2 build would confirm the relative size.</li>
+</ul>
+
+<h3 id="new-tool-asset-icons-and-per-category-hlx-asset-labeling">New tool asset icons and per-category HLX asset labeling</h3>
+
+<ul>
+<li><strong>Description:</strong> The Dota 2 build adds a large set of tool asset icons, including asset directory direct selection, asset directory indirect selection, external filter active/inactive, include child folders, locate selection directories, asset complex no level of detail, asset Half-Life: Alyx, asset industrial, asset military, tag anim graph one, tag anim graph one overlay, curve none, EV clip loop, pick entity tool cursor/add/remove, toggle transform pin activated, tool locator, workplane tool cursor, outliner icon, and &ldquo;parametric Emmy shop duplicate faces.&rdquo; Most of these assets carry creation dates in 2026 in their metadata, which Tyler reads as significant ongoing tool-related asset work. HLX assets are being separated into labeled, marked categories with their own custom icons and assets to denote selections.</li>
+<li><strong>Confidence:</strong> Mixed — icon names and 2026 metadata timestamps are datamined facts; the interpretation that this is being built so &ldquo;anybody&rdquo; can use the full toolset and asset set is Tyler&rsquo;s inference.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Datamine of the Dota 2 update of 2026-03-24, including asset metadata creation dates.</li>
+<li><strong>Earlier mentions:</strong> Tyler cites the November discovery of the &ldquo;asset science&rdquo; icon as prior coverage of the same trend; the new element is custom per-category asset icons.</li>
+<li><strong>Verification:</strong> verified — asset metadata in the Dota 2 build can be re-read for the 2026 timestamps.</li>
+</ul>
+
+<h3 id="new-kitchen-tool-asset">New &ldquo;kitchen&rdquo; tool asset</h3>
+
+<ul>
+<li><strong>Description:</strong> A new tool asset named &ldquo;kitchen,&rdquo; whose icon is a spoon and fork, appears in the toolset. Tyler offers no interpretation beyond noting it exists and joking about it.</li>
+<li><strong>Confidence:</strong> Fact — the asset and icon are datamined; no meaning is asserted.</li>
+<li><strong>Category:</strong> Other</li>
+<li><strong>Source:</strong> Datamine of the Dota 2 update of 2026-03-24.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the asset entry can be re-checked in the build.</li>
+</ul>
+
+<h3 id="fountain-screenplay-format-added-as-a-third-party-source-2-tool">Fountain screenplay format added as a third-party Source 2 tool</h3>
+
+<ul>
+<li><strong>Description:</strong> A new icon marked &ldquo;F&rdquo; is not Valve-made and denotes a newly introduced third-party tool called Fountain, described via its GitHub as &ldquo;a simple plain text format for movie and TV scripts,&rdquo; used for import/export by script-writing apps including Fade In, Highland, Final Draft, and Slugline. Tyler says it is effectively for reading scripts written for cutscenes, that it is not known exactly how Valve is using it, and that it appears to accompany a dramatic amount of choreography work.</li>
+<li><strong>Confidence:</strong> Mixed — the tool and its description are factual; the cutscene-usage purpose is Tyler&rsquo;s inference, which he flags as not currently known.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of the Dota 2 update of 2026-03-24 plus the Fountain project&rsquo;s GitHub description, quoted by Tyler.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — confirmation would require finding the tool&rsquo;s registration or usage in Source 2 tool configs.</li>
+</ul>
+
+<h3 id="choreography-volume-and-the-game-is-further-behind-argument">Choreography volume and the &ldquo;game is further behind&rdquo; argument</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler notes that many people read the cutscene/choreography tooling as evidence the game is much further behind than previously thought, then argues the opposite: Half-Life 2 leaked about a year before release with no choreography work completed — only stopgap cutscenes and voice acting — and animated first-person choreography was not shown until E3 2004. He says Valve does choreography very late, that voice actors are expensive, that it is among the most tedious parts of Half-Life development, and that a dramatic amount of choreography work has been underway since roughly September or October 2025.</li>
+<li><strong>Confidence:</strong> Speculation — explicitly framed as &ldquo;a bit of a devil&rsquo;s advocate,&rdquo; resting on the historical Half-Life 2 comparison rather than an HLX artifact.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Tyler&rsquo;s analysis, using the 2003 Half-Life 2 leak and E3 2004 as the comparison.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> unverified — a shipping-date or milestone announcement would test the claim.</li>
+</ul>
+
+<h3 id="new-face-poser-icons">New face poser icons</h3>
+
+<ul>
+<li><strong>Description:</strong> New face poser icons appear in the toolset alongside the other tool assets. No further detail is given.</li>
+<li><strong>Confidence:</strong> Fact — icon presence is datamined; no function is claimed.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of the Dota 2 update of 2026-03-24.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — icons can be re-checked in the build.</li>
+</ul>
+
+<h3 id="hammer-locator-tool-with-no-current-functionality">Hammer locator tool with no current functionality</h3>
+
+<ul>
+<li><strong>Description:</strong> A new locator tool for Hammer is present, but Tyler says it has no real functionality in the current Dota 2 toolset, so its purpose is unknown. Related locator states include tool locator and tool locator activated.</li>
+<li><strong>Confidence:</strong> Mixed — the tool&rsquo;s presence is factual; the statement that it has no functionality is Tyler&rsquo;s testing of the shipped Dota 2 toolset.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of the Dota 2 update of 2026-03-24 and Tyler&rsquo;s inspection of the tool in that build.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — a later build where the tool is wired up would reveal its function.</li>
+</ul>
+
+<h3 id="asset-browser-gains-folder-tree-view-and-spacewalk-camera">Asset browser gains folder tree view and spacewalk camera</h3>
+
+<ul>
+<li><strong>Description:</strong> The asset browser is updated with a new folder tree view for all assets and a new spacewalk camera mode for viewing any asset.</li>
+<li><strong>Confidence:</strong> Fact — described as changes present in the datamined toolset.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of the Dota 2 update of 2026-03-24.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the tool UI can be re-checked in the build.</li>
+</ul>
+
+<h3 id="new-model-doc-tools">New model doc tools</h3>
+
+<ul>
+<li><strong>Description:</strong> New model doc tools are added in the same update. Tyler gives no further specifics.</li>
+<li><strong>Confidence:</strong> Fact — presence is datamined.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of the Dota 2 update of 2026-03-24.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — the individual tools are not enumerated in the video.</li>
+</ul>
+
+<h3 id="gpu-particle-lighting-and-ray-traced-collision-marked-hlx-exclusive">GPU particle lighting and ray-traced collision marked HLX-exclusive</h3>
+
+<ul>
+<li><strong>Description:</strong> The build adds GPU-side particle support, specifically dynamic bouncing / RTGI ray-traced lighting for different particle lights and GPU-accelerated particle ray-tracing collision modes. Tyler stresses that these GPU-based particle light features, including RTGI-based bounce particle lights, are HLX-exclusive even in the Dota 2 build: HLX is named as the &ldquo;Source 2 mod&rdquo; these features must exist within, and &ldquo;these functions won&rsquo;t work unless your game is HLX.&rdquo;</li>
+<li><strong>Confidence:</strong> Fact — the HLX-exclusive gating is read from the datamined strings; Tyler quotes the conditional directly.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of the Dota 2 update of 2026-03-24.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the conditional strings and feature flags can be re-read in the build.</li>
+</ul>
+
+<h3 id="volumetric-emitter-now-uses-the-volumetric-channel-v-data">Volumetric emitter now uses the volumetric channel V data</h3>
+
+<ul>
+<li><strong>Description:</strong> The volumetric emitter covered in the Deadlock build now uses the volumetric channel V data, tying the two updates&rsquo; particle work together.</li>
+<li><strong>Confidence:</strong> Fact — stated as a datamined link between the two builds.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine comparison of the Deadlock 2026-02-05 and Dota 2 2026-03-24 updates.</li>
+<li><strong>Earlier mentions:</strong> Refers back within this video to the volumetric emitter described from the Deadlock update; no earlier video is cited.</li>
+<li><strong>Verification:</strong> verified — the channel reference can be checked in the Dota 2 build.</li>
+</ul>
+
+<h3 id="vehicle-hit-groups-added-to-ai-base-npc-fgd">Vehicle hit groups added to AI base NPC FGD</h3>
+
+<ul>
+<li><strong>Description:</strong> The AI base NPC FGD gains vehicle hit groups: chassis, hood, driver side window, passenger side window, door mid left, door mid right, door mid left window, door mid right window, trunk, door rear left, door rear right, door rear left window, door rear right window, headlight left, headlight right, taillight left, taillight right, windshield, window rear, wheel front left, wheel front right, wheel rear left, and wheel rear right. Tyler reads this as linking the destructible/breakable prop system to the vehicle system, with part destruction affecting how a vehicle drives.</li>
+<li><strong>Confidence:</strong> Mixed — the hit group list is datamined; the destructible-vehicle gameplay reading is Tyler&rsquo;s inference, phrased as &ldquo;it appears.&rdquo;</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of the AI base NPC FGD in the Dota 2 update of 2026-03-24.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — vehicle entity definitions or map placements using these hit groups would support the gameplay reading.</li>
+</ul>
+
+<h3 id="companion-system-updates-in-ai-default-npc-fgd">Companion-system updates in AI default NPC FGD</h3>
+
+<ul>
+<li><strong>Description:</strong> The AI default NPC FGD adds &ldquo;animated temporary ragdoll,&rdquo; &ldquo;set movement gate,&rdquo; &ldquo;set override,&rdquo; and &ldquo;set desired strategy,&rdquo; updated for the player companion system. Tyler repeats &ldquo;player companion system&rdquo; for emphasis.</li>
+<li><strong>Confidence:</strong> Fact — the entity inputs are datamined; Tyler does not speculate on the companion&rsquo;s identity.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of the AI default NPC FGD in the Dota 2 update of 2026-03-24.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the FGD inputs can be re-read in the build.</li>
+</ul>
+
+<h3 id="base-fgd-prop-physics-and-navigation-commands">Base FGD prop-physics and navigation commands</h3>
+
+<ul>
+<li><strong>Description:</strong> The base FGD gains &ldquo;set enable breaking,&rdquo; &ldquo;set enable collisions for breakable,&rdquo; &ldquo;disable push clamp for environment physics explosion,&rdquo; &ldquo;place anchors at constraint transform for physics generic constraint,&rdquo; &ldquo;update nav when moving,&rdquo; and &ldquo;force nav cut&rdquo; for base prop physics.</li>
+<li><strong>Confidence:</strong> Fact — the command names are datamined.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of the base FGD in the Dota 2 update of 2026-03-24.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the FGD entries can be re-checked in the build.</li>
+</ul>
+
+<h3 id="lights-2-fgd-bounce-lights-and-ray-tracing-proxy-shaders">Lights 2 FGD bounce lights and ray-tracing proxy shaders</h3>
+
+<ul>
+<li><strong>Description:</strong> The lights 2 FGD gives bounce lights a commented-out real-time lighting option, and new shaders related to a ray tracing proxy are added.</li>
+<li><strong>Confidence:</strong> Fact — FGD and shader entries are datamined; the commented-out state is noted as such.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of the Dota 2 update of 2026-03-24.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the FGD key and shader files can be re-read in the build.</li>
+</ul>
+
+<h3 id="resource-compiler-interest-tags-and-repack2-out-of-work-in-progress">Resource compiler interest tags and repack2 out of work-in-progress</h3>
+
+<ul>
+<li><strong>Description:</strong> The resource compiler now has interest tags, and repack 2 is no longer considered a work in progress.</li>
+<li><strong>Confidence:</strong> Fact — both are datamined state changes in the toolchain.</li>
+<li><strong>Category:</strong> Technology</li>
+<li><strong>Source:</strong> Datamine of the Dota 2 update of 2026-03-24.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the compiler strings and repack 2 status flag can be re-checked.</li>
+</ul>
+
+<h3 id="world-renderer-gains-aggregate-rtp-proxy-and-dynamic-shadow-object-types">World renderer gains aggregate RTP proxy and dynamic-shadow object types</h3>
+
+<ul>
+<li><strong>Description:</strong> The world renderer adds two object types: &ldquo;aggregate RTP proxy&rdquo; and &ldquo;needs dynamic shadows.&rdquo;</li>
+<li><strong>Confidence:</strong> Fact — object type strings are datamined.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of the Dota 2 update of 2026-03-24.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the renderer object type list can be re-read in the build.</li>
+</ul>
+
+<h3 id="npc-movement-capabilities-expanded">NPC movement capabilities expanded</h3>
+
+<ul>
+<li><strong>Description:</strong> NPCs are given stop, start, planted, turn, and lean movement capabilities.</li>
+<li><strong>Confidence:</strong> Fact — the capability list is datamined.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of the Dota 2 update of 2026-03-24.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the NPC movement definitions can be re-checked in the build.</li>
+</ul>
+
+<h3 id="pulse-updated-for-interactions-scene-payload-vdata-and-courier-anchors">Pulse updated for interactions, scene payload VData, and courier anchors</h3>
+
+<ul>
+<li><strong>Description:</strong> Pulse now supports info interaction, scene payload VData, and info courier anchor.</li>
+<li><strong>Confidence:</strong> Fact — the added Pulse entities/keys are datamined.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of the Dota 2 update of 2026-03-24.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the Pulse schema can be re-read in the build.</li>
+</ul>
+
+<h3 id="environment-wind-controller-gains-cloth-effect">Environment wind controller gains cloth effect</h3>
+
+<ul>
+<li><strong>Description:</strong> The environment wind controller adds a cloth effect, governing how wind affects cloth materials in the world.</li>
+<li><strong>Confidence:</strong> Fact — the controller key is datamined.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of the Dota 2 update of 2026-03-24.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the wind controller definition can be re-checked.</li>
+</ul>
+
+<h3 id="v-midi-music-sequencer-updated-to-schemas-with-renamed-commands">V MIDI music sequencer updated to schemas with renamed commands</h3>
+
+<ul>
+<li><strong>Description:</strong> The built-in Source 2 V MIDI music sequencer — which Tyler says was, as far as is known, used only for the Vortigaunt singing in Half-Life: Alyx — now uses schemas for its data, and all commands were renamed with a few added. One new command reloads all files, removing the need to restart the engine to hear changes, which Tyler frames as useful for fast iteration on tracks.</li>
+<li><strong>Confidence:</strong> Mixed — the schema change, renames, and reload command are datamined; the &ldquo;only used for Vortigaunt singing&rdquo; scope is Tyler&rsquo;s stated understanding (&ldquo;as far as we know&rdquo;).</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of the Dota 2 update of 2026-03-24.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — confirming V MIDI&rsquo;s use in Alyx would require checking shipped Alyx content.</li>
+</ul>
+
+<h3 id="commentary-system-saveload-fix">Commentary system save/load fix</h3>
+
+<ul>
+<li><strong>Description:</strong> The commentary system is updated, which Tyler interprets as a slight fix to a save/load bug that would have surfaced during the past few months of bug testing. He cites Kayla on his Discord server, who suggested the issue may have been found during a wider check for this class of mistake, though no other classes appear to have been changed this way. He adds that the only known Source 2 game currently in development that this would affect is HLX, since no other active Source 2 games have save/loads or commentary.</li>
+<li><strong>Confidence:</strong> Mixed — the commentary-system change is datamined and the Discord attribution is named; the bug-fix purpose and the &ldquo;only HLX&rdquo; scope are inference, hedged with &ldquo;more than likely&rdquo; and &ldquo;as far as we know.&rdquo;</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Datamine of the Dota 2 update of 2026-03-24, plus a report from Kayla on Tyler&rsquo;s Discord server.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — the specific diff in the commentary class would confirm the save/load fix theory.</li>
+</ul>
+
+<h3 id="wobbler-hammer-helper-found-by-gabe-follower">&ldquo;Wobbler&rdquo; Hammer helper found by Gabe Follower</h3>
+
+<ul>
+<li><strong>Description:</strong> A Hammer helper called &ldquo;wobbler,&rdquo; credited to Gabe Follower, enables a &ldquo;visualize wobbler&rdquo; drop-down group on a Hammer entity. In Valve&rsquo;s own wording, per Tyler, it &ldquo;enables a visualize wobbler drop-down group on a hammer entity properly.&rdquo; It exposes noise frequency and noise amount variables, ramp out time and ramp in time, and max angular and max position for the wobbles.</li>
+<li><strong>Confidence:</strong> Fact — the helper, its keyvalues, and the Valve description string are datamined; the find is attributed to Gabe Follower.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Gabe Follower&rsquo;s datamine of the Dota 2 update of 2026-03-24, discussed by Tyler.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the helper and its description can be re-read in the build.</li>
+</ul>
+
+<h3 id="cubemap-fog-curves-and-point-shake">Cubemap fog curves and point shake</h3>
+
+<ul>
+<li><strong>Description:</strong> The update adds cubemap fog height and distance curves, plus a &ldquo;point shake&rdquo; icon and feature. Tyler identifies point shake as being for screen shaking.</li>
+<li><strong>Confidence:</strong> Mixed — the entries are datamined; the screen-shake function of point shake is Tyler&rsquo;s plain reading rather than a documented description.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of the Dota 2 update of 2026-03-24.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — a description string or usage in a map would confirm point shake&rsquo;s function.</li>
+</ul>
+
+<h3 id="eric-wolpaw-interviews-noted-but-not-reviewed">Eric Wolpaw interviews noted but not reviewed</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler notes that Eric Wolpaw gave a couple of interviews and that links are in the description, but says he has not had time to comb through them, so no content is discussed.</li>
+<li><strong>Confidence:</strong> Unclear — the interviews are acknowledged without any claim about their contents; Tyler explicitly says he has not reviewed them.</li>
+<li><strong>Category:</strong> Other</li>
+<li><strong>Source:</strong> Tyler&rsquo;s mention of external interviews by Eric Wolpaw.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — the interviews themselves would need to be read for any HLX content.</li>
+</ul>
+
+<h3 id="johns-campaign-mod-version-2">John&rsquo;s Campaign mod version 2</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler highlights the Half-Life 2 Episode 2 mod John&rsquo;s Campaign, originally released in September 2025, whose version 2 went up on ModDB roughly a week before this video and which he feels is under-appreciated. He describes it as absurd, feeling like a shitpost while showing extensive mapping and near-immersive-sim design, with a first level based on Deathloop, and calls it one of the most interesting Half-Life 2 mods he has played in years. He stops short of detailing it because he wants to stream it.</li>
+<li><strong>Confidence:</strong> Speculation — Tyler&rsquo;s opinion and recommendation; the release dates and platform are factual.</li>
+<li><strong>Category:</strong> Other</li>
+<li><strong>Source:</strong> ModDB release of John&rsquo;s Campaign version 2, as described by Tyler.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — the ModDB page would confirm the version 2 date.</li>
+</ul>
+
+<h3 id="gore-agulation-released-on-steam">Gore Agulation released on Steam</h3>
+
+<ul>
+<li><strong>Description:</strong> Gore Agulation is described as the newest Half-Life 2 mod on Steam: mechanically identical to Half-Life 2, but themed after Scorn with everything — weapons, player character, enemies — made of flesh. Tyler calls the story weird, the voice acting pretty good, the gameplay solid, and the level design pretty good, noting it is a free mod download with achievements, and recommends it.</li>
+<li><strong>Confidence:</strong> Speculation — assessment and recommendation; the Steam release, free availability, and achievements are stated as facts.</li>
+<li><strong>Category:</strong> Other</li>
+<li><strong>Source:</strong> Steam listing for the Gore Agulation Half-Life 2 mod, as described by Tyler.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — the Steam store page would confirm release, price, and achievements.</li>
+</ul>
+
+<h3 id="raising-the-bar-arena-announced">Raising the Bar Arena announced</h3>
+
+<ul>
+<li><strong>Description:</strong> The Raising the Bar Redux team announced Raising the Bar Arena, a Half-Life 2 Deathmatch mod in the Half-Life 2 beta style — dark and gritty, aligned with 1990s arena shooters like Quake 3 Arena and Unreal Tournament rather than 2004 Half-Life 2 Deathmatch. It is to receive updates for the rest of Raising the Bar Redux&rsquo;s development cycle, with new maps alongside each division release, and the team has floated Capture the Flag and wave-based cooperative survival, with more co-op promised.</li>
+<li><strong>Confidence:</strong> Speculation — Tyler&rsquo;s characterization and reaction to an announced project; the announcement itself and its stated plans are reported as given.</li>
+<li><strong>Category:</strong> Other</li>
+<li><strong>Source:</strong> Raising the Bar team&rsquo;s public announcement, as described by Tyler.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — the team&rsquo;s announcement post or store/mod page would confirm scope.</li>
+</ul>
+
+<h3 id="concerns-about-raising-the-bar-scope-and-team-crossover">Concerns about Raising the Bar scope and team crossover</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler, saying he has been in the scene 15 years, argues the Raising the Bar Redux team over-scopes: the main mod is on division 3 of a planned seven, projected into 2030, while the team also carries Raising the Bar Salvation (a released spin-off playing a beta version of Father Grigori), Raising the Bar Triumph (a Portal beta mod), and Raising the Bar Retail (a re-skin and re-map of Half-Life 2, worked on by a separate team with some crossover). He questions how the team can sustain this, contrasts it with Project Borealis having little playable content, and notes crossover between the Raising the Bar Redux team and the Half-Life 2 RTX team.</li>
+<li><strong>Confidence:</strong> Speculation — opinion and forecasting about team capacity; the division count, project names, and team relationships are stated as his understanding.</li>
+<li><strong>Category:</strong> Other</li>
+<li><strong>Source:</strong> Tyler&rsquo;s analysis of public Raising the Bar project announcements and team relationships.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> unverified — project release history over time would test the sustainability claim.</li>
+</ul>
+
+<h2 id="new-or-changed-in-this-video">New or changed in this video</h2>
+
+<ul>
+<li>First report of HLX being named explicitly inside a Deadlock build (2026-02-05) for smoke-based particle refraction and a particle-driven volumetric smoke emitter with emission/sink/repel interactions.</li>
+<li>The 2026-03-24 Dota 2 build is presented as the largest HLX-related Source 2 back-end dump he has covered, yielding the majority of the video&rsquo;s new material.</li>
+<li>New tool asset icons, a per-category custom-icon asset scheme for HLX assets, a &ldquo;kitchen&rdquo; asset, and a third-party Fountain screenplay-format tool.</li>
+<li>GPU particle lighting, RTGI bounce particle lights, and GPU particle ray-tracing collision are stated to be HLX-exclusive and non-functional in any other game.</li>
+<li>Expanded AI base NPC FGD vehicle hit groups, companion-system inputs, prop-physics commands, and new NPC movement capabilities.</li>
+<li>New Hammer wobbler helper (credited to Gabe Follower), locator tool, asset browser folder tree and spacewalk camera, model doc tools, cubemap fog curves, and point shake.</li>
+<li>Commentary-system change tied to save/load bug testing, with the claim that HLX is the only active Source 2 project with save/loads and commentary.</li>
+<li>Explicit counter-argument to the &ldquo;choreography means the game is early&rdquo; reading, using the Half-Life 2 pre-release timeline; confidence in a near-term release is presented as low (&ldquo;hopium&rdquo;).</li>
+<li>Community segment: John&rsquo;s Campaign v2, Gore Agulation, and the Raising the Bar Arena announcement with Tyler&rsquo;s scope concerns.</li>
+</ul>
+
+<h2 id="notable-quotes">Notable quotes</h2>
+
+<ul>
+<li>&ldquo;HLX was explicitly referenced in the Deadlock update on February 5th, specifically related to refracting of smoke-based particle effects.&rdquo; — Framing the first datamine finding.</li>
+<li>&ldquo;this was genuinely the largest dump of strings and information related to Source 2 back-end development associated with HLX that we have seen in years, if ever&rdquo; — Describing the March 24 Dota 2 update.</li>
+<li>&ldquo;these functions won&rsquo;t work unless your game is HLX&rdquo; — On the HLX-exclusive GPU particle lighting features.</li>
+<li>&ldquo;the only known Source 2 game currently in development that this would affect is HLX&rdquo; — On the commentary/save-load change.</li>
+<li>&ldquo;Valve does the choreography very late into development.&rdquo; — His rebuttal to reading cutscene tooling as a delay signal.</li>
+<li>&ldquo;How on Earth are you ever going to finish all of this?&rdquo; — On the Raising the Bar team&rsquo;s announced slate.</li>
+</ul>
+
+<h2 id="open-questions">Open questions</h2>
+
+<ul>
+<li>What the smoke-grid VData file contains and which smoke types it defines.</li>
+<li>What the Hammer locator tool is intended to do once functional.</li>
+<li>How Valve is actually using the Fountain script format in the cutscene pipeline.</li>
+<li>Whether the vehicle hit groups correspond to drivable, part-destructible vehicles and in what context they appear.</li>
+<li>What the &ldquo;kitchen&rdquo; tool asset is for.</li>
+<li>Whether the commentary-system change is confirmed as a save/load bug fix.</li>
+<li>What Eric Wolpaw said in the interviews Tyler had not yet reviewed.</li>
+</ul>
+</main>
+<footer class="site-foot">
+<p>Independent research notes on Tyler McVicker's HLX coverage. Not affiliated
+with Valve or with Tyler McVicker.</p>
+<p><strong>HLX is a datamined codename.</strong> Tyler identifies it as
+Half-Life 3; Valve has never confirmed that, and no official release date,
+window or announcement exists.</p>
+</footer>
+</body>
+</html>

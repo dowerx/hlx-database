@@ -1,0 +1,1699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Half-Life 3 / HLX — Development &amp; Features Database</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Research notes on Tyler McVicker's HLX coverage. Derived analysis only.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-bar">
+<a class="brand" href="index.html">HLX Research Database</a>
+<nav>
+<a href="claims.html">Claims</a>
+<a href="appendix-video-stats.html">Stats</a>
+<a href="sources/README.html">Sources</a>
+<a href="data.html">Data</a>
+</nav>
+</header>
+<p class="site-note">Derived analysis only. No transcripts, subtitle files or
+source video are hosted here; quotations are short and attributed, and every
+summary links to the original video.</p>
+<main>
+<h1 id="half-life-3-hlx-development-features-database">Half-Life 3 / HLX — Development &amp; Features Database</h1>
+
+<p>A structured record of what Tyler McVicker&rsquo;s HLX coverage claims about Valve&rsquo;s unannounced Half-Life project, how those claims changed, and how they compare with the Miro research board.</p>
+
+<p><strong>Coverage:</strong> 31 videos, 2024-08-04 → 2026-10-22, plus the Miro export.
+<strong>Extracted claims:</strong> 610 events across 31 per-video summaries.
+<strong>Official release date:</strong> none. Valve has never announced Half-Life 3, HLX, or a launch window.
+<strong>Latest state:</strong> as of HLX Files #20 (2026-10-22), Tyler expects <strong>no HLX announcement in 2026</strong>.</p>
+
+<blockquote>
+<p><strong>The single most important caveat:</strong> “HLX” is a datamined project codename. Tyler identifies HLX as Half-Life 3, and the accumulated evidence is strongly Half-Life-shaped, but <strong>Valve has never publicly confirmed that HLX is Half-Life 3</strong>. Statements below distinguish Tyler&rsquo;s identification from official confirmation.</p>
+</blockquote>
+
+<hr>
+
+<h2 id="1-read-me-first">1. Read me first</h2>
+
+<p>This database is organized around four different kinds of statement, which are easy to blur together:</p>
+
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong>Primary artifact / official statement</strong></td>
+<td>A named, checkable thing: a patch string, a published interview, a store listing, a talk recording.</td>
+<td>The Artifact Foundry <code>box_creature_model_hlx.vanmgrph</code> string; the Steam Frame team saying HLX is not VR.</td>
+</tr>
+
+<tr>
+<td><strong>Tyler&rsquo;s inference</strong></td>
+<td>Tyler&rsquo;s reading of artifacts, sources, or Valve&rsquo;s behaviour. Often plausible, sometimes hedged.</td>
+<td>“HLX is Half-Life 3”; “open-linear, not open world”; “announcement by end of 2025.”</td>
+</tr>
+
+<tr>
+<td><strong>Secondhand / unnamed sourcing</strong></td>
+<td>Playtest reports, “whole floor” claims, trailer rumours, insider release chatter.</td>
+<td>Gabe Follower&rsquo;s external-playtest report; the “entire floor” claim in #19.</td>
+</tr>
+
+<tr>
+<td><strong>Debunked / superseded</strong></td>
+<td>A claim the corpus later corrects or abandons.</td>
+<td>White Sands = HLX; voxel destruction; open world; 2025 release.</td>
+</tr>
+</tbody>
+</table>
+<p>Confidence labels in the per-video summaries:</p>
+
+<ul>
+<li><strong>Fact</strong> — directly supported by a named primary artifact, official statement, datamine, store page, court document, etc.</li>
+<li><strong>Speculation</strong> — Tyler&rsquo;s inference, expectation, or opinion.</li>
+<li><strong>Mixed</strong> — some parts evidenced, others inferred; the summary explains which.</li>
+<li><strong>Unclear</strong> — the basis is not made clear.</li>
+</ul>
+
+<p><strong>“Fact” does not mean “independently verified by this project.”</strong> Many “Fact” entries are checkable artifacts that were not re-checked here. The verification field in each summary is the audit trail: <code>verified</code>, <code>needs follow-up</code>, <code>unverified</code>, or a partial combination.</p>
+
+<p><strong>Start here:</strong></p>
+
+<ul>
+<li><a href="claims.html"><code>claims.md</code></a> — the detailed evidence trail for 19 contested claims (C01–C19), with dated position histories.</li>
+<li><a href="appendix-video-stats.html"><code>appendix-video-stats.md</code></a> — per-video event counts, evidence mix and coverage gaps.</li>
+<li><a href="sources/README.html"><code>sources/README.md</code></a> — what is archived, what cannot be, and how the receipts work.</li>
+</ul>
+
+<hr>
+
+<h2 id="2-status-snapshot">2. Status snapshot</h2>
+
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Current answer</th>
+<th>Basis</th>
+<th>Status</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Does HLX exist?</td>
+<td>Yes. Public engine strings run from 2020-10-09 to 2026-10.</td>
+<td>Artifact Foundry animgraph, Dota/CS2/Deadlock strings, Hammer helpers</td>
+<td>Verified artifact</td>
+</tr>
+
+<tr>
+<td>Is HLX Half-Life 3?</td>
+<td>Tyler says yes. Valve has not confirmed it.</td>
+<td>Casting, HEV/offworld strings, Half-Life tooling, project scale</td>
+<td><strong>Tyler&rsquo;s identification; unconfirmed</strong></td>
+</tr>
+
+<tr>
+<td>Is it a full game?</td>
+<td>Tyler&rsquo;s conclusion: a full non-VR Half-Life game, not an engine feature or save format.</td>
+<td>Accumulated datamines + hiring/playtest reports</td>
+<td>Strong inference, not official</td>
+</tr>
+
+<tr>
+<td>VR?</td>
+<td>No.</td>
+<td>Steam Frame team statement, 2025-11-12; design/tech arguments</td>
+<td><strong>Official statement</strong></td>
+</tr>
+
+<tr>
+<td>Open world?</td>
+<td>No. Tyler describes “open linear.”</td>
+<td>Hammer 16,384-unit walk limit, baked-lightmap architecture</td>
+<td>Technical inference</td>
+</tr>
+
+<tr>
+<td>Voxel destruction?</td>
+<td>No. Arty was a separate voxel project; HLX does not use voxel geometry.</td>
+<td><code>create_iso_surface</code> absent from current builds; no Hammer support</td>
+<td>Debunked</td>
+</tr>
+
+<tr>
+<td>Day/night cycle?</td>
+<td>No. The code belongs to Dota 2.</td>
+<td>Source 2 symbol tracing</td>
+<td>Debunked</td>
+</tr>
+
+<tr>
+<td>Release date?</td>
+<td>None announced.</td>
+<td>—</td>
+<td><strong>No official date</strong></td>
+</tr>
+
+<tr>
+<td>2026 announcement?</td>
+<td>Tyler predicts no.</td>
+<td>Commit trend, development signals</td>
+<td>Speculation</td>
+</tr>
+
+<tr>
+<td>Platforms?</td>
+<td>PC/Steam expected. Steam Machine “flagship” pairing is pattern-based, not evidence.</td>
+<td>Source 2/Steam context</td>
+<td>Unconfirmed</td>
+</tr>
+
+<tr>
+<td>Multiplayer?</td>
+<td>Single-player “as far as we understand”; co-op unknown.</td>
+<td>Datamine context</td>
+<td>Unconfirmed</td>
+</tr>
+
+<tr>
+<td>Story?</td>
+<td>Post-<em>Alyx</em>: Eli alive, Alyx missing, Gordon returned. Details unknown.</td>
+<td><em>Final Hours</em>, <em>Alyx</em> post-credits, Valve interviews</td>
+<td>Scene facts verified; future story unknown</td>
+</tr>
+
+<tr>
+<td>Current production state?</td>
+<td>Tyler: intensive development/polish; survived a semi-reboot; “entire floor” claim is hearsay.</td>
+<td>#19, unnamed sources</td>
+<td><strong>Speculation</strong></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="the-shortest-possible-history">The shortest possible history</h3>
+
+<ol>
+<li><strong>1999–2017:</strong> several different “Half-Life 3” projects, including the Episode Three trilogy, a 2013–2015 attempt, and Epistle 3. None is HLX.</li>
+<li><strong>2019–2020:</strong> <em>Half-Life: Alyx</em> retcons Eli&rsquo;s death; Valve finishes Alyx; HLX takes shape and appears in public Source 2 builds by September–October 2020.</li>
+<li><strong>2020–2024:</strong> HLX grows through shared Source 2 engine work; the codename leaks; dataminers find Half-Life-specific VData, NPC, vehicle, and tooling strings.</li>
+<li><strong>2024–2025:</strong> Tyler argues HLX is a full game and enters late production; external playtests are reported; a 2025 announcement is expected and then missed.</li>
+<li><strong>2026:</strong> The project is still in development after a semi-reboot. Valve says HLX is not VR. Tyler&rsquo;s latest prediction is no announcement in 2026.</li>
+</ol>
+
+<hr>
+
+<h2 id="3-source-inventory-31-videos">3. Source inventory (31 videos)</h2>
+
+<p>All 31 summaries are listed chronologically. Dates are exact YouTube upload dates from <code>video-metadata.tsv</code>. The YouTube ID links to the original video; the title links to the local summary.</p>
+
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Series</th>
+<th>Video (summary)</th>
+<th>YouTube ID</th>
+<th>Role</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>2024-08-04</td>
+<td>HLX Files #0</td>
+<td><a href="The-Half-Life-3-Leaks-Weve-Been-Waiting-For-HLX-Files-0-36gF6eiCsqU.en.html">The Half-Life 3 Leaks We&rsquo;ve Been Waiting For</a></td>
+<td><a href="https://www.youtube.com/watch?v=36gF6eiCsqU"><code>36gF6eiCsqU</code></a></td>
+<td>Foundation: HLX = full game, White Sands, résumés</td>
+</tr>
+
+<tr>
+<td>2024-08-25</td>
+<td>HLX Files #1</td>
+<td><a href="2-New-Half-Life-Games-Valves-Up-to-Chicanery-HLX-Files-1-FNNZUjkN3Qg.en.html">2 New Half-Life Games? Valve&rsquo;s Up to Chicanery!</a></td>
+<td><a href="https://www.youtube.com/watch?v=FNNZUjkN3Qg"><code>FNNZUjkN3Qg</code></a></td>
+<td>Status; valve string cleanup; Deckard</td>
+</tr>
+
+<tr>
+<td>2024-09-12</td>
+<td>HLX Files #2</td>
+<td><a href="Half-Life-3-Valve-and-Risk-of-Rain-2-The-Future-HLX-Files-2-bv0sMeb2Vp4.en.html">Half-Life 3, Valve &amp; Risk of Rain 2 - The Future</a></td>
+<td><a href="https://www.youtube.com/watch?v=bv0sMeb2Vp4"><code>bv0sMeb2Vp4</code></a></td>
+<td>“Wide-linear,” not open world; claimed voxel destruction (later walked back); Hopoo hires</td>
+</tr>
+
+<tr>
+<td>2024-10-16</td>
+<td>HLX Files #4</td>
+<td><a href="NEW-HALF-LIFE-3-LEAKS-JUST-FOR-YOU-HLX-Files-4-HWlRkzwHLwI.en.html">NEW HALF-LIFE 3 LEAKS, JUST FOR YOU!</a></td>
+<td><a href="https://www.youtube.com/watch?v=HWlRkzwHLwI"><code>HWlRkzwHLwI</code></a></td>
+<td>Surface attributes, heat, 2013–2015 posthuman account</td>
+</tr>
+
+<tr>
+<td>2024-11-22</td>
+<td>HLX Files #5</td>
+<td><a href="Valve-Isnt-Trying-to-Hide-HL3-Anymore-HLX-Files-5-yQSdohLVa20.en.html">Valve Isn&rsquo;t Trying to Hide HL3 Anymore</a></td>
+<td><a href="https://www.youtube.com/watch?v=yQSdohLVa20"><code>yQSdohLVa20</code></a></td>
+<td>Arty voxel <code>.h</code> files; NPC/streaming/physics</td>
+</tr>
+
+<tr>
+<td>2024-12-11</td>
+<td>HLX Files #6</td>
+<td><a href="A-Whole-Bunch-of-Simulated-Reality-HLX-Files-6-f9cLbSumFO4.en.html">A Whole Bunch of Simulated Reality</a></td>
+<td><a href="https://www.youtube.com/watch?v=f9cLbSumFO4"><code>f9cLbSumFO4</code></a></td>
+<td>Simulation systems: fire, fluids, wind, gravity</td>
+</tr>
+
+<tr>
+<td>2024-12-20</td>
+<td>Gaiden</td>
+<td><a href="Valves-Codename-Fremont-a-Console-Explored-and-Explained-HLX-Files-Gaiden-u0qd-T1Z8fI.en.html">Valve&rsquo;s Codename Fremont, a Console Explored &amp; Explained</a></td>
+<td><a href="https://www.youtube.com/watch?v=u0qd-T1Z8fI"><code>u0qd-T1Z8fI</code></a></td>
+<td>Hardware only: Fremont console datamine</td>
+</tr>
+
+<tr>
+<td>2025-01-01</td>
+<td>HLX Files #7</td>
+<td><a href="G-Man-Hints-at-Unexpected-Surprises-in-2025-HLX-Files-7-TyrlxYsMHYg.en.html">G-Man Hints at “Unexpected Surprises” in 2025</a></td>
+<td><a href="https://www.youtube.com/watch?v=TyrlxYsMHYg"><code>TyrlxYsMHYg</code></a></td>
+<td>Shapiro post; playtests; <sup>2025</sup>&frasl;<sub>2026</sub> window</td>
+</tr>
+
+<tr>
+<td>2025-01-31</td>
+<td>HLX Files #8</td>
+<td><a href="Half-Life-3-Derangement-Syndrome-HLX-Files-8-3f20EdGSxwQ.en.html">Half-Life 3 Derangement Syndrome</a></td>
+<td><a href="https://www.youtube.com/watch?v=3f20EdGSxwQ"><code>3f20EdGSxwQ</code></a></td>
+<td>Rejects the “ARG 197” theory</td>
+</tr>
+
+<tr>
+<td>2025-02-26</td>
+<td>HLX Files #9</td>
+<td><a href="The-Final-Stages-of-Production-Are-Here-HLX-Files-9-_lGdUBMdQ94.en.html">The Final Stages of Production Are Here</a></td>
+<td><a href="https://www.youtube.com/watch?v=_lGdUBMdQ94"><code>_lGdUBMdQ94</code></a></td>
+<td>Polish argument; FSR3 string; voxel walk-back</td>
+</tr>
+
+<tr>
+<td>2025-04-08</td>
+<td>One-off</td>
+<td><a href="Half-Life-3-The-Rise-Fall-and-Rebirth--rs7LHtODh4.en.html">Half-Life 3 - The Rise, Fall &amp; Rebirth</a></td>
+<td><a href="https://www.youtube.com/watch?v=-rs7LHtODh4"><code>-rs7LHtODh4</code></a></td>
+<td>Full 1999–2024 retrospective</td>
+</tr>
+
+<tr>
+<td>2025-04-19</td>
+<td>HLX Files #10</td>
+<td><a href="Valve-Just-Cant-Help-Themselves-HLX-Files-10-JrCIxd1JiAo.en.html">Valve Just Can&rsquo;t Help Themselves</a></td>
+<td><a href="https://www.youtube.com/watch?v=JrCIxd1JiAo"><code>JrCIxd1JiAo</code></a></td>
+<td>Employee hints; gravity talk; HEV suit</td>
+</tr>
+
+<tr>
+<td>2025-05-28</td>
+<td>HLX Files #11</td>
+<td><a href="17-New-HLX-Leaks-its-Almost-Here-HLX-Files-11-FUj4iMRKGqM.en.html">17 New HLX Leaks, it&rsquo;s Almost Here</a></td>
+<td><a href="https://www.youtube.com/watch?v=FUj4iMRKGqM"><code>FUj4iMRKGqM</code></a></td>
+<td>Save/load rewrite; vehicles; async AI</td>
+</tr>
+
+<tr>
+<td>2025-07-31</td>
+<td>HLX Files #12</td>
+<td><a href="The-Great-Valve-Refactoring-HLX-Files-12-W7fLurNQT8U.en.html">The Great Valve Refactoring</a></td>
+<td><a href="https://www.youtube.com/watch?v=W7fLurNQT8U"><code>W7fLurNQT8U</code></a></td>
+<td>CS2 backend refactor; AG2; tooltips</td>
+</tr>
+
+<tr>
+<td>2025-09-03</td>
+<td>HLX Files #14</td>
+<td><a href="Your-Monthly-HL3-Update-HLX-Files-14-htC-u80xs_Q.en.html">Your Monthly HL3 Update</a></td>
+<td><a href="https://www.youtube.com/watch?v=htC-u80xs_Q"><code>htC-u80xs_Q</code></a></td>
+<td>Liquids, vehicle changes, AI sound events</td>
+</tr>
+
+<tr>
+<td>2025-10-29</td>
+<td>HLX Files #15</td>
+<td><a href="HLX-Development-Might-Have-Hit-a-New-Stage-HLX-Files-15-qKR-G1EuYyg.en.html">HLX Development Might Have Hit a New Stage</a></td>
+<td><a href="https://www.youtube.com/watch?v=qKR-G1EuYyg"><code>qKR-G1EuYyg</code></a></td>
+<td>Late-stage refactor; fake leaks; trailer rumour</td>
+</tr>
+
+<tr>
+<td>2025-11-18</td>
+<td>HLX Files #16</td>
+<td><a href="The-Final-Episode-HOPE-WE-DONT-KNOW-A-DATE-HOPE-HLX-Files-16-E09c6YSfWWc.en.html">The Final Episode? HOPE. WE DON&rsquo;T KNOW A DATE. HOPE.</a></td>
+<td><a href="https://www.youtube.com/watch?v=E09c6YSfWWc"><code>E09c6YSfWWc</code></a></td>
+<td>Steam hardware; debunks; CS2 strings</td>
+</tr>
+
+<tr>
+<td>2026-01-29</td>
+<td>Every Last Detail Ep1</td>
+<td><a href="The-Ultimate-Half-Life-3-Deep-Dive-Every-Last-Detail-Ep1-cH71Bn8VUAg.en.html">The Ultimate Half-Life 3 Deep Dive</a></td>
+<td><a href="https://www.youtube.com/watch?v=cH71Bn8VUAg"><code>cH71Bn8VUAg</code></a></td>
+<td>Foundational chronology + debunks</td>
+</tr>
+
+<tr>
+<td>2026-02-02</td>
+<td>HLX Files #17</td>
+<td><a href="Valves-Winter-Break-Ended-HLX-Didnt-HLX-Files-17-irI02zjaSlM.en.html">Valve&rsquo;s Winter Break Ended, HLX Didn&rsquo;t</a></td>
+<td><a href="https://www.youtube.com/watch?v=irI02zjaSlM"><code>irI02zjaSlM</code></a></td>
+<td>Post-holiday refactoring; no milestone</td>
+</tr>
+
+<tr>
+<td>2026-03-01</td>
+<td>Every Last Detail Ep2</td>
+<td><a href="The-Gameplay-Mechanics-of-Half-Life-3-Every-Last-Detail-Ep2-34uDQ-I7Oec.en.html">The Gameplay Mechanics of Half-Life 3</a></td>
+<td><a href="https://www.youtube.com/watch?v=34uDQ-I7Oec"><code>34uDQ-I7Oec</code></a></td>
+<td>Gameplay dossier: HEV, fire, water, vehicles</td>
+</tr>
+
+<tr>
+<td>2026-03-08</td>
+<td>Every Last Detail Ep4</td>
+<td><a href="The-Enemies-and-Locations-of-Half-Life-3-Every-Last-Detail-Ep4-Q9ug2VyTPlo.en.html">The Enemies &amp; Locations of Half-Life 3</a></td>
+<td><a href="https://www.youtube.com/watch?v=Q9ug2VyTPlo"><code>Q9ug2VyTPlo</code></a></td>
+<td>Enemies, factions, locations (spoilers)</td>
+</tr>
+
+<tr>
+<td>2026-03-15</td>
+<td>One-off</td>
+<td><a href="The-Valve-Hardware-Nightmare-Gaben-vs-the-World-tBWfvvsDSxQ.en.html">The Valve Hardware Nightmare - Gaben vs. the World</a></td>
+<td><a href="https://www.youtube.com/watch?v=tBWfvvsDSxQ"><code>tBWfvvsDSxQ</code></a></td>
+<td>Hardware delays and pricing context</td>
+</tr>
+
+<tr>
+<td>2026-03-23</td>
+<td>Every Last Detail Ep5</td>
+<td><a href="The-NPC-Intelligence-of-Half-Life-3-Every-Last-Detail-Ep5-FT-fH7ZVqKo.en.html">The NPC Intelligence of Half-Life 3</a></td>
+<td><a href="https://www.youtube.com/watch?v=FT-fH7ZVqKo"><code>FT-fH7ZVqKo</code></a></td>
+<td>NPC AI dossier</td>
+</tr>
+
+<tr>
+<td>2026-03-31</td>
+<td>HLX Files #18</td>
+<td><a href="So-Many-Friggin-Leaks-Its-Insane-HLX-Files-18-Jd95JQ_oZpM.en.html">So Many Friggin&rsquo; Leaks, It&rsquo;s Insane</a></td>
+<td><a href="https://www.youtube.com/watch?v=Jd95JQ_oZpM"><code>Jd95JQ_oZpM</code></a></td>
+<td>Deadlock/Dota dump; tools; GPU particles</td>
+</tr>
+
+<tr>
+<td>2026-04-16</td>
+<td>Every Last Detail Ep6</td>
+<td><a href="The-New-Technology-of-Half-Life-3-Every-Last-Detail-Ep6-w14ZUG1EKio.en.html">The New Technology of Half-Life 3</a></td>
+<td><a href="https://www.youtube.com/watch?v=w14ZUG1EKio"><code>w14ZUG1EKio</code></a></td>
+<td>Engine/technology dossier</td>
+</tr>
+
+<tr>
+<td>2026-04-25</td>
+<td>Every Last Detail Ep7</td>
+<td><a href="Half-Life-3-From-Valves-Own-Mouth-Every-Last-Detail-Ep7-WjRHZxbSEHE.en.html">Half-Life 3 From Valve&rsquo;s Own Mouth</a></td>
+<td><a href="https://www.youtube.com/watch?v=WjRHZxbSEHE"><code>WjRHZxbSEHE</code></a></td>
+<td>Published Valve statements, 2020–2024</td>
+</tr>
+
+<tr>
+<td>2026-06-16</td>
+<td>One-off</td>
+<td><a href="Steam-Hardware-Is-Weeks-Away-Heres-Everything-zs9LdkbOzHg.en.html">Steam Hardware Is Weeks Away, Here&rsquo;s Everything.</a></td>
+<td><a href="https://www.youtube.com/watch?v=zs9LdkbOzHg"><code>zs9LdkbOzHg</code></a></td>
+<td>Steam hardware launch evidence</td>
+</tr>
+
+<tr>
+<td>2026-07-06</td>
+<td>HLX Files #19</td>
+<td><a href="The-Real-State-of-Half-Life-3-Development-in-2026-HLX-Files-19-8Fi44EB4hjk.en.html">The Real State of Half-Life 3 Development in 2026</a></td>
+<td><a href="https://www.youtube.com/watch?v=8Fi44EB4hjk"><code>8Fi44EB4hjk</code></a></td>
+<td>Latest broad state-of-play; Dark Carnival strings</td>
+</tr>
+
+<tr>
+<td>2026-09-04</td>
+<td>One-off</td>
+<td><a href="The-Steam-Frame-Situation-is-a-Nightmare-Bx400IBgZVo.en.html">The Steam Frame Situation is a Nightmare</a></td>
+<td><a href="https://www.youtube.com/watch?v=Bx400IBgZVo"><code>Bx400IBgZVo</code></a></td>
+<td>Steam Frame delays and price prediction</td>
+</tr>
+
+<tr>
+<td>2026-09-14</td>
+<td>One-off</td>
+<td><a href="The-Steam-Frame-is-1059-and-HLA-Runs-at-36FPS-Reprojected-to-72-jpvsGr1sQAk.en.html">The Steam Frame is $1059 &amp; HLA Runs @ 36FPS Reprojected to 72</a></td>
+<td><a href="https://www.youtube.com/watch?v=jpvsGr1sQAk"><code>jpvsGr1sQAk</code></a></td>
+<td>Official Steam Frame price; Alyx port performance</td>
+</tr>
+
+<tr>
+<td>2026-10-22</td>
+<td>HLX Files #20</td>
+<td><a href="Please-Be-Chill-Valve-Said-HLX-Out-Loud-HLX-Files-20-5nR6GfshoYw.en.html">Please Be Chill, Valve Said HLX Out Loud</a></td>
+<td><a href="https://www.youtube.com/watch?v=5nR6GfshoYw"><code>5nR6GfshoYw</code></a></td>
+<td>HLX spoken publicly; latest tools; no-2026 prediction</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Gaps in the set:</strong> HLX Files #3 and #13, and Every Last Detail Ep3, are not present among the 31 source files. The numbering gaps are source gaps, not missing summaries. Ep4&rsquo;s spoiler content follows Ep2; Ep5&rsquo;s AI content follows Ep4.</p>
+
+<p><strong>Video count by series label:</strong> 19 HLX Files episodes, 6 Every Last Detail episodes, 1 Gaiden, 4 hardware one-offs, and 1 retrospective = 31. The four hardware one-offs are the 2026-03-15, 2026-06-16, 2026-09-04 and 2026-09-14 videos.</p>
+
+<hr>
+
+<h2 id="4-timeline">4. Timeline</h2>
+
+<h3 id="41-before-the-discovery-era-19992020">4.1 Before the discovery era (1999–2020)</h3>
+
+<p>This is the documented background, not the HLX datamine story. The important point is that <strong>“Half-Life 3” has named several different projects</strong>.</p>
+
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Event</th>
+<th>Evidence / status</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>1999</td>
+<td><code>halflife3.com</code> is registered.</td>
+<td>Tied by <em>The Rise, Fall &amp; Rebirth</em> to the Sierra/Prospero contract; a contractual placeholder, not proof of a game. Mixed.</td>
+</tr>
+
+<tr>
+<td>2003</td>
+<td>Gabe Newell rules out Half-Life 3.</td>
+<td>Published statement; Fact.</td>
+</tr>
+
+<tr>
+<td>2005</td>
+<td>Microsoft&rsquo;s Xbox 360 keynote lists Half-Life 3.</td>
+<td>Listing, not confirmation; Fact for the listing.</td>
+</tr>
+
+<tr>
+<td>2006–2008</td>
+<td>Episode Three is positioned as the trilogy conclusion. Press describes an arctic base, Eli staying dead, and G-Man answers.</td>
+<td>Named press previews; Fact for what was said, not for shipped content.</td>
+</tr>
+
+<tr>
+<td>2011</td>
+<td>Newell: “The episodic model failed.”</td>
+<td>Published statement; Fact.</td>
+</tr>
+
+<tr>
+<td>2013</td>
+<td>A Jira leak shows a 43-member Half-Life 3 group, later splitting into subgroups.</td>
+<td>Leak; unverified.</td>
+</tr>
+
+<tr>
+<td>2013–2015</td>
+<td>The “posthuman” HL3 material: HL3TXT, the Sephilon correspondence, Gordon with an Aperture robotic arm. <em>The Final Hours of Half-Life: Alyx</em> confirms a 2015 Half-Life 3 existed.</td>
+<td>Mixed: published book confirms a 2015 project; the story/art details are leak-derived.</td>
+</tr>
+
+<tr>
+<td>2017</td>
+<td>Marc Laidlaw publishes <em>Epistle 3</em>.</td>
+<td>Fact. A separate, earlier conclusion to the Episode Three story.</td>
+</tr>
+
+<tr>
+<td>2019-01-21</td>
+<td>The <em>Alyx</em> story team pitches the Eli retcon: the G-Man pulls Alyx to the end of Episode Two and saves Eli. Gabe Newell approves it.</td>
+<td><em>The Final Hours of Half-Life: Alyx</em>; verified.</td>
+</tr>
+
+<tr>
+<td>2020-03-23</td>
+<td><em>Half-Life: Alyx</em> ships. Valve gives interviews saying it wants to make more Half-Life.</td>
+<td>Published interviews; verified quotes.</td>
+</tr>
+
+<tr>
+<td>2020-08-12</td>
+<td>A VData <code>assettype</code> image is dated in metadata. VData exists by this point.</td>
+<td>Miro #0010/#1189; metadata-based.</td>
+</tr>
+
+<tr>
+<td>2020-09-04</td>
+<td>First public VData reference in a Dota 2 update (18:42:33 UTC).</td>
+<td>Miro #1178; Ep1; verified artifact.</td>
+</tr>
+
+<tr>
+<td>2020-09-22</td>
+<td>Garry Newman receives Source 2 Sandbox access. Early builds already contain uncleaned HLX console helpers.</td>
+<td>Accidental public commit + build datamine; verified. This puts HLX in production before 2020-09-22.</td>
+</tr>
+
+<tr>
+<td>2020-10-09</td>
+<td><strong>First public HLX reference:</strong> an Artifact Foundry update renames a box-creature animgraph to <code>box_creature_model_hlx.vanmgrph</code>.</td>
+<td>Miro #1231; Ep1; verified artifact.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Project start is not settled.</strong> Miro #1182 says HLX “started taking shape in late 2019,” while Ep1 says it was greenlit around completion of <em>Alyx</em>&rsquo;s ending (around the March 2020 release) and existed before 2020-09-22. These are compatible if “taking shape” precedes formal greenlight, but no public artifact dates the decision.</p>
+
+<h3 id="42-discovery-timeline-20242026">4.2 Discovery timeline (2024–2026)</h3>
+
+<p>Each entry is when Tyler reported the material, not necessarily when the underlying code was written. Tyler repeatedly warns that strings can predate their public appearance by years.</p>
+
+<h4 id="2024-hlx-becomes-a-public-thesis">2024 — HLX becomes a public thesis</h4>
+
+<ul>
+<li><strong>2024-08-04 — HLX Files #0.</strong> Tyler argues HLX is a full non-VR Half-Life game, not an engine feature or save format. Introduces the “Project White Sands” casting leak, a 2020–2023 former-employee résumé, HEV/offworld/feral-manhack strings, and the claim that HLX is Half-Life 3. He also reassigns voxel destruction, voxel hair, vehicle simulation and Xen creatures away from Deadlock — a correction that later splits again when the voxel claim is walked back. White Sands is corrected much later. → <a href="The-Half-Life-3-Leaks-Weve-Been-Waiting-For-HLX-Files-0-36gF6eiCsqU.en.html">summary</a></li>
+<li><strong>2024-08-25 — HLX Files #1.</strong> A fresh Half-Life 2 testing branch, a secondhand “two non-CS/non-Deadlock games” claim, Deckard still in production, and Valve removing/renaming strings Tyler had reported (Xen gorilla removed; Houndeye → “NPC monster”; HEV suits → “Burbank suits”). → <a href="2-New-Half-Life-Games-Valves-Up-to-Chicanery-HLX-Files-1-FNNZUjkN3Qg.en.html">summary</a></li>
+<li><strong>2024-09-12 — HLX Files #2.</strong> Valve&rsquo;s bandwidth across Deadlock/CS2/hardware; the Hopoo Games acqui-hire; the first explicit “wide-linear, not open world” formulation. Tyler also claims voxel-based destructible environments — a claim #9 later walks back and Ep1 debunks. → <a href="Half-Life-3-Valve-and-Risk-of-Rain-2-The-Future-HLX-Files-2-bv0sMeb2Vp4.en.html">summary</a></li>
+<li><strong>2024-10-16 — HLX Files #4.</strong> Surface attributes return with flash points and heat conductivity; a purported 2013–2015 “posthuman” Gordon account; a 2021–2023 hiring wave; LinkedIn profiles describing unannounced-project work. → <a href="NEW-HALF-LIFE-3-LEAKS-JUST-FOR-YOU-HLX-Files-4-HWlRkzwHLwI.en.html">summary</a></li>
+<li><strong>2024-11-22 — HLX Files #5.</strong> Roughly 21 <code>.h</code> files from Valve&rsquo;s cancelled voxel project “Arty” ship inside a Dota 2 update; NPC AI, level-streaming and physics changes; a new <code>Point Orient</code> entity. Tyler argues Arty&rsquo;s voxel destruction, vehicle, buoyancy, fluid and multiplayer systems are being ported into HLX, and says HLX “is going to have voxel based destruction in some form.” #9 later reassigns the voxel systems to a different project, and Ep1 debunks the HLX use entirely. → <a href="Valve-Isnt-Trying-to-Hide-HL3-Anymore-HLX-Files-5-yQSdohLVa20.en.html">summary</a></li>
+<li><strong>2024-12-11 — HLX Files #6.</strong> The simulation dossier: Pulse scripting, surface flammability, fluids, wind, material deformation, gravity/underwater/space movement, NPC damage and mood. Frames it as an emergent-physics successor to the E3 2003 demos. → <a href="A-Whole-Bunch-of-Simulated-Reality-HLX-Files-6-f9cLbSumFO4.en.html">summary</a></li>
+<li><strong>2024-12-20 — Gaiden: Fremont.</strong> A hardware-only episode. Public Valve GitLab mirrors expose an AMD “Lilac” APU, prototype board F7F, HDMI-A, and HDMI CEC for a device codenamed Fremont. No HLX content. → <a href="Valves-Codename-Fremont-a-Console-Explored-and-Explained-HLX-Files-Gaiden-u0qd-T1Z8fI.en.html">summary</a></li>
+<li><strong>2024-12-31 — Mike Shapiro&rsquo;s G-Man post.</strong> The voice actor posts in character after roughly four years of silence, prompting the next episode. Reported in #7. → <a href="G-Man-Hints-at-Unexpected-Surprises-in-2025-HLX-Files-7-TyrlxYsMHYg.en.html">summary</a></li>
+</ul>
+
+<h4 id="2025-late-production-expectations-then-a-missed-window">2025 — late-production expectations, then a missed window</h4>
+
+<ul>
+<li><strong>2025-01-01 — HLX Files #7.</strong> Tyler reads the G-Man post as a hook, not a date. Relays a colleague&rsquo;s report that Valve has entered external playtesting, predicts an announcement by end-2025 if testing goes smoothly, slipping to 2026 if core gameplay/story/art need rework. → <a href="G-Man-Hints-at-Unexpected-Surprises-in-2025-HLX-Files-7-TyrlxYsMHYg.en.html">summary</a></li>
+<li><strong>2025-01-31 — HLX Files #8.</strong> Rejects the community “ARG 197” theory and argues Valve no longer runs ARGs; restates that HLX is very late and already being tested by third parties, without new evidence. → <a href="Half-Life-3-Derangement-Syndrome-HLX-Files-8-3f20EdGSxwQ.en.html">summary</a></li>
+<li><strong>2025-02-26 — HLX Files #9.</strong> Argues HLX has passed the maximum-risk holiday window and is in optimization/polish. The ten-hour Dota 2 datamine is mostly small end-of-production changes; the “HLX FSR3” string appears in the 2025-02-25 Deadlock update. Tyler also walks back the voxel-destruction association, saying those systems appear to belong to a different project. → <a href="The-Final-Stages-of-Production-Are-Here-HLX-Files-9-_lGdUBMdQ94.en.html">summary</a></li>
+<li><strong>2025-04-08 — The Rise, Fall &amp; Rebirth.</strong> The 1999–2024 retrospective: halflife3.com, Episode Three, the 2013 Jira leak, the 2015 project, Epistle 3, <em>Alyx</em>, and the HLX datamine era. The best single source for the pre-HLX history. → <a href="Half-Life-3-The-Rise-Fall-and-Rebirth--rs7LHtODh4.en.html">summary</a></li>
+<li><strong>2025-04-19 — HLX Files #10.</strong> Employee hints, a Ben Burbank talk touching gravity and NPC communication, the Deadlock HEV-suit datamine, and Morasky&rsquo;s denial of Deadlock involvement. No new build numbers or assets. → <a href="Valve-Just-Cant-Help-Themselves-HLX-Files-10-JrCIxd1JiAo.en.html">summary</a></li>
+<li><strong>2025-05-28 — HLX Files #11.</strong> A from-scratch save/load rewrite, vehicle transport and meshlet attributes, electrical/elemental simulation, multithreaded physics, asynchronous AI, crouch/crawl states, expanded sight/sound AI, and a wind/fan system. Tyler calls it late-cycle polish. → <a href="17-New-HLX-Leaks-its-Almost-Here-HLX-Files-11-FUj4iMRKGqM.en.html">summary</a></li>
+<li><strong>2025-07-31 — HLX Files #12.</strong> A large CS2 backend update replaces the animation system and rewrites AI scripts, FGD definitions and localization tokens. Tyler reads plain-language tooltips as public-facing polish, while qualifying that this is Valve. → <a href="The-Great-Valve-Refactoring-HLX-Files-12-W7fLurNQT8U.en.html">summary</a></li>
+<li><strong>2025-09-03 — HLX Files #14.</strong> New HLX liquid simulation with oil/water types, an ability-positioning entity, a destructible-part event tied to enemy AI, vehicle entity changes including a removed jeep, and a new-vs-legacy save toggle. Also the claim that August 2025 was Valve&rsquo;s busiest build month in about a decade. → <a href="Your-Monthly-HL3-Update-HLX-Files-14-htC-u80xs_Q.en.html">summary</a></li>
+<li><strong>2025-10-29 — HLX Files #15.</strong> Destructible hit groups, destruction-death behaviour, liquid spills and sound absorption are read as late-stage refactoring. Tyler debunks the 4chan concept art as AI-generated, the Mike Shapiro “Valve opening” story as invented, and a Half-Life 2 SteamDB changelist as a mod update; relays a trailer-work rumour. → <a href="HLX-Development-Might-Have-Hit-a-New-Stage-HLX-Files-15-qKR-G1EuYyg.en.html">summary</a></li>
+<li><strong>2025-11-12 — Valve announces Steam Frame, Steam Machine and Steam Controller.</strong> The Steam Frame team states HLX is <strong>not a VR game</strong>. This is the clearest official statement in the corpus. → <a href="The-Ultimate-Half-Life-3-Deep-Dive-Every-Last-Detail-Ep1-cH71Bn8VUAg.en.html">Ep1 summary</a> · <a href="The-Final-Episode-HOPE-WE-DONT-KNOW-A-DATE-HOPE-HLX-Files-16-E09c6YSfWWc.en.html">HLX #16 summary</a></li>
+<li><strong>2025-11-18 — HLX Files #16.</strong> Hardware announcement coverage, the 4chan art and 18 November date debunked, CS2 string leaks, and a restated 2025 announcement expectation (with a possible slip to January/February). Tyler retracts the November 18 interpretation of the previous episode&rsquo;s trailer-work rumour, and Jason Schreier clarifies his 2025 prediction was not inside information. → <a href="The-Final-Episode-HOPE-WE-DONT-KNOW-A-DATE-HOPE-HLX-Files-16-E09c6YSfWWc.en.html">summary</a></li>
+<li><strong>2025-12 — Dota 2 adds Animgraph 2 authoring tools.</strong> Creation, mesh-to-skeleton and sequence-to-clip conversion, Model Doc resource lists, and a Hammer AG2 identifier field. Reported later in Ep6. → <a href="The-New-Technology-of-Half-Life-3-Every-Last-Detail-Ep6-w14ZUG1EKio.en.html">summary</a></li>
+</ul>
+
+<h4 id="2026-the-post-2025-window">2026 — the post-2025 window</h4>
+
+<ul>
+<li><strong>2026-01-29 — Every Last Detail Ep1.</strong> The foundational chronology: shared Source 2, patch-diffing method, the 2019 <em>Alyx</em> pivot, VData, Sandbox, the first HLX string, the 2021 codename leak, Aperture Desk Job, vehicles, hiring, and the full debunk section (open world, VR, voxels, day/night). Also corrects White Sands to Deadlock. → <a href="The-Ultimate-Half-Life-3-Deep-Dive-Every-Last-Detail-Ep1-cH71Bn8VUAg.en.html">summary</a></li>
+<li><strong>2026-02-02 — HLX Files #17.</strong> Valve returns from winter break with large CS2/Deadlock/Dota updates, but the HLX material is almost entirely refactoring into VData and Animgraph 2. No milestone, date, or asset. Tyler calls it a long polish pass. → <a href="Valves-Winter-Break-Ended-HLX-Didnt-HLX-Files-17-irI02zjaSlM.en.html">summary</a></li>
+<li><strong>2026-02-05 — Deadlock update names HLX in a smoke shader.</strong> Particle-based volumetric smoke explicitly references HLX for refraction. Reported in #18. → <a href="So-Many-Friggin-Leaks-Its-Insane-HLX-Files-18-Jd95JQ_oZpM.en.html">summary</a></li>
+<li><strong>2026-03-01 — Every Last Detail Ep2.</strong> Gameplay dossier: HEV suit sounds, gravity gun FGD entries, dynamic fire, buoyancy, spills, waterfall helpers, fans, VData weapons, spawn-volume variation, level streaming, breakable props, gravity shifting, and the full modular vehicle schema. → <a href="The-Gameplay-Mechanics-of-Half-Life-3-Every-Last-Detail-Ep2-34uDQ-I7Oec.en.html">summary</a></li>
+<li><strong>2026-03-08 — Every Last Detail Ep4.</strong> Enemy/location catalogue: Houndeye, Xen Gorilla, Xen Jellyfish, Xen Swooper, Feral Manhack, Kush Child, Howler, Flitter, Harvest Man Baby, Combine Charger, snipers, penta tank, off-world workers, Off-World Storks, the “fly guy,” and Xen/off-world/foundry locations. Spoiler warning. → <a href="The-Enemies-and-Locations-of-Half-Life-3-Every-Last-Detail-Ep4-Q9ug2VyTPlo.en.html">summary</a></li>
+<li><strong>2026-03-15 — The Valve Hardware Nightmare.</strong> Traces Valve&rsquo;s hardware messaging through the February 3 AMD call, the February 4 FAQ, the edited March 6 Steam Year in Review post, and GDC 2026. RAM/storage shortages and tariffs push the launch to a vague 2026. Hardware context, not an HLX update. → <a href="The-Valve-Hardware-Nightmare-Gaben-vs-the-World-tBWfvvsDSxQ.en.html">summary</a></li>
+<li><strong>2026-03-19 — CS2 reserves become clips.</strong> Miro #0438 records a CS2 parameter change: reserve ammo is treated as clips. It uses a weapon-VData concept also seen in HLX, but its relevance to HLX is unconfirmed and it is not reported in the videos. Miro only.</li>
+<li><strong>2026-03-23 — Every Last Detail Ep5.</strong> NPC AI dossier: navigation spaces, moods, four flinch/damage types (burn, sonic primary, sonic secondary, Newton), destructible body parts, modifiers, designer tuning, base NPC VData, abilities, schedules, squads, difficulty scaling, last-known/last-seen tracking, and deliberate misses. → <a href="The-NPC-Intelligence-of-Half-Life-3-Every-Last-Detail-Ep5-FT-fH7ZVqKo.en.html">summary</a></li>
+<li><strong>2026-03-24 — Dota 2 back-end dump.</strong> Tyler calls it the largest HLX-adjacent Source 2 dump he has seen: tool icons, Fountain screenplay tool, GPU particle lighting and particle ray-tracing collision marked HLX-exclusive, expanded vehicles/props/companions. Reported in #18. → <a href="So-Many-Friggin-Leaks-Its-Insane-HLX-Files-18-Jd95JQ_oZpM.en.html">summary</a></li>
+<li><strong>2026-03-31 — HLX Files #18.</strong> The Deadlock smoke shader, the Dota back-end dump, per-category HLX asset labels, choreography volume, <code>Wobbler</code> helper, FGD prop-physics/nav commands, and the argument that choreography tooling does not mean the game is early. → <a href="So-Many-Friggin-Leaks-Its-Insane-HLX-Files-18-Jd95JQ_oZpM.en.html">summary</a></li>
+<li><strong>2026-04-01 — CS2 switches everything to AG2.</strong> Miro #0857: CS2 uses Animgraph 2 for everything from the 2026-04-01 update; AG1 is completely removed. This resolves Ep6&rsquo;s open question about player models. Miro only, after Ep6&rsquo;s recording.</li>
+<li><strong>2026-04-16 — Every Last Detail Ep6.</strong> Technology dossier: hair strands, VData, procedural audio, Speech Graphics lip-sync, TAA/upscalers, weather/wind, ray tracing, AI LOD, distance fields, mesh shaders, Pulse, and Animgraph 2 architecture/shipping. → <a href="The-New-Technology-of-Half-Life-3-Every-Last-Detail-Ep6-w14ZUG1EKio.en.html">summary</a></li>
+<li><strong>2026-04-25 — Every Last Detail Ep7.</strong> A compilation of Valve&rsquo;s own published statements from 2020–2024: Wolpaw, Walker, Coomer, Newell, Morasky, the Noclip documentary, and anonymized post-2020 résumés. Corroborates intent, not a release. → <a href="Half-Life-3-From-Valves-Own-Mouth-Every-Last-Detail-Ep7-WjRHZxbSEHE.en.html">summary</a></li>
+<li><strong>2026-06-16 — Steam Hardware Is Weeks Away.</strong> Steam client/SteamVR datamines, Canadian radio certification, native Android VR builds, and US customs imports point to imminent pre-orders. An anonymous June 12 claim says prices/reservations between June 22–30; Tyler expects early-July sales. Explicitly separates this from HLX. → <a href="Steam-Hardware-Is-Weeks-Away-Heres-Everything-zs9LdkbOzHg.en.html">summary</a></li>
+<li><strong>2026-06-26 — Dota 2 “Dark Carnival” ships.</strong> The update supplies the HLX branch strings that dominate #19: subpixel AA, GPU particles, meshlets, MIDI beat system, GPU-driven Hammer audio, water material two, deformable geometry, ragdoll mass/buoyancy, zero-gravity/no-collision attributes, NPC vehicle animation events, choreography strafe modes, and new tool icons. → <a href="The-Real-State-of-Half-Life-3-Development-in-2026-HLX-Files-19-8Fi44EB4hjk.en.html">summary</a></li>
+<li><strong>2026-07-06 — HLX Files #19.</strong> The broadest 2026 state-of-play: Dark Carnival strings, upscaling beyond FSR, HLX audio/water/NPC/physics/tooling, the whole-floor claim, the abandoned chapter-rebuild explanation, and the inference that HLX was decoupled from the Steam Machine minimum spec. No official statement or date. → <a href="The-Real-State-of-Half-Life-3-Development-in-2026-HLX-Files-19-8Fi44EB4hjk.en.html">summary</a></li>
+<li><strong>2026-09-04 — The Steam Frame Situation is a Nightmare.</strong> Tyler traces the headset from rumoured summer-2025 announcement timing to a November 2025 announcement and an expected September 14, 2026 sale, with no confirmed price. VR developers had a late-July software deadline; review units arrived August 24. Alyx&rsquo;s standalone port is bundled, unrelated to HLX. → <a href="The-Steam-Frame-Situation-is-a-Nightmare-Bx400IBgZVo.en.html">summary</a></li>
+<li><strong>2026-09-14 — Steam Frame price and Alyx performance.</strong> Official US prices: <span class="math inline">\(1,059 (256 GB) and \)</span>1,299 (1 TB); power supply <span class="math inline">\(29, accessory kits \)</span>59/$49. Digital Foundry reports <em>Half-Life: Alyx</em> at native 36 FPS reprojected to 72 on the standalone headset. No HLX date. → <a href="The-Steam-Frame-is-1059-and-HLA-Runs-at-36FPS-Reprojected-to-72-jpvsGr1sQAk.en.html">summary</a></li>
+<li><strong>2026-09-22 — CS2 nav-generation check.</strong> Miro #0300 records a CS2 update function that checks for a specific entity when generating nav. Miro only; after #19, before #20.</li>
+<li><strong>2026-10-21 — Valve says “HLX” out loud.</strong> At the Game Sound Convention in Burbank, a panelist says Deadlock has its own HDR version and “HLX has its own version.” Tyler presents it as the first direct public utterance of the codename. → <a href="Please-Be-Chill-Valve-Said-HLX-Out-Loud-HLX-Files-20-5nR6GfshoYw.en.html">HLX #20 summary</a></li>
+<li><strong>2026-10-22 — HLX Files #20.</strong> The latest datamine pass over CS2 Rush Hour, Deadlock City Never Sleeps and Dota 2 Inside the Trove of Terror: “HLX cover preview,” “HLX Basic Projectile Emitter Helper,” Ranger Trap Helper, flyer flanking AI, threshold tips, gunship bomb drops, cloth/fire rules, precipitation audio, SFM2 Gen Biped. Tyler predicts <strong>no HLX announcement in 2026</strong>. → <a href="Please-Be-Chill-Valve-Said-HLX-Out-Loud-HLX-Files-20-5nR6GfshoYw.en.html">summary</a></li>
+</ul>
+
+<hr>
+
+<h2 id="5-thematic-dossiers">5. Thematic dossiers</h2>
+
+<p>These are cross-video syntheses. Each claim inherits the confidence of its underlying events; “expected to appear in HLX” is Tyler&rsquo;s framing unless stated otherwise.</p>
+
+<h3 id="51-project-identity-and-production-history">5.1 Project identity and production history</h3>
+
+<p><strong>What is solid:</strong> HLX is a real internal codename present in public Source 2 builds since at least October 2020. It was in production before the September 22, 2020 Sandbox builds. The codename became public knowledge on March 25, 2021. A 2020–2023 former-employee résumé describes work on an unannounced title. Valve hired heavily from other studios in 2021–2023 and acqui-hired most of Hopoo Games in 2024.</p>
+
+<p><strong>What is Tyler&rsquo;s identification:</strong> that HLX is <em>Half-Life 3</em>. The supporting pattern is Half-Life-specific: HEV-suit sound references, “offworld,” Xen fauna, feral manhacks, Half-Life-style weapon buckets, a gravity gun, an HEV-suited protagonist, and Half-Life Hammer tooling. None of that is a Valve announcement.</p>
+
+<p><strong>What is secondhand:</strong> external playtesting (Gabe Follower, December 2024), the “entire floor” claim (2026), the trailer-work rumour (2025), and the semi-reboot/chapter-rebuild story. Tyler hedges each.</p>
+
+<p><strong>What changed:</strong> the project is not the 2013–2015 “posthuman” Half-Life 3 or the 2015 Source 2 build. <em>The Final Hours</em> confirms a 2015 Half-Life 3, but Tyler treats HLX as a later project that took shape around the <em>Alyx</em> ending. He also corrects the idea that the 2018 small team in <em>The Final Hours</em> was HLX: that line runs Citadel → Neon Prime → Shadow Line → Deadlock. Separately, his own 2024 voxel-destruction claim (#2/#5) was walked back in #9 and debunked in Ep1.</p>
+
+<p><strong>Current production read:</strong> Tyler&rsquo;s latest position is intensive development/polish, not pre-production. The 2025 announcement window was missed. #19 says the project survived a semi-reboot and that his earlier chapter-rebuild explanation no longer holds; he does not state the replacement claim.</p>
+
+<p><strong>Links:</strong> <a href="The-Ultimate-Half-Life-3-Deep-Dive-Every-Last-Detail-Ep1-cH71Bn8VUAg.en.html">Ep1</a> · <a href="Half-Life-3-The-Rise-Fall-and-Rebirth--rs7LHtODh4.en.html">Rise/Fall</a> · <a href="Half-Life-3-From-Valves-Own-Mouth-Every-Last-Detail-Ep7-WjRHZxbSEHE.en.html">Ep7</a> · <a href="The-Real-State-of-Half-Life-3-Development-in-2026-HLX-Files-19-8Fi44EB4hjk.en.html">#19</a></p>
+
+<h3 id="52-engine-rendering-audio-and-tools">5.2 Engine, rendering, audio and tools</h3>
+
+<p><strong>Shared-engine method.</strong> Valve does not fork Source 2 per title. Features developed for Dota 2, CS2, Deadlock or HLX appear across the others, so patch-diffing one game can expose another project&rsquo;s needs. This is the methodological premise of the whole series; Tyler states it as fact, and the cross-game strings support it.</p>
+
+<p><strong>VData.</strong> A designer-driven data system that lets gameplay values and content definitions change without recompiling code. HLX&rsquo;s weapons, NPCs, crates, crate items, grenades, vehicles, liquids, precipitation and map entities are all described as VData-driven. VData existed by 2020-08-12 and first appeared publicly on 2020-09-04. Its presence is verified; the claim that every listed HLX category uses it is Tyler&rsquo;s reading of the schemas.</p>
+
+<p><strong>Animgraph 2.</strong> The replacement animation system: <code>.vnmgraph</code> graphs, <code>.vnmclip</code> clips, <code>.vnmskel</code> skeletons, <code>.vnmvar</code> variations (later deprecated), bone LOD, additive clips, legacy animevents, and networked efficiency. Deadlock moved its heroes to AG2; CS2 shipped AG2 for viewmodels on 2025-07-29 and, per Miro #0857, uses AG2 for everything from 2026-04-01 with AG1 removed. Ep6 found early HLX AG2 use in nav-link transitions, but HLX-specific AG2 deployment remains inferred.</p>
+
+<p><strong>Rendering.</strong> TAA and upscaling (initially FSR3, later more than FSR), ray-tracing support reported in Source 2 in late 2025, mesh shaders and meshlets, distance fields for AO/shadows/reflections, hair-strand simulation, subpixel anti-aliasing marked HLX-exclusive, GPU-driven particles, volumetric smoke with HLX refraction, dynamic shadow/RTP proxy work, and “only render in effects water pass” flags. The features are observable; which ones ship in HLX is not.</p>
+
+<p><strong>Audio.</strong> Procedural runtime sound generation, sound containers/stacks, a MIDI beat system, GPU-driven Hammer audio, precipitation audio operators that respond to surface and shelter, Speech Graphics lip-sync middleware, vehicle wind/RPM synthesis, and tape-player-style containers. HLX-specific sound containers and a test stack date to 2024-02-07.</p>
+
+<p><strong>Tools.</strong> Hammer helpers named directly for HLX include “HLX cover preview” and “HLX Basic Projectile Emitter Helper.” The same datamine adds Ranger Trap Helper and <code>Wobbler</code>, whose project attribution is not confirmed, plus a projectile/cover/trap toolset, a “Half-Life Hammer” feature set, surface-graph rebuilding, the Fountain screenplay format, Pulse visual scripting, Model Doc additions, and SFM2&rsquo;s “Gen Biped” bone classification. Tyler reads plain-language tooltips and per-category asset icons as public-facing polish.</p>
+
+<p><strong>Save/load and streaming.</strong> A from-scratch save/load rewrite (#11), a new-versus-legacy save-version enum (#14), commentary-system save/load fixes (#18), and work-in-progress level streaming. Miro adds binary KV3 saves with a legacy path and a debug text export (#0387/#0390). The save rewrite is one of the stronger “late production” signals, but it is engine-level.</p>
+
+<p><strong>Links:</strong> <a href="The-New-Technology-of-Half-Life-3-Every-Last-Detail-Ep6-w14ZUG1EKio.en.html">Ep6</a> · <a href="The-Real-State-of-Half-Life-3-Development-in-2026-HLX-Files-19-8Fi44EB4hjk.en.html">#19</a> · <a href="Please-Be-Chill-Valve-Said-HLX-Out-Loud-HLX-Files-20-5nR6GfshoYw.en.html">#20</a> · <a href="So-Many-Friggin-Leaks-Its-Insane-HLX-Files-18-Jd95JQ_oZpM.en.html">#18</a></p>
+
+<h3 id="53-simulation-physics-and-destruction">5.3 Simulation, physics and destruction</h3>
+
+<p><strong>Fire and heat.</strong> Surface attributes carry flash point and heat conductivity. NPCs ignite after enough exposure above their flash point (<code>ai_time_to_ignite</code>, default 0.3). Held objects have ignition temperature and hold-time rules. Fire interacts with oil and other liquid properties. This is a generalized material-reaction system, not a scripted set piece.</p>
+
+<p><strong>Water and liquids.</strong> Source 2 adds buoyancy and drowning, liquid spills that spawn puddles, oil and water liquid types, waterfall helpers, a second water material, and an “only render in effects water pass” flag. HLX-specific liquid-property containers date to 2025-08-18.</p>
+
+<p><strong>Wind and weather.</strong> Fans with three particle types, wind affecting fog/grass/trees/hair/cloth, precipitation moved to VData, precipitation audio that changes with surface and shelter, and asynchronous particle wind simulation.</p>
+
+<p><strong>Physics and destruction.</strong> Multithreaded physics, deformable geometry, ragdoll mass and buoyancy scales, zero-gravity and no-collision attributes, destructible hit groups, destruction-death behavior, radius damage for destructible parts, breakable props that spawn sub-props and contained items, and NPC body-part destruction. Tyler compares the body-part system to <em>Doom Eternal</em> weak points but marks the combat application as inference.</p>
+
+<p><strong>Gravity shifting.</strong> Player and NPC traversal of gravity-bent spaces: walking on ceilings, warping across surfaces, orbiting. Compared to <em>Super Mario Galaxy</em> and <em>Prey</em> (2006). The tech is datamined; combat integration is inferred.</p>
+
+<p><strong>Vehicles.</strong> A modular, VData-driven, physics-based system: multiple passengers, passenger weapons, speed-dependent FOV, tire friction, suspension, wheel drag, surface-dependent handling, rollover/flip recovery, entry/exit rules, hit groups for occupants, and controller assists. Miro adds passenger enter/exit animations, passenger roles, and destructible car parts (#0410–#0544). The first schema leaked in a 2022-06-09 Dota 2 update and was removed in later updates; Miro #1487 says it changed again in November 2022 and March 2023 with <code>CWheeledPhysicsVehicleVData</code>, and Miro #0378 describes a sophisticated system in base FGDs. The “vehicles were deleted” shorthand is therefore too strong: the early accidental exposure was removed, but the system continued to evolve.</p>
+
+<p><strong>Links:</strong> <a href="The-Gameplay-Mechanics-of-Half-Life-3-Every-Last-Detail-Ep2-34uDQ-I7Oec.en.html">Ep2</a> · <a href="The-New-Technology-of-Half-Life-3-Every-Last-Detail-Ep6-w14ZUG1EKio.en.html">Ep6</a> · <a href="17-New-HLX-Leaks-its-Almost-Here-HLX-Files-11-FUj4iMRKGqM.en.html">#11</a> · <a href="Your-Monthly-HL3-Update-HLX-Files-14-htC-u80xs_Q.en.html">#14</a></p>
+
+<h3 id="54-gameplay-weapons-and-world-structure">5.4 Gameplay, weapons and world structure</h3>
+
+<p><strong>HEV suit and gravity gun.</strong> HEV sound effects (legacy pickup, plug detachment, a 1–9 container test) are in the engine; Tyler expects the suit to appear. Gravity-gun-related FGD entries were updated in 2021 and removed later; Tyler treats the gravity gun as likely but not confirmed as a usable weapon. The “Burbank suits” rename in #1 shows Valve actively scrubbing Half-Life names.</p>
+
+<p><strong>Weapons.</strong> Weapons were rewritten around VData. Flags support exhaustible/one-use weapons and weapons whose ammo never refills. Sound events cover primary, secondary, melee and special actions. HUD bucket positions follow a Half-Life-style weapon selector. Tyler explicitly says the one-use flag does <strong>not</strong> mean all HLX weapons are single-use.</p>
+
+<p><strong>World structure.</strong> Tyler rejects open world on technical grounds: Hammer&rsquo;s 16,384-unit walk limit, baked lightmaps as the core lighting model, no traditional global illumination, and the scale of Deadlock/Neon Prime lighting. His description is “open linear,” comparable to <em>Doom</em> 2016&rsquo;s Foundry or open-ended <em>Uncharted 4</em> levels. Procedural spawn volumes and a director-style system may add variation inside those spaces, echoing the cancelled 2013 attempt.</p>
+
+<p><strong>Traversal and interaction.</strong> Physics-object pickup matches Half-Life 2; gravity shifting, vehicles, crouch/crawl states, level streaming, breakable props, and dynamic prop pickup/drop by NPCs round out the movement/interaction picture.</p>
+
+<p><strong>Multiplayer.</strong> Tyler understands HLX as single-player “as far as we understand.” The co-op question is unresolved; the corpus contains no verified multiplayer evidence.</p>
+
+<p><strong>Links:</strong> <a href="The-Gameplay-Mechanics-of-Half-Life-3-Every-Last-Detail-Ep2-34uDQ-I7Oec.en.html">Ep2</a> · <a href="The-Ultimate-Half-Life-3-Deep-Dive-Every-Last-Detail-Ep1-cH71Bn8VUAg.en.html">Ep1</a> · <a href="The-Real-State-of-Half-Life-3-Development-in-2026-HLX-Files-19-8Fi44EB4hjk.en.html">#19</a></p>
+
+<h3 id="55-npc-ai-and-combat">5.5 NPC AI and combat</h3>
+
+<p><strong>Navigation.</strong> NPC nav spaces/grids, moving platforms, gravity-shifted spaces, crawling, expanded movement capabilities, nav-link variants that can reference AG2 graphs, and AI level-of-detail.</p>
+
+<p><strong>Perception and mood.</strong> Mood files and a mood system; expanded sight-and-sound reactions; “AI volumetric events” replacing the older AI sound entity; last-known versus last-seen enemy tracking; deliberate misses; difficulty-scaled damage from all sources.</p>
+
+<p><strong>Damage and body parts.</strong> Four additional flinch/damage types: burn, sonic primary, sonic secondary and Newton. Destructible body parts generalize <em>Alyx</em>&rsquo;s limited limb destruction into a full weak-point/dismemberment system, with hit-group damage and radius damage for parts. Tyler does not know which weapons use the new damage types.</p>
+
+<p><strong>Abilities, schedules and squads.</strong> A base NPC VData schema, abilities with proximity/range/cooldown/priority constraints, ability sound maps, NPC schedules, a rewritten squad system with squad slots, ally health regeneration, dynamic throwing/catching, and dropping/picking up/destroying abilities. Tyler compares the schedule ambition to <em>Red Dead Redemption 2</em> but cannot confirm the task contents.</p>
+
+<p><strong>Tactical behaviours.</strong> Designer-placed Combine Charger shield deployments (absent in <em>Alyx</em>), dynamic sniper positions, signal/fallback hint nodes, NPC-run holdouts, dynamic physics-prop pickup/drop-off, a “flyer” flanking AI, a “threshold” tactical tip, and the “HLX cover preview” system with distance, peek, narrowness and model-size parameters. The cover system is a modernization of Half-Life 2&rsquo;s node-based cover.</p>
+
+<p><strong>Caveat.</strong> Most of this is schema and tooling. It shows what the engine can express, not what shipped encounters use.</p>
+
+<p><strong>Links:</strong> <a href="The-NPC-Intelligence-of-Half-Life-3-Every-Last-Detail-Ep5-FT-fH7ZVqKo.en.html">Ep5</a> · <a href="The-Enemies-and-Locations-of-Half-Life-3-Every-Last-Detail-Ep4-Q9ug2VyTPlo.en.html">Ep4</a> · <a href="Please-Be-Chill-Valve-Said-HLX-Out-Loud-HLX-Files-20-5nR6GfshoYw.en.html">#20</a></p>
+
+<h3 id="56-enemies-factions-and-locations-spoilers">5.6 Enemies, factions and locations (spoilers)</h3>
+
+<p>This is the weakest evidentiary layer: names come from strings, icons, hint nodes and entity entries, not from models, maps or trailers. Treat the table as a <strong>candidate roster</strong>, not a confirmed bestiary.</p>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type / role</th>
+<th>Evidence</th>
+<th>Confidence</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Houndeye</td>
+<td>Returning Xen fauna</td>
+<td>String and icon; later renamed “NPC monster”</td>
+<td>Mixed</td>
+</tr>
+
+<tr>
+<td>Xen Gorilla</td>
+<td>Xen creature</td>
+<td>Strings; removed after Tyler&rsquo;s first video</td>
+<td>Mixed</td>
+</tr>
+
+<tr>
+<td>Xen Jellyfish</td>
+<td>Xen creature</td>
+<td>String/icon</td>
+<td>Mixed</td>
+</tr>
+
+<tr>
+<td>Xen Swooper</td>
+<td>Xen flyer</td>
+<td>String/icon</td>
+<td>Mixed</td>
+</tr>
+
+<tr>
+<td>Feral Manhack</td>
+<td>Rogue Combine machine</td>
+<td>Strings across Dota/CS2/Deadlock</td>
+<td>Mixed</td>
+</tr>
+
+<tr>
+<td>Kush Child</td>
+<td>Unknown creature that can find water sources</td>
+<td>String/AI task</td>
+<td>Mixed</td>
+</tr>
+
+<tr>
+<td>Howler</td>
+<td>Creature that throws objects and changes target while howling</td>
+<td>String/AI behavior</td>
+<td>Mixed</td>
+</tr>
+
+<tr>
+<td>Flitter</td>
+<td>Burrow-dwelling creature</td>
+<td>String; burrows in holes or pipes, compared to Antlions</td>
+<td>Mixed</td>
+</tr>
+
+<tr>
+<td>Harvest Man Baby</td>
+<td>Juvenile creature known only to chirp</td>
+<td>Sound/entity reference</td>
+<td>Fact for the reference</td>
+</tr>
+
+<tr>
+<td>Combine Charger</td>
+<td>Shield-deploying Combine unit</td>
+<td>Hint-node placement; absent in <em>Alyx</em></td>
+<td>Mixed</td>
+</tr>
+
+<tr>
+<td>Combine Sniper</td>
+<td>Emplaced/dynamic sniper</td>
+<td>Multiple firing positions in hint nodes</td>
+<td>Mixed</td>
+</tr>
+
+<tr>
+<td>Penta tank</td>
+<td>Off-world five-legged tank/sentry platform</td>
+<td>Deadlock build string; turret role inferred</td>
+<td>Mixed</td>
+</tr>
+
+<tr>
+<td>Off-world workers</td>
+<td>Combine labour force</td>
+<td>String</td>
+<td>Mixed</td>
+</tr>
+
+<tr>
+<td>Off-World Storks</td>
+<td>Restock/deployment units</td>
+<td>String</td>
+<td>Mixed</td>
+</tr>
+
+<tr>
+<td>“Fly guy”</td>
+<td>Unknown flyer, suspected jet-packed Combine Officer</td>
+<td>String/AI class; identity inferred</td>
+<td>Speculation</td>
+</tr>
+
+<tr>
+<td>Antlion</td>
+<td>Returning Xen fauna</td>
+<td>HLX thumper entity entries, later renamed</td>
+<td>Mixed</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Locations.</strong> Xen, the Combine off-world, and a foundry are framed as likely visitable places. The evidence is environmental/entity naming, not map files. Tyler marks all three location conclusions as speculative. The foundry may connect to the cut cremator-factory content, but that is inference.</p>
+
+<p><strong>Cut/renamed content.</strong> Valve removed the Xen Gorilla string and renamed Houndeye and HEV suit references after Tyler&rsquo;s first reports. That is evidence of scrubbing, not necessarily cancellation.</p>
+
+<p><strong>Links:</strong> <a href="The-Enemies-and-Locations-of-Half-Life-3-Every-Last-Detail-Ep4-Q9ug2VyTPlo.en.html">Ep4</a> · <a href="The-Ultimate-Half-Life-3-Deep-Dive-Every-Last-Detail-Ep1-cH71Bn8VUAg.en.html">Ep1</a> · <a href="The-NPC-Intelligence-of-Half-Life-3-Every-Last-Detail-Ep5-FT-fH7ZVqKo.en.html">Ep5</a></p>
+
+<h3 id="57-story-and-valves-public-statements">5.7 Story and Valve&rsquo;s public statements</h3>
+
+<p><strong>The post-<em>Alyx</em> setup.</strong> <em>The Final Hours</em> documents the January 2019 decision to have the G-Man save Eli at the end of Episode Two. <em>Alyx</em>&rsquo;s post-credits scene shows Eli alive, Alyx gone, and Gordon receiving the crowbar. Sean Vanaman and Erik Wolpaw describe it as a deliberate promise of more. That is verified scene content. <strong>What happens next is unknown.</strong></p>
+
+<p><strong>What Valve said, 2020–2024:</strong></p>
+
+<ul>
+<li>Robin Walker (March 2020): a Half-Life 3 team would have to answer “what is the big technological leap,” and “I don&rsquo;t think there&rsquo;s going to be another 13 years until the next one.”</li>
+<li>Erik Wolpaw (March 2020): “I would love to do more,” and later “I&rsquo;m ready to sign up for the next one.”</li>
+<li>Gabe Newell (October 2020): the <em>Alyx</em> team is “incredibly fired up.”</li>
+<li>Gabe Newell (July 2021): the <em>Alyx</em> ending is “the right progression.”</li>
+<li>Greg Coomer (March 2022): “There are multiple games in development right now at Valve.”</li>
+<li>Greg Coomer (August 2022): “We love that world and we want to continue to explore the Half-Life universe.”</li>
+<li>Mike Morasky (September 2024): a recent project he “can&rsquo;t talk about.”</li>
+<li>Noclip&rsquo;s 2024 Half-Life 2 documentary: Gabe Newell frames Half-Life as a vehicle for innovation; Brian Jacobson discusses the team&rsquo;s willingness to rebuild.</li>
+</ul>
+
+<p>These quotes establish intent and a live Half-Life universe. They do <strong>not</strong> name HLX, confirm a sequel, or date it. Morasky&rsquo;s project is unidentified.</p>
+
+<p><strong>What is not established:</strong> whether HLX continues directly from the <em>Alyx</em> ending, whether Alyx is rescued, Gordon&rsquo;s role, the G-Man&rsquo;s goal, or any chapter structure. Fan scenarios in the corpus — an adult Alyx and Gordon&rsquo;s child, or an arctic Borealis search — are speculation and should not be repeated as leaks.</p>
+
+<p><strong>Barney Calhoun.</strong> Tyler&rsquo;s only recurring story claim is that Barney is “likely a part of it” (#9, 2025-02-26), stated while recapping what HLX “appears” to be; he cites no model, voice line, script, or casting evidence. In #8 (2025-01-31) he closed with a rhetorical aside that the player would “probably be walking around part of Half-Life 3 with Barney Calhoun as your sidekick because Alyx Vance is captured,” offered with no supporting detail and never repeated. Treat the first as low-confidence speculation and the second as an unelaborated aside, not a leak. No Barney-named model, VO file, or script is reported anywhere in the HLX material summarized here, but that is weak negative evidence only: Valve scrubbed HEV suit strings in the same period, so missing names prove little.</p>
+
+<p><strong>Links:</strong> <a href="Half-Life-3-From-Valves-Own-Mouth-Every-Last-Detail-Ep7-WjRHZxbSEHE.en.html">Ep7</a> · <a href="The-Ultimate-Half-Life-3-Deep-Dive-Every-Last-Detail-Ep1-cH71Bn8VUAg.en.html">Ep1</a> · <a href="Half-Life-3-The-Rise-Fall-and-Rebirth--rs7LHtODh4.en.html">Rise/Fall</a></p>
+
+<h3 id="58-release-timing-and-marketing">5.8 Release timing and marketing</h3>
+
+<p>There is <strong>no official release date, window, or announcement date</strong> anywhere in the corpus.</p>
+
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Prediction or signal</th>
+<th>Outcome</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>2024-08-04</td>
+<td>Development pace suggests completion is approaching.</td>
+<td>No announcement in 2024.</td>
+</tr>
+
+<tr>
+<td>2025-01-01</td>
+<td>Announcement by end-2025 if playtesting goes smoothly; 2026 if rework is needed.</td>
+<td>2025 passed.</td>
+</tr>
+
+<tr>
+<td>2025-02-26</td>
+<td>Production believed near completion; announcement possible in 2025.</td>
+<td>2025 passed.</td>
+</tr>
+
+<tr>
+<td>2025-05-28</td>
+<td>Timing unknown; could be “any day or a year from now.”</td>
+<td>Unfalsifiable at the time.</td>
+</tr>
+
+<tr>
+<td>2025-07-31</td>
+<td>No known schedule; Tyler stops answering timing questions.</td>
+<td>—</td>
+</tr>
+
+<tr>
+<td>2025-09-03</td>
+<td>Release date remains unknown after QuakeCon 2025.</td>
+<td>—</td>
+</tr>
+
+<tr>
+<td>2025-11-18</td>
+<td>Gabe Follower says Valve&rsquo;s intent to announce in 2025 is unchanged; Tyler allows a slip to January/February.</td>
+<td>2025 passed.</td>
+</tr>
+
+<tr>
+<td>2026-02-02</td>
+<td>2025 deadlines missed; <em>Raising the Bar</em> reprint and Shapiro tease did not materialize.</td>
+<td>Confirmed miss.</td>
+</tr>
+
+<tr>
+<td>2026-07-06</td>
+<td>Insiders expected H2 2025 (October, then November); Tyler infers a decision to delay. No new date.</td>
+<td>Unverified insider account.</td>
+</tr>
+
+<tr>
+<td>2026-10-22</td>
+<td><strong>No HLX announcement in 2026.</strong></td>
+<td>Tyler&rsquo;s explicit prediction.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Marketing/hoax history.</strong> The “ARG 197” theory was rejected in #8. The 4chan concept art was judged AI-generated (#15/#16). The Mike Shapiro “Valve opening” Reddit story was called invented (#15). The circulating 18 November announcement date was false (#16). Game Awards 2025 did not host a reveal (#15). The <em>Raising the Bar</em> reprint was treated as a possible timing signal, then did not materialize (#15/#17). The Dbrand Half-Life 3 hint drew a reported Valve reaction but no announcement (#19). Tyler&rsquo;s consistent rule: only a Valve announcement counts.</p>
+
+<p><strong>Links:</strong> <a href="G-Man-Hints-at-Unexpected-Surprises-in-2025-HLX-Files-7-TyrlxYsMHYg.en.html">#7</a> · <a href="The-Final-Stages-of-Production-Are-Here-HLX-Files-9-_lGdUBMdQ94.en.html">#9</a> · <a href="The-Final-Episode-HOPE-WE-DONT-KNOW-A-DATE-HOPE-HLX-Files-16-E09c6YSfWWc.en.html">#16</a> · <a href="The-Real-State-of-Half-Life-3-Development-in-2026-HLX-Files-19-8Fi44EB4hjk.en.html">#19</a> · <a href="Please-Be-Chill-Valve-Said-HLX-Out-Loud-HLX-Files-20-5nR6GfshoYw.en.html">#20</a></p>
+
+<h3 id="59-hardware-and-platform-context">5.9 Hardware and platform context</h3>
+
+<p>This is not HLX evidence, but it shapes the release environment and repeatedly intersects the coverage.</p>
+
+<ul>
+<li><strong>2024-12-20:</strong> “Fremont” datamine points to a SteamOS living-room console with an AMD “Lilac” APU, prototype board F7F, HDMI-A and HDMI CEC. Tyler&rsquo;s console conclusion is an assumption; the identifiers are factual.</li>
+<li><strong>2025-11-12:</strong> Valve announces Steam Frame, Steam Machine and Steam Controller for 2026. The Steam Frame team says HLX is <strong>not VR</strong>.</li>
+<li><strong>2026-02–03:</strong> RAM/storage shortages and tariffs push pre-orders from “early 2026” to a vague “2026.” GDC 2026 reaffirms all three products for 2026.</li>
+<li><strong>2026-06:</strong> Steam client/SteamVR datamines, Canadian radio certification, native Android VR builds, and customs imports suggest imminent pre-orders. Tyler expects early-July sales; the actual timing slips again.</li>
+<li><strong>2026-09-04:</strong> Steam Frame expected on sale September 14, with no confirmed price. Review units arrive August 24; VR developers had a late-July software deadline.</li>
+<li><strong>2026-09-14:</strong> Official US prices: <strong>$1,059 (256 GB)</strong> and <strong>$1,299 (1 TB)</strong>; power supply <span class="math inline">\(29; accessory kits \)</span>59/$49. <em>Half-Life: Alyx</em> runs at native 36 FPS reprojected to 72 on the standalone headset and is bundled free. No release date for the port; reviewers already have it.</li>
+</ul>
+
+<p><strong>HLX-specific platform conclusions:</strong> none confirmed. Tyler treats HLX as a PC/Steam title and once expected it to be the Steam Machine&rsquo;s flagship, but Ep1 labels that “pattern-based expectation rather than evidence.” #19 theorizes that Valve decoupled HLX from the Steam Machine minimum spec because the machine is weaker than a base PS5 and will miss its saturation target. That is speculation.</p>
+
+<p><strong>Links:</strong> <a href="Valves-Codename-Fremont-a-Console-Explored-and-Explained-HLX-Files-Gaiden-u0qd-T1Z8fI.en.html">Gaiden</a> · <a href="The-Valve-Hardware-Nightmare-Gaben-vs-the-World-tBWfvvsDSxQ.en.html">Hardware Nightmare</a> · <a href="Steam-Hardware-Is-Weeks-Away-Heres-Everything-zs9LdkbOzHg.en.html">Steam Hardware</a> · <a href="The-Steam-Frame-Situation-is-a-Nightmare-Bx400IBgZVo.en.html">Frame Nightmare</a> · <a href="The-Steam-Frame-is-1059-and-HLA-Runs-at-36FPS-Reprojected-to-72-jpvsGr1sQAk.en.html">Frame Price</a></p>
+
+<h3 id="510-casting-hiring-and-business-context">5.10 Casting, hiring and business context</h3>
+
+<ul>
+<li><strong>Casting codenames.</strong> Valve uses random cover names for casting. “Project White Sands” is a <strong>Deadlock</strong> voice-actor codename, not HLX, per Ep1 and Miro #0849/#0850. Tyler compares it to “Hot Dog” (Left 4 Dead VR/3) and “jameroquai” (<em>Alyx</em>); those comparisons are unverified.</li>
+<li><strong>Résumés.</strong> A former Valve employee&rsquo;s résumé describes 2020–2023 level design, lighting, combat encounters and puzzles on an unannounced title. Ep7 adds anonymized post-2020 résumés covering level design, lighting, prototypes, AI, player mechanics, puzzles, and physics-engine work; one veteran returned after 2004–2017. These are LinkedIn/resumé claims, not Valve confirmations.</li>
+<li><strong>Hiring.</strong> Valve hired heavily from id Software, Sucker Punch, MachineGames, Insomniac and Naughty Dog in 2021–2023 (Mixed), and acqui-hired most of Hopoo Games in 2024 after cancelling its “Snail” project (Fact for the acqui-hire; HLX assignment is speculation).</li>
+<li><strong>Production signals.</strong> External playtests (December 2024, secondhand); a “very late stage” claim (January 2025); the “entire floor” claim and semi-reboot survival (July 2026); a reported commit-number surge and AI use at Valve since 2024 (#20). None is an official milestone.</li>
+<li><strong>Privacy.</strong> The original White Sands résumé and unnamed employee profiles are not reproduced here, deliberately. Public credited performers are named only where the published source names them; do not identify private individuals from résumés or casting documents.</li>
+</ul>
+
+<p><strong>Links:</strong> <a href="The-Half-Life-3-Leaks-Weve-Been-Waiting-For-HLX-Files-0-36gF6eiCsqU.en.html">HLX #0</a> · <a href="The-Ultimate-Half-Life-3-Deep-Dive-Every-Last-Detail-Ep1-cH71Bn8VUAg.en.html">Ep1</a> · <a href="Half-Life-3-From-Valves-Own-Mouth-Every-Last-Detail-Ep7-WjRHZxbSEHE.en.html">Ep7</a> · <a href="Half-Life-3-Valve-and-Risk-of-Rain-2-The-Future-HLX-Files-2-bv0sMeb2Vp4.en.html">#2</a></p>
+
+<hr>
+
+<h2 id="6-claim-ledger-corrected-superseded-and-unresolved">6. Claim ledger: corrected, superseded and unresolved</h2>
+
+<p>This table is the quickest way to avoid repeating an outdated claim. “Earlier” is not necessarily wrong at the time; “current” is the latest iteration in the corpus. The full evidence trail for each ID is in <a href="claims.html"><code>claims.md</code></a>; the two files share the same C-IDs.</p>
+
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Claim</th>
+<th>Earlier position</th>
+<th>Current position</th>
+<th>Verdict</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>C01</td>
+<td><strong>Project White Sands</strong></td>
+<td>HLX Files #0 (2024-08-04) treats it as Valve&rsquo;s casting codename for HLX.</td>
+<td>Ep1 (2026-01-29) and Miro #0849/#0850: a <strong>Deadlock</strong> voice-actor codename, confirmed by the actors.</td>
+<td><strong>Corrected.</strong> Do not use White Sands as HLX evidence.</td>
+</tr>
+
+<tr>
+<td>C02</td>
+<td><strong>HLX is only an engine feature or save format</strong></td>
+<td>Early community argument; #0 explicitly rejects it.</td>
+<td>Full non-VR Half-Life game, in Tyler&rsquo;s reading.</td>
+<td><strong>Superseded by Tyler.</strong> Still an inference, not official.</td>
+</tr>
+
+<tr>
+<td>C03</td>
+<td><strong>HLX is open world</strong></td>
+<td>A public claim attributed to Gabe Follower; #2 (2024-09-12) already rejected it.</td>
+<td>“Open linear”: wide spaces, procedural activities, not a seamless open world. Ep1 adds the 16,384-unit walk limit and baked-lightmap argument.</td>
+<td><strong>Debunked.</strong> Tyler rejected it within five weeks of the first leaks, not years later.</td>
+</tr>
+
+<tr>
+<td>C04</td>
+<td><strong>Voxel destruction / voxel geometry</strong></td>
+<td>Tyler claimed it directly: #2 (2024-09-12) says HLX environments are voxel-based and destructible; #5 (2024-11-22) ties it to the Arty files and says HLX “is going to have voxel based destruction in some form.”</td>
+<td>#9 (2025-02-26) walks it back: the voxel-destruction systems “appear to be for a different project.” Ep1 (2026-01-29) says no voxel geometry or Hammer support; <code>create_iso_surface</code> is absent from current builds. Arty was a separate cancelled voxel project.</td>
+<td><strong>Walked back, then debunked.</strong> This was Tyler&rsquo;s own claim, not only community speculation.</td>
+</tr>
+
+<tr>
+<td>C05</td>
+<td><strong>HLX is VR</strong></td>
+<td>Early “VR sequel to Alyx” hypothesis, listed under “Debunked” in Miro #0809.</td>
+<td>Non-VR. The Steam Frame team said so on 2025-11-12; design (vehicles, gravity shifting) and the absence of post-<em>Alyx</em> VR work support it.</td>
+<td><strong>Settled by official statement.</strong></td>
+</tr>
+
+<tr>
+<td>C06</td>
+<td><strong>Day/night cycle</strong></td>
+<td>Source 2 day/night code was attributed to HLX.</td>
+<td>The code belongs to Dota 2; not HLX.</td>
+<td><strong>Debunked.</strong></td>
+</tr>
+
+<tr>
+<td>C07</td>
+<td><strong>2025 announcement / release</strong></td>
+<td>#7, #9 and #16 expected an announcement by end-2025, with a possible slip.</td>
+<td>2025 passed. #19 describes insider expectations for October, then November, and a delay. #20 predicts no 2026 announcement.</td>
+<td><strong>Superseded.</strong> No new official date.</td>
+</tr>
+
+<tr>
+<td>C08</td>
+<td><strong>Vehicle entities were deleted</strong></td>
+<td>Ep2: the June 9, 2022 vehicle schema and related entities were deleted after discovery.</td>
+<td>Miro #1486 confirms the early schema was removed in following major updates, but #1487 records further changes in November 2022 and March 2023 (<code>CWheeledPhysicsVehicleVData</code>), and #0378 describes a full vehicle system in base FGDs.</td>
+<td><strong>Nuanced.</strong> The early accidental exposure was removed; the vehicle system evolved.</td>
+</tr>
+
+<tr>
+<td>C09</td>
+<td><strong>Animgraph 2 in CS2</strong></td>
+<td>Ep6 (2026-04-16): AG2 shipped for CS2 viewmodels on 2025-07-29; player models were “planned,” and it was unknown whether they had shipped.</td>
+<td>Miro #0857: CS2 uses AG2 for everything from 2026-04-01; AG1 is completely removed.</td>
+<td><strong>Updated by later data.</strong> Not a contradiction.</td>
+</tr>
+
+<tr>
+<td>C10</td>
+<td>*<strong>The Final Hours*&rsquo; 2018 small team was HLX</strong></td>
+<td>A common reading of the book&rsquo;s “small team” passage.</td>
+<td>Ep1: that team was Citadel, the lineage that became Neon Prime → Shadow Line → Deadlock.</td>
+<td><strong>Corrected by Tyler; codename chain needs follow-up.</strong> HLX is later.</td>
+</tr>
+
+<tr>
+<td>C11</td>
+<td><strong>A chapter was being rebuilt</strong></td>
+<td>Tyler&rsquo;s earlier explanation of the semi-reboot.</td>
+<td>#19: he no longer believes that explanation, based on unnamed sources, and declines to state the new claim.</td>
+<td><strong>Retracted by Tyler; replacement unknown.</strong></td>
+</tr>
+
+<tr>
+<td>C12</td>
+<td><strong>HLX started in late 2019 vs. greenlit around the <em>Alyx</em> ending</strong></td>
+<td>Miro #1182: “started taking shape in late 2019.” Ep1: greenlit around completion of <em>Alyx</em>&rsquo;s ending.</td>
+<td>Both place the origin in the late-2019 to early-2020 window; neither is a formal greenlight date.</td>
+<td><strong>Unresolved, probably compatible.</strong></td>
+</tr>
+
+<tr>
+<td>C13</td>
+<td><strong>VData work began in late 2020</strong></td>
+<td>Miro #0891&rsquo;s sentence says work began in late 2020 and first references were September 5, 2020.</td>
+<td>Miro #1178 dates the first public reference to 2020-09-04 18:42 UTC; #0010/#1189 date the assettype image to 2020-08-12. VData therefore existed by August 12.</td>
+<td><strong>Miro note error.</strong> Use “existed by 2020-08-12; first public reference 2020-09-04.”</td>
+</tr>
+
+<tr>
+<td>C14</td>
+<td><strong>HLX is Half-Life 3</strong></td>
+<td>Tyler&rsquo;s identification from 2024 onward.</td>
+<td>Still Tyler&rsquo;s identification. Valve has never confirmed it.</td>
+<td><strong>Unconfirmed.</strong> The strongest open claim.</td>
+</tr>
+
+<tr>
+<td>C15</td>
+<td><strong>The 4chan art, Shapiro “Valve opening” story, and ARG 197</strong></td>
+<td>Circulated as possible HLX clues.</td>
+<td>AI-generated art (#15/#16); invented story (#15); no Valve ARG (#8).</td>
+<td><strong>Debunked.</strong></td>
+</tr>
+
+<tr>
+<td>C16</td>
+<td><strong>The <em>Raising the Bar</em> reprint is a timing signal</strong></td>
+<td>#15 speculated that a reprint was timed to Half-Life hype.</td>
+<td>#17: the reprint did not materialize in the expected window.</td>
+<td><strong>Superseded as a signal.</strong></td>
+</tr>
+
+<tr>
+<td>C17</td>
+<td><strong>HLX is the Steam Machine&rsquo;s flagship</strong></td>
+<td>Ep1 describes the pairing as a pattern-based expectation.</td>
+<td>#19 instead theorizes that HLX was decoupled from the Steam Machine minimum spec.</td>
+<td><strong>Speculation both ways.</strong> No platform announcement.</td>
+</tr>
+
+<tr>
+<td>C18</td>
+<td><strong>HEV suit strings</strong></td>
+<td>#0 reported HEV suit strings; #1 says Valve renamed the HLX strings to “Burbank suits.” #10 records a separate Deadlock rename.</td>
+<td>Ep2 still finds legacy HEV sound references and expects the suit.</td>
+<td><strong>Nuanced.</strong> Two renames, not one. The suit is likely; string evidence is unstable.</td>
+</tr>
+
+<tr>
+<td>C19</td>
+<td><strong>Barney Calhoun&rsquo;s role</strong></td>
+<td>#8 (2025-01-31) ends with an aside that Barney will be the sidekick “because Alyx Vance is captured.”</td>
+<td>#9 (2025-02-26) reduces it to “Barney Calhoun is likely a part of it,” with no cited artifact.</td>
+<td><strong>Speculation, downgraded.</strong> No model, voice line, or script evidence has been shown.</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h2 id="7-miro-cross-check">7. Miro cross-check</h2>
+
+<p><strong>Source:</strong> 1,920 rows from the <a href="https://miro.com/app/board/uXjVINqBTwM=/">Miro research board</a>, summarized in <a href="miro-report.html"><code>miro-report.md</code></a>.</p>
+
+<p><strong>What the board contains:</strong> 1,078 notes, 713 labels, 63 dated notes, 35 file paths, 24 provenance notes, and a handful of date/number and path/fragment items. Top keyword clusters are AI (205), NPC (167), vehicle (144), VData (105), animation (103), HLX (65), Deadlock (63), physics (59), sound (48), entities (44), nav (42), weapons (40), shaders (38), and particles (32).</p>
+
+<p><strong>Important limitation:</strong> the Miro board is a research mural, not an independent source. Many notes are Tyler&rsquo;s/community evidence boards; some are later than the videos; image metadata can be wrong or ambiguous. It is best used to <strong>corroborate, expand, and date-check</strong>, not to “prove” a claim.</p>
+
+<h3 id="71-where-miro-agrees-with-the-videos">7.1 Where Miro agrees with the videos</h3>
+
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Miro record</th>
+<th>Video record</th>
+<th>Result</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>First public HLX reference</td>
+<td>#1231: Artifact Foundry update, 2020-10-09 20:57:04 UTC, renames <code>box_creature_model.vmdl</code> to <code>box_creature_model_hlx.vanmgrph</code>.</td>
+<td>Ep1: same update, same date, same interpretation.</td>
+<td><strong>Exact agreement.</strong></td>
+</tr>
+
+<tr>
+<td>White Sands</td>
+<td>#0849/#0850: White Sands is a Deadlock codename used for voice actors, despite Deadlock also using “Citadel” and “Project8.”</td>
+<td>Ep1: same correction; #0 had linked it to HLX.</td>
+<td><strong>Miro supports the later correction.</strong></td>
+</tr>
+
+<tr>
+<td>First public VData</td>
+<td>#1178: initial VData in the 2020-09-04 18:42:33 UTC Dota 2 update.</td>
+<td>Ep1: first public reference 2020-09-04; VData existed by 2020-08-12.</td>
+<td><strong>Agreement on the public date.</strong></td>
+</tr>
+
+<tr>
+<td>Project start</td>
+<td>#1182: HLX started taking shape in late 2019, while <em>Alyx</em>&rsquo;s ending was being finished.</td>
+<td>Ep1: greenlit around completion of the <em>Alyx</em> ending; in production before 2020-09-22.</td>
+<td><strong>Compatible; exact date unresolved.</strong></td>
+</tr>
+
+<tr>
+<td>HEV suit</td>
+<td>#0381/#0398: HEV suit sound references added 2024-04-18, including “legacy” sounds.</td>
+<td>Ep2: HEV sound effects, legacy labeling, December 2024 pickup sound.</td>
+<td><strong>Agreement in substance.</strong></td>
+</tr>
+
+<tr>
+<td>Water</td>
+<td>#0377: Source 2 supports buoyancy and drowning; water in CS2/Dota is only a shader.</td>
+<td>Ep2: buoyancy, drowning, spills, waterfall helpers.</td>
+<td><strong>Agreement.</strong></td>
+</tr>
+
+<tr>
+<td>Vehicles</td>
+<td>#0378: sophisticated VData/physics vehicle system in base FGDs; #0410–#0544: passengers, roles, animations, destructible parts, suspension.</td>
+<td>Ep2: modular vehicle system, passengers, hit groups, rollover, assists.</td>
+<td><strong>Miro expands the detail.</strong></td>
+</tr>
+
+<tr>
+<td>Animgraph 2</td>
+<td>#0855–#0857: AG2 replaces AG1; Deadlock all heroes; CS2 all systems from 2026-04-01.</td>
+<td>Ep6: AG2 architecture and shipping timeline; #17: AG2 adoption in refactors.</td>
+<td><strong>Agreement; Miro is later.</strong></td>
+</tr>
+
+<tr>
+<td>HLX tooling</td>
+<td>#1228: unknown HLX reference in Model Doc&rsquo;s AG2 Graph Creator.</td>
+<td>#20: HLX-named Hammer helpers.</td>
+<td><strong>Corroboration.</strong></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="72-discrepancies-and-nuances">7.2 Discrepancies and nuances</h3>
+
+<table>
+<thead>
+<tr>
+<th>Issue</th>
+<th>What Miro says</th>
+<th>What the videos say</th>
+<th>Resolution</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong>VData chronology</strong></td>
+<td>#0891: “Work on VData begun in late 2020. First references … Sep 5 2020.” #1178: first public reference 2020-09-04 18:42 UTC. #1189: likely earlier than September 5 because the assettype image is dated 2020-08-12.</td>
+<td>Ep1: VData existed before 2020-08-12; first public reference 2020-09-04.</td>
+<td>The “late 2020” phrase is internally inconsistent with its own dates. The September <sup>4</sup>&frasl;<sub>5</sub> difference is most likely a UTC-versus-local-date difference; #1178 supplies the precise 2020-09-04 18:42:33 UTC timestamp. <strong>Use: existed by 2020-08-12; first public reference 2020-09-04 UTC.</strong></td>
+</tr>
+
+<tr>
+<td><strong>Vehicle lifecycle</strong></td>
+<td>#1486: vehicle schemas and a related entity added 2022-06-09, removed in following major updates, “likely a mistake.” #1487: schemas changed again 2022-11-04 and 2023-03-13, adding <code>CWheeledPhysicsVehicleVData</code>. #0378: a sophisticated vehicle system is in base FGDs.</td>
+<td>Ep2: the June 2022 schema was added, then vehicle-related entities were deleted; the system is extensive.</td>
+<td><strong>Both are right about different layers.</strong> The early Dota 2 exposure was removed; the schema continued to evolve. Avoid “vehicles were cut.”</td>
+</tr>
+
+<tr>
+<td><strong>Animgraph 2 in CS2</strong></td>
+<td>#0857: CS2 uses AG2 for everything from 2026-04-01; AG1 removed.</td>
+<td>Ep6 (recorded before that update): CS2 viewmodels on 2025-07-29; player models “planned.”</td>
+<td><strong>Later data resolves an open question.</strong> Not a contradiction.</td>
+</tr>
+
+<tr>
+<td><strong>HLX start date</strong></td>
+<td>#1182: late 2019.</td>
+<td>Ep1: greenlit around the <em>Alyx</em> ending (around the March 2020 release), but in production before 2020-09-22.</td>
+<td><strong>Compatible if “taking shape” precedes greenlight.</strong> No artifact dates the decision.</td>
+</tr>
+
+<tr>
+<td><strong>White Sands</strong></td>
+<td>#0849/#0850: Deadlock.</td>
+<td>#0: HLX; Ep1: Deadlock.</td>
+<td><strong>#0 is the outdated iteration.</strong> Miro and Ep1 agree.</td>
+</tr>
+
+<tr>
+<td><strong>“HLX is a VR sequel to Alyx”</strong></td>
+<td>#0809 preserves the hypothesis, apparently as a note to debunk.</td>
+<td>#1, Ep1, and the 2025-11-12 Steam Frame statement reject VR.</td>
+<td><strong>Stale hypothesis; do not use.</strong></td>
+</tr>
+
+<tr>
+<td><strong>Miro date metadata</strong></td>
+<td>Several notes rely on image metadata (e.g., 2020-08-12, 2022-02-01, 2023-07-11).</td>
+<td>Videos often give only a public patch date.</td>
+<td><strong>Treat metadata dates as no-later-than creation hints, not release dates.</strong></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="73-miro-only-details-worth-carrying-forward">7.3 Miro-only details worth carrying forward</h3>
+
+<p>These do not appear in the 31 video summaries (or appear only in passing) and are flagged as Miro-sourced:</p>
+
+<ul>
+<li><strong>Vehicle passenger detail:</strong> passenger roles, allowed-passenger lists, enter/exit animations, <code>PassengerEntered</code>/<code>PassengerExited</code> outputs, procedural vehicle sounds, destructible car parts, suspension/wheel-drag parameters (#0410–#0544).</li>
+<li><strong>Vehicle modifier states:</strong> <code>MODIFIER_STATE_ENTERING_VEHICLE</code> and <code>EXITING_VEHICLE</code> added September–October 2024, explicitly “not meant for Deadlock” because Deadlock has no vehicles (#0188).</li>
+<li><strong>Weapon/ammo detail:</strong> reserve ammo treated as clips in CS2 from 2026-03-19 (#0438).</li>
+<li><strong>Audio detail:</strong> a tape-player sound container added 2025-11-10 (#1041).</li>
+<li><strong>Rendering detail:</strong> <code>VS_MS_RTX</code> mesh-shader/RTX path in Deadlock from 2025-05-09 (#0992).</li>
+<li><strong>Nav detail:</strong> a CS2 function that checks a specific entity during nav generation, 2026-09-22 (#0300).</li>
+<li><strong>Engine cadence:</strong> the latest Source 2 engine update at the time of the board&rsquo;s last edit was Dota 2 “Dark Carnival,” 2026-06-26 19:55:51 UTC (#0083).</li>
+<li><strong>AG2 nav-link variants:</strong> <code>CNavLinkMovementVData</code> can reference AG2 graphs; AG2 has been an HLX concept since 2020 (#0213, #0867).</li>
+</ul>
+
+<p><strong>Bottom line:</strong> Miro strengthens the technical chronology and supplies more granular vehicle/audio/rendering detail, but it does not independently confirm HLX = Half-Life 3 or a release date. Its most useful correction is the White Sands/Deadlock identification; its most important internal inconsistency is the VData date wording.</p>
+
+<hr>
+
+<h2 id="8-verification-audit-and-open-questions">8. Verification audit and open questions</h2>
+
+<h3 id="81-verification-counts">8.1 Verification counts</h3>
+
+<p>Every event in <code>events.tsv</code> carries a verification field. Across 610 events:</p>
+
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th align="right">Count</th>
+<th>Meaning</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Verified</td>
+<td align="right">126</td>
+<td>A named artifact, official statement, or released build can be checked directly.</td>
+</tr>
+
+<tr>
+<td>Needs follow-up</td>
+<td align="right">400</td>
+<td>Plausible, but the specific artifact/build/resume was not identified or archived.</td>
+</tr>
+
+<tr>
+<td>Unverified</td>
+<td align="right">70</td>
+<td>The claim rests on unnamed sources, inference, or a record not available here.</td>
+</tr>
+
+<tr>
+<td>Partly verified / partly follow-up</td>
+<td align="right">14</td>
+<td>Some sub-claims are checkable; others are not.</td>
+</tr>
+
+<tr>
+<td><strong>Total</strong></td>
+<td align="right"><strong>610</strong></td>
+<td>All events in <code>events.tsv</code>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Confidence distribution:</strong> Fact 232 (including two hybrid Fact-first labels), Mixed 232, Speculation 121, Unclear 25. “Fact” is not the same as “verified”: 230+ events are labeled Fact because a primary artifact is named, but many of those artifacts were not independently re-checked for this database. Per-video breakdown: <a href="appendix-video-stats.html"><code>appendix-video-stats.md</code></a> §2.</p>
+
+<p><strong>Category distribution:</strong></p>
+
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th align="right">Events</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Development state</td>
+<td align="right">177</td>
+</tr>
+
+<tr>
+<td>Engine feature</td>
+<td align="right">122</td>
+</tr>
+
+<tr>
+<td>Gameplay</td>
+<td align="right">88</td>
+</tr>
+
+<tr>
+<td>Hardware</td>
+<td align="right">51</td>
+</tr>
+
+<tr>
+<td>Other</td>
+<td align="right">40</td>
+</tr>
+
+<tr>
+<td>Lore</td>
+<td align="right">32</td>
+</tr>
+
+<tr>
+<td>Release date</td>
+<td align="right">31</td>
+</tr>
+
+<tr>
+<td>Marketing</td>
+<td align="right">28</td>
+</tr>
+
+<tr>
+<td>Technology</td>
+<td align="right">25</td>
+</tr>
+
+<tr>
+<td>Business/legal</td>
+<td align="right">16</td>
+</tr>
+
+<tr>
+<td><strong>Total</strong></td>
+<td align="right"><strong>610</strong></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="82-what-is-genuinely-well-supported">8.2 What is genuinely well-supported</h3>
+
+<ul>
+<li>The <strong>existence of the HLX codename</strong> in public Source 2 builds from 2020-10-09 onward.</li>
+<li>The <strong>first public reference</strong> (<code>box_creature_model_hlx.vanmgrph</code>, Artifact Foundry, 2020-10-09) and the <strong>codename becoming public</strong> on 2021-03-25.</li>
+<li><strong>VData&rsquo;s public appearance</strong> on 2020-09-04 and its existence by 2020-08-12.</li>
+<li><strong>Valve&rsquo;s published statements</strong> quoted in Ep7, including Walker&rsquo;s “big technological leap,” Coomer&rsquo;s “multiple games,” and Morasky&rsquo;s “can&rsquo;t talk about it.”</li>
+<li>The <strong>Steam Frame team&rsquo;s statement</strong> that HLX is not VR (2025-11-12).</li>
+<li><strong>Steam hardware prices and reservation rules</strong> (2026-09-14), which are official.</li>
+<li><strong>Animgraph 2&rsquo;s use in shipped games</strong> (Deadlock, CS2) and the documented file formats.</li>
+<li>The <strong>Dark Carnival voice cast</strong> and released-update content (#19).</li>
+<li>The <strong>2019 Eli retcon</strong> and the <em>Alyx</em> post-credits scene, via <em>The Final Hours</em> and the writers&rsquo; interviews.</li>
+</ul>
+
+<h3 id="83-priority-follow-up-queue">8.3 Priority follow-up queue</h3>
+
+<table>
+<thead>
+<tr>
+<th>Priority</th>
+<th>Open item</th>
+<th>Why it matters</th>
+<th>What would settle it</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>HLX = Half-Life 3</strong></td>
+<td>The entire database&rsquo;s title claim.</td>
+<td>A Valve announcement, store page, or official reference naming Half-Life 3 and HLX together.</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td><strong>Release window</strong></td>
+<td>Every timing claim is prediction.</td>
+<td>Valve announcement, press release, or store listing.</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td><strong>White Sands archive</strong></td>
+<td>The Deadlock association is now well supported, but the original résumé/casting listing was never archived.</td>
+<td>A privacy-safe archived copy of the casting notice, or actor confirmation on the record.</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td><strong>“Build Breakmaster”</strong></td>
+<td>A July 2023 asset of unknown identity; possibly tooling, possibly content.</td>
+<td>The asset itself, its path, or a Valve tool reference.</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td><strong>“197”</strong></td>
+<td>The December 2024 passage is transcribed unintelligibly; its referent is unknown.</td>
+<td>Clean audio/transcript of the passage and the original artifact.</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td><strong>Xpaw&rsquo;s November app ID</strong></td>
+<td>An unidentified Valve app, explicitly separated from the Deadlock experimental build.</td>
+<td>SteamDB/package metadata tying the ID to a project.</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td><strong>Vehicle system continuity</strong></td>
+<td>The “deleted” shorthand is misleading; the schema&rsquo;s later evolution is Miro-only.</td>
+<td>A build-to-build diff of <code>CBaseVehicleVData</code>/<code>CWheeledPhysicsVehicleVData</code> and the base FGD entries.</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td><strong>VData start date</strong></td>
+<td>Miro&rsquo;s “late 2020” wording conflicts with its own August/September dates.</td>
+<td>The original assettype metadata and the 2020-09-04 Dota build.</td>
+</tr>
+
+<tr>
+<td>9</td>
+<td><strong>HLX-specific Animgraph 2 use</strong></td>
+<td>AG2 is confirmed in Deadlock/CS2; HLX use is inferred from nav-link variants.</td>
+<td>An HLX-tagged AG2 graph, skeleton, or clip in a public build.</td>
+</tr>
+
+<tr>
+<td>10</td>
+<td><strong>Enemy roster and locations</strong></td>
+<td>Names are strings/icons, not models or maps.</td>
+<td>Model, map, or scripted-encounter assets; a trailer.</td>
+</tr>
+
+<tr>
+<td>11</td>
+<td><strong>Post-<em>Alyx</em> story</strong></td>
+<td>Only the setup is verified.</td>
+<td>Valve marketing, credits, or a shipped game.</td>
+</tr>
+
+<tr>
+<td>12</td>
+<td><strong>“Entire floor,” semi-reboot, trailer rumour</strong></td>
+<td>All rely on unnamed sources; #19 withholds the revised chapter claim.</td>
+<td>Named reporting or a Valve statement.</td>
+</tr>
+
+<tr>
+<td>13</td>
+<td><strong>External playtests</strong></td>
+<td>A key late-production signal, but secondhand.</td>
+<td>Named reporting or a public test build.</td>
+</tr>
+
+<tr>
+<td>14</td>
+<td><strong>GSC talk wording</strong></td>
+<td>The “first direct utterance” claim is Tyler&rsquo;s characterization.</td>
+<td>Full talk recording with timestamps.</td>
+</tr>
+
+<tr>
+<td>15</td>
+<td><strong>Résumé/LinkedIn claims</strong></td>
+<td>Useful hiring signal, but unverifiable without identifying individuals.</td>
+<td>Aggregate, privacy-safe employment data or Valve confirmation.</td>
+</tr>
+
+<tr>
+<td>16</td>
+<td><strong>Miro metadata dates</strong></td>
+<td>Image metadata may reflect creation, export, or upload, not code introduction.</td>
+<td>Build IDs and patch diffs for each dated item.</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="84-open-questions-grouped">8.4 Open questions, grouped</h3>
+
+<p><strong>Identity and release</strong>
+- Is HLX officially Half-Life 3, or a different Half-Life project?
+- Is it a direct sequel to <em>Alyx</em>, a new chapter, or something structurally different?
+- When will Valve announce it, and is there any fixed date at all?
+- Is the 2025–2026 delay a genuine delay, a re-scope, or a normal Valve schedule slip?
+- What did the semi-reboot change, and what did Tyler stop believing about the chapter rebuild?</p>
+
+<p><strong>Content and story</strong>
+- Does the game continue from the <em>Alyx</em> ending? Is Alyx rescued? What is Gordon&rsquo;s role?
+- Which enemies are real gameplay factions versus test/legacy strings?
+- Are Xen, the Combine off-world, and the foundry playable chapters?
+- Is the game single-player only, or is co-op hiding in the schemas?
+- How much of the 2013–2015 “posthuman” material survives in HLX?</p>
+
+<p><strong>Technology</strong>
+- Which engine features actually ship in HLX versus remain shared Source 2 capability?
+- Does HLX use ray tracing, mesh shaders, or AG2 in gameplay-critical paths?
+- Does the vehicle system survive in the shipped game, and in what form?
+- How much of the NPC ability/squad/body-part system is used in encounters?
+- Is the level-streaming system seamless, and does it remove loading screens?</p>
+
+<p><strong>Business and platform</strong>
+- Is HLX a PC/Steam exclusive, or will it appear on consoles?
+- Is the Steam Machine “flagship” framing real or only fan pattern-matching?
+- Did Valve decouple HLX from the Steam Machine minimum spec, as #19 theorizes?
+- What is the actual state of the <em>Raising the Bar</em> reprint and the reported Valve/Dbrand interaction?
+- Which hiring/resumé claims correspond to HLX rather than Deadlock or another Valve project?</p>
+
+<hr>
+
+<h2 id="9-method-evidence-and-limitations">9. Method, evidence and limitations</h2>
+
+<h3 id="source-archive">Source archive</h3>
+
+<p>The archive layer records Wayback receipts for all 31 videos (all verified) and
+the Miro board (capture blocked by Miro, HTTP 403; the board export is the
+durable copy); <code>source-manifest.tsv</code> classifies all 610 events into build evidence, press,
+official statements, résumé/casting, community posts and inference. Most of the
+corpus is build evidence, which a web archive cannot preserve — those rows are
+marked as requiring a build snapshot rather than given an invented URL. Status:
+<a href="sources/archive-status.html"><code>sources/archive-status.md</code></a>; policy:
+<a href="sources/README.html"><code>sources/README.md</code></a>.</p>
+
+<h3 id="method-notes">Method notes</h3>
+
+<ul>
+<li><strong>Dates:</strong> upload dates come from YouTube metadata, not playlist order. In-video dates are kept as stated and labeled.</li>
+<li><strong>Transcripts:</strong> auto-generated captions; names and technical terms are sometimes garbled. Summaries preserve Tyler&rsquo;s hedging rather than silently resolving it.</li>
+<li><strong>Summaries:</strong> each video has one summary, written to a fixed schema. Structural consistency is checked mechanically; truth is not.</li>
+<li><strong>Fact vs. verified:</strong> <code>Fact</code> means a named artifact/official statement supports the claim; <code>verified</code> means the artifact is directly checkable. They overlap but are not identical.</li>
+<li><strong>Miro:</strong> the board is treated as a secondary research aid. Its dated notes are useful but not authoritative; where its wording conflicts with its own dates, the dates and build references win.</li>
+<li><strong>No source video was re-edited or re-uploaded.</strong> The VTT files are the immutable source of record.</li>
+<li><strong>Privacy:</strong> no individual actor or employee is identified; résumé claims are summarized without names or links.</li>
+</ul>
+
+<h3 id="known-limitations">Known limitations</h3>
+
+<ol>
+<li><strong>No official confirmation</strong> of HLX = Half-Life 3.</li>
+<li><strong>No official release date</strong>; every timing statement is prediction or hearsay.</li>
+<li><strong>Most engine features are shared Source 2 capability</strong>, not proof of HLX use.</li>
+<li><strong>Auto-captions</strong> produce name/term errors; where possible the summary notes the transcription uncertainty.</li>
+<li><strong>Miro metadata dates</strong> can be misleading.</li>
+<li><strong>The 31-video set is incomplete</strong>: HLX Files #3/#13 and Every Last Detail Ep3 are absent.</li>
+<li><strong>Verification is uneven</strong>: 400 events still need follow-up, and “Fact” labels were not independently re-checked.</li>
+</ol>
+
+<hr>
+
+<h2 id="10-bottom-line">10. Bottom line</h2>
+
+<p>The corpus supports a strong, consistent picture of a large Half-Life project in Source 2, publicly visible under the codename <strong>HLX</strong> since October 2020, with Half-Life-specific weapons, HEV suit, Xen fauna, NPC AI, vehicles, gravity shifting, liquid/fire simulation, Animgraph 2, and a deep Hammer/tooling stack.</p>
+
+<p>It does <strong>not</strong> support any of the following as fact:</p>
+
+<ul>
+<li>that Valve has officially called it Half-Life 3;</li>
+<li>that it has a release date or a confirmed 2026 announcement;</li>
+<li>that it is open world, VR, voxel-based, or built around a day/night cycle;</li>
+<li>that “Project White Sands” is HLX;</li>
+<li>that any specific enemy, location, or story beat is confirmed.</li>
+</ul>
+
+<p>The most defensible summary is: <strong>HLX is a real, long-running, Half-Life-shaped Valve project that entered public datamining view in 2020, was still in intensive development in 2026, and has never been officially announced.</strong> Everything beyond that is Tyler&rsquo;s inference, secondhand reporting, or a prediction — useful, but labeled as such.</p>
+</main>
+<footer class="site-foot">
+<p>Independent research notes on Tyler McVicker's HLX coverage. Not affiliated
+with Valve or with Tyler McVicker.</p>
+<p><strong>HLX is a datamined codename.</strong> Tyler identifies it as
+Half-Life 3; Valve has never confirmed that, and no official release date,
+window or announcement exists.</p>
+</footer>
+</body>
+</html>

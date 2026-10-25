@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Monthly HL3 Update - HLX Files #14</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Research notes on Tyler McVicker's HLX coverage. Derived analysis only.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-bar">
+<a class="brand" href="index.html">HLX Research Database</a>
+<nav>
+<a href="claims.html">Claims</a>
+<a href="appendix-video-stats.html">Stats</a>
+<a href="sources/README.html">Sources</a>
+<a href="data.html">Data</a>
+</nav>
+</header>
+<p class="site-note">Derived analysis only. No transcripts, subtitle files or
+source video are hosted here; quotations are short and attributed, and every
+summary links to the original video.</p>
+<main>
+<h1 id="your-monthly-hl3-update---hlx-files-14">Your Monthly HL3 Update - HLX Files #14</h1>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Video ID</td>
+<td><code>htC-u80xs_Q</code></td>
+</tr>
+
+<tr>
+<td>URL</td>
+<td><a href="https://www.youtube.com/watch?v=htC-u80xs_Q">https://www.youtube.com/watch?v=htC-u80xs_Q</a></td>
+</tr>
+
+<tr>
+<td>Release date</td>
+<td>2025-09-03</td>
+</tr>
+
+<tr>
+<td>Duration</td>
+<td>9:41</td>
+</tr>
+
+<tr>
+<td>Series</td>
+<td>HLX Files #14</td>
+</tr>
+</tbody>
+</table>
+<p>| Summary status | <code>complete</code> |</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>Tyler&rsquo;s monthly HLX roundup covers a batch of new entity and FGD strings from the data mines and a Perforce commit graph he says shows August 2025 as Valve&rsquo;s busiest build month in roughly a decade. The datamine material centers on a new HLX-specific liquid simulation with oil and water types, an ability-positioning entity, a destructible-part event tied to enemy AI, vehicle entity changes including a removed jeep, a new-versus-legacy save-system toggle, and cleanup of the AI sound entity into an &ldquo;AI volumetric event&rdquo; with new reaction inputs. He also notes load-time logging added in a Counter-Strike 2 update, which he reads as Valve optimizing level load times. He is explicit that he does not know the release date and that &ldquo;within a year&rdquo; is his own expectation, not a Valve statement. The episode also covers a Half-Life: Alyx soundtrack vinyl release and the Air Exchange Revised mod.</p>
+
+<h2 id="mentioned-events">Mentioned events</h2>
+
+<h3 id="hlx-release-date-remains-unknown-after-quakecon-2025">HLX release date remains unknown after QuakeCon 2025</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says he attended QuakeCon (transcribed &ldquo;Quon&rdquo;) this year and met over 200 viewers. He says he was asked when Half-Life 3 is coming out 129 separate times, including by Dave Ashri (as transcribed), and at least once every 15 minutes. He answers that he does not know, that nobody knows, and that only Valve knows — possibly not even Valve. He jokes that he began telling people it had been announced the day before and they had missed it on a plane.</li>
+<li><strong>Confidence:</strong> Speculation — this is Tyler&rsquo;s personal account and his stated belief about the state of Valve&rsquo;s knowledge, with no document, statement, or dated evidence offered.</li>
+<li><strong>Category:</strong> Release date</li>
+<li><strong>Source:</strong> Tyler&rsquo;s account of conversations at QuakeCon 2025.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> unverified — would require an official Valve announcement or a dated store/event listing.</li>
+</ul>
+
+<h3 id="august-2025-was-valves-busiest-build-month-in-about-a-decade">August 2025 was Valve&rsquo;s busiest build month in about a decade</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler presents a graph where each point is the number of changes pushed to Valve&rsquo;s internal Perforce within the prior 30 days, based on publicly visible build/commit numbers. He says August 2025 was Valve&rsquo;s busiest month in the last 10 years in terms of pushing changes to builds, and that the most Perforce commits in a single 7-day period since at least 2016 also occurred in August 2025. He stresses the data covers all internal Valve projects, not just HLX, and names Deadlock, Dota 2, Counter-Strike 2, HLX, Team Fortress, and &ldquo;some other fun stuff&rdquo; as active work.</li>
+<li><strong>Confidence:</strong> Mixed — the individual build-number increments are publicly observable, but the &ldquo;busiest in 10 years&rdquo; ranking depends on Tyler&rsquo;s own tracked dataset going back to 2016, and the link between commit volume and HLX progress is his interpretation.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Tyler&rsquo;s analysis of publicly published Valve build/commit numbers charted over time.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — the underlying build-ID dataset and the code that produced the graph are not published with the video; reproducing the 30-day rolling counts from public build numbers would confirm it.</li>
+</ul>
+
+<h3 id="counter-strike-2-update-adds-per-component-load-time-logging">Counter-Strike 2 update adds per-component load-time logging</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says one change in the most recent Counter-Strike 2 update is that everything related to loading now logs how long it took, including how long each individual component of a level takes to load. He says this &ldquo;heavily implies&rdquo; Valve is working on optimizing load times.</li>
+<li><strong>Confidence:</strong> Mixed — the logging change is presented as a fact from the named CS2 update, while the conclusion that it is load-time optimization work (and that it relates to HLX) is Tyler&rsquo;s inference.</li>
+<li><strong>Category:</strong> Technology</li>
+<li><strong>Source:</strong> Datamine of the most recent Counter-Strike 2 update, as described by Tyler.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — inspect the CS2 update&rsquo;s binaries or changelog for the load-timing log statements and determine whether the same code is shared with HLX.</li>
+</ul>
+
+<h3 id="save-system-version-variable-can-select-new-or-legacy-saves">Save-system version variable can select new or legacy saves</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler reports a new &ldquo;save version&rdquo; variable that lets the game choose between the new save system and the legacy (old) save system. He says these are options for a value in the forge game data (FGD) file, and that the &ldquo;E&rdquo; prefix means enum, which he notes is a code naming convention appearing in game data.</li>
+<li><strong>Confidence:</strong> Fact — Tyler reads the variable and its enum options from FGD data attributed to the datamine.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of HLX FGD/entity definitions; no build number or filename is given.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — locate the save-version enum and its new/legacy values in the relevant FGD file and confirm which system HLX defaults to.</li>
+</ul>
+
+<h3 id="ai-sound-entity-cleanup-becomes-ai-volumetric-event-with-new-reaction-inputs">AI sound entity cleanup becomes &ldquo;AI volumetric event&rdquo; with new reaction inputs</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says the AI sound entity cleanup he discussed last video resulted in the AI sound entity becoming an &ldquo;AI volumetric event&rdquo; (transcribed &ldquo;AI Volutric event&rdquo;). The related inputs he lists are: react to source, danger approaching, allies only react, cause NPCs to blindly panic, squad only reacts, only Combine reacts, and Combine ignores. He characterizes the set as optimization work.</li>
+<li><strong>Confidence:</strong> Fact — the input and event names are read from datamined definitions, though the video does not name the file or build.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of HLX AI event/FGD definitions presented on screen.</li>
+<li><strong>Earlier mentions:</strong> Explicitly references the previous episode&rsquo;s discussion of the AI sound entity becoming the AI volumetric event; this video lists the reaction inputs that came out of that cleanup.</li>
+<li><strong>Verification:</strong> needs follow-up — search HLX AI event definitions for the volumetric event and the seven listed reaction inputs.</li>
+</ul>
+
+<h3 id="liquid-simulation-system-developed-specifically-for-hlx">Liquid simulation system developed specifically for HLX</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler reads a &ldquo;liquid property contents&rdquo; entry describing &ldquo;a particle simulation system specifically for liquids specifically developed for HLX.&rdquo; The listed liquid types are oil, water, and &ldquo;none,&rdquo; with friction (resistance) calculated for the liquid.</li>
+<li><strong>Confidence:</strong> Fact — the description and liquid type list are read directly from the datamined entry; the gameplay role of oil and water is not demonstrated.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of HLX entity/particle definitions presented on screen.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — locate the liquid property definition and its oil/water/none values, and determine whether the system ships in HLX or is shared Source 2 code.</li>
+</ul>
+
+<h3 id="ability-use-position-entity-for-pre-ability-movement">&ldquo;Ability use position&rdquo; entity for pre-ability movement</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler describes an optional entity that marks where a character should move before using an ability, which he calls the new &ldquo;ability use position&rdquo; entity. The description implies AI or scripted characters path to a designated spot before activating an ability.</li>
+<li><strong>Confidence:</strong> Fact — the entity name and description are read from the datamine, while the specific gameplay use (which abilities, which characters) is not shown.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of HLX entity definitions presented on screen.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — locate the &ldquo;ability use position&rdquo; entity in HLX entity definitions and find which abilities reference it.</li>
+</ul>
+
+<h3 id="destructible-part-destroyed-event-wired-to-enemy-ai">Destructible-part-destroyed event wired to enemy AI</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler reads an entity that lets another event trigger once a destructible part of a model is destroyed, which he ties to enemy AI: if the player destroys part of an enemy, the game can fire a follow-up event. He frames this as part of the same batch of AI-related additions.</li>
+<li><strong>Confidence:</strong> Fact — the entity and its trigger behavior are read from the datamine; the enemy-dismemberment interpretation is Tyler&rsquo;s framing of what the event enables.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of HLX entity/FGD definitions presented on screen.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — locate the &ldquo;on destructible part destroyed&rdquo; output/event in HLX entity definitions and identify the models with destructible parts.</li>
+</ul>
+
+<h3 id="vehicle-entity-changes-include-jeep-removal-and-speed-scaling">Vehicle entity changes include jeep removal and speed scaling</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler lists vehicle-related changes in the same dump: vehicle melee side, vehicle top speed scale, &ldquo;vehicle jeep removed,&rdquo; modifier gravity scale, modifier value, body group choice, body group choice override, vehicle top speed scale override, and modifier value. He presents the list without explaining the gameplay intent of each entry.</li>
+<li><strong>Confidence:</strong> Fact — the field and modifier names are read from the datamine; what the jeep removal or top-speed scaling means for HLX is not established.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of HLX vehicle entity/FGD definitions presented on screen.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — check HLX vehicle entity definitions for the listed keys and confirm whether the jeep entity was deleted or merely deprecated.</li>
+</ul>
+
+<h3 id="optimization-work-read-as-a-sign-of-content-lock-and-late-stage-development">Optimization work read as a sign of content lock and late-stage development</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler argues that optimizing a game to this extent only makes sense when content is locked and core systems will not be refactored, because otherwise the optimization work would be wasted. He says this means development is getting close, but clarifies that &ldquo;close&rdquo; does not mean a week or two: &ldquo;I within a year.&rdquo; He does not give a date or source for that window.</li>
+<li><strong>Confidence:</strong> Speculation — the content-lock argument and the one-year horizon are Tyler&rsquo;s reasoning about development phase, not a Valve statement or document.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Tyler&rsquo;s inference from the optimization and AI-cleanup datamine findings.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> unverified — would require Valve confirmation of content lock, a production schedule, or an announcement.</li>
+</ul>
+
+<h3 id="half-life-alyx-soundtrack-coming-to-vinyl">Half-Life: Alyx soundtrack coming to vinyl</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler mentions in passing that the Half-Life: Alyx soundtrack is being brought to vinyl, and jokes about asking &ldquo;Mr. Morasky&rdquo; (as transcribed &ldquo;Mr. Morasy&rdquo;) to include the Midnight Riders Christmas song on a Midnight Riders vinyl release. No label, date, or track list is given.</li>
+<li><strong>Confidence:</strong> Unclear — Tyler states the vinyl release as news but names no announcement, store listing, or label; the basis is not shown.</li>
+<li><strong>Category:</strong> Marketing</li>
+<li><strong>Source:</strong> Tyler&rsquo;s mention during the episode; no primary source named.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — an official Valve, composer, or label announcement or a store listing for the Alyx soundtrack vinyl would confirm it.</li>
+</ul>
+
+<h3 id="air-exchange-revised-mod-combines-cut-air-exchange-with-nova-prospekt">Air Exchange Revised mod combines cut Air Exchange with Nova Prospekt</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says the mod he is playing is &ldquo;Air Exchange Revised,&rdquo; which incorporates the Air Exchange levels from the WC map pack that leaked in 2003 — a cut chapter from Half-Life 2 circa 2001–2002 — and merges the Nova Prospekt areas into it, since Air Exchange evolved into Nova Prospekt. He calls it the most complete version of Air Exchange he has played and says it is a one-click Steam Workshop install. He also uses the Half-Life 2 2002-era replacement pack collection on the Steam Workshop and links both in the description.</li>
+<li><strong>Confidence:</strong> Mixed — the mod&rsquo;s existence, its Workshop availability, and Tyler playing it are directly observed; the design-history claim that Air Exchange evolved into Nova Prospekt is presented without a cited document.</li>
+<li><strong>Category:</strong> Other</li>
+<li><strong>Source:</strong> Tyler&rsquo;s playthrough of the Air Exchange Revised Steam Workshop mod and the Half-Life 2 2002-era replacement pack collection.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — both items are named and searchable on the Steam Workshop; the 2003 WC map pack leak and the Air Exchange-to-Nova Prospekt design history would need separate documentation.</li>
+</ul>
+
+<h2 id="new-or-changed-in-this-video">New or changed in this video</h2>
+
+<ul>
+<li>First appearance in this series of an HLX-specific liquid particle simulation with oil, water, and &ldquo;none&rdquo; liquid types and calculated friction.</li>
+<li>New &ldquo;ability use position&rdquo; entity and a destructible-part-destroyed event tied to enemy AI.</li>
+<li>Vehicle entity churn, including a removed jeep entity and top-speed/gravity/body-group modifiers.</li>
+<li>New save-version enum allowing selection between the new and legacy save systems, plus CS2 load-time logging read as load optimization.</li>
+<li>Follow-up to the previous episode&rsquo;s AI sound entity change: the entity is now the AI volumetric event with a defined set of reaction inputs (react to source, danger approaching, allies only react, panic, squad only reacts, only Combine reacts, Combine ignores).</li>
+<li>New quantitative claim that August 2025 was Valve&rsquo;s busiest build month in about a decade and its busiest 7-day commit period since at least 2016, with the caveat that it spans all Valve projects.</li>
+<li>Release-date position unchanged: Tyler explicitly says he does not know and offers only a personal &ldquo;within a year&rdquo; expectation.</li>
+<li>The vinyl and mod segments are side items rather than new HLX development information.</li>
+</ul>
+
+<h2 id="notable-quotes">Notable quotes</h2>
+
+<ul>
+<li>&ldquo;I don&rsquo;t know. Nobody knows. The only people that know is Valve and it&rsquo;s possible that even they don&rsquo;t know.&rdquo; — On the HLX release date, after being asked 129 times at QuakeCon.</li>
+<li>&ldquo;A particle simulation system specifically for liquids specifically developed for HLX.&rdquo; — Reading the liquid property entry.</li>
+<li>&ldquo;August of 2025 was Valve&rsquo;s busiest month in the last 10 years in terms of actually pushing things to builds.&rdquo; — On the Perforce commit graph.</li>
+<li>&ldquo;It&rsquo;s covering all projects internally at Valve, not just HLX.&rdquo; — Caveat on the build-volume graph.</li>
+<li>&ldquo;It&rsquo;s almost like it&rsquo;s only smart to optimize your game to this extent when you know that your content locked.&rdquo; — On reading the optimization work as late-stage development.</li>
+<li>&ldquo;No, no, no. I within a year.&rdquo; — Clarifying that &ldquo;close&rdquo; does not mean weeks. (Transcript reads &ldquo;I within a year&rdquo;; likely &ldquo;I mean within a year.&rdquo;)</li>
+</ul>
+
+<h2 id="open-questions">Open questions</h2>
+
+<ul>
+<li>Which Valve game, build, or depot the entity/FGD dump at the start of the video came from; no build number or filename is given.</li>
+<li>Whether the liquid simulation, save-version enum, and vehicle changes are HLX-only or shared Source 2 code that appears across Valve titles.</li>
+<li>What &ldquo;none&rdquo; means as a liquid type, and how oil and water friction values differ.</li>
+<li>Whether the removed jeep entity indicates a cut vehicle or a rename.</li>
+<li>Whether the CS2 load-time logging is intended for HLX, CS2, or all Source 2 games.</li>
+<li>What evidence, if any, underlies Tyler&rsquo;s &ldquo;within a year&rdquo; expectation.</li>
+<li>Whether the Half-Life: Alyx vinyl release is officially announced, and by which label.</li>
+<li>How destructible enemy parts affect combat beyond triggering a follow-up event.</li>
+</ul>
+</main>
+<footer class="site-foot">
+<p>Independent research notes on Tyler McVicker's HLX coverage. Not affiliated
+with Valve or with Tyler McVicker.</p>
+<p><strong>HLX is a datamined codename.</strong> Tyler identifies it as
+Half-Life 3; Valve has never confirmed that, and no official release date,
+window or announcement exists.</p>
+</footer>
+</body>
+</html>

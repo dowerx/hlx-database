@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Real State of Half-Life 3 Development in 2026 - HLX Files #19</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Research notes on Tyler McVicker's HLX coverage. Derived analysis only.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-bar">
+<a class="brand" href="index.html">HLX Research Database</a>
+<nav>
+<a href="claims.html">Claims</a>
+<a href="appendix-video-stats.html">Stats</a>
+<a href="sources/README.html">Sources</a>
+<a href="data.html">Data</a>
+</nav>
+</header>
+<p class="site-note">Derived analysis only. No transcripts, subtitle files or
+source video are hosted here; quotations are short and attributed, and every
+summary links to the original video.</p>
+<main>
+<h1 id="the-real-state-of-half-life-3-development-in-2026---hlx-files-19">The Real State of Half-Life 3 Development in 2026 - HLX Files #19</h1>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Video ID</td>
+<td><code>8Fi44EB4hjk</code></td>
+</tr>
+
+<tr>
+<td>URL</td>
+<td><a href="https://www.youtube.com/watch?v=8Fi44EB4hjk">https://www.youtube.com/watch?v=8Fi44EB4hjk</a></td>
+</tr>
+
+<tr>
+<td>Release date</td>
+<td>2026-07-06</td>
+</tr>
+
+<tr>
+<td>Duration</td>
+<td>17:23</td>
+</tr>
+
+<tr>
+<td>Series</td>
+<td>HLX Files #19</td>
+</tr>
+</tbody>
+</table>
+<p>| Summary status | <code>complete</code> |</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>The video opens by correcting a widely shared story: a Dota 2 patch variable that leaked the &ldquo;Dark Carnival&rdquo; update name was renamed by Valve to &ldquo;Why are you reading our variables?&rdquo;, which Tyler says was a Dota 2-specific joke and not a message to Half-Life dataminers. The release of the Dark Carnival update then supplies the bulk of the video: a long list of strings in the HLX branch covering rendering, GPU-driven effects and audio, water and fluid behavior, animation, physics, and editor tooling. Tyler reads those strings as evidence that Valve raised the graphical and mechanical bar for HLX, and he connects that to the Steam Machine&rsquo;s launch performance, Deadlock&rsquo;s slower update cadence, and a Box3D blog post that names Ragnarok as a Rubicon evolution for future Valve games. The release-date and project-status material — the 2025 October/November expectations, the delay, and the claim that HLX occupies an entire floor — is presented explicitly as speculation from unnamed sources, with repeated reminders that Valve has said nothing officially.</p>
+
+<h2 id="mentioned-events">Mentioned events</h2>
+
+<h3 id="dota-2-dark-carnival-variable-leak-and-the-why-are-you-reading-our-variables-rename">Dota 2 &ldquo;Dark Carnival&rdquo; variable leak and the &ldquo;Why are you reading our variables?&rdquo; rename</h3>
+
+<ul>
+<li><strong>Description:</strong> Dataminers in the Dota 2 community found a variable in a recent patch that indicated membership in the next major content update, apparently named the &ldquo;Dark Carnival.&rdquo; In the following Dota 2 patch, that variable was renamed to &ldquo;Why are you reading our variables?&rdquo;. Tyler notes that datamining Valve patches to predict updates has been a community practice for roughly 15 to 20 years.</li>
+<li><strong>Confidence:</strong> Fact — the patch strings and the rename are concrete artifacts Tyler describes directly, not an inference.</li>
+<li><strong>Category:</strong> Other</li>
+<li><strong>Source:</strong> Datamine of Dota 2 patch strings across two consecutive updates.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — inspect the Dota 2 build strings or patch diffs for both the original Dark Carnival variable and the &ldquo;Why are you reading our variables?&rdquo; replacement.</li>
+</ul>
+
+<h3 id="claim-that-valves-variable-rename-was-aimed-at-half-life-dataminers">Claim that Valve&rsquo;s variable rename was aimed at Half-Life dataminers</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says press outlets and YouTube channels reframed the rename as an angry message from Valve to people datamining the Half-Life franchise and the HLX codename. He states the joke referred only to the Dota 2 community spoiling Dark Carnival and &ldquo;had absolutely nothing to do with HLX,&rdquo; and that outlets used the Half-Life framing to put Half-Life 3 in headlines.</li>
+<li><strong>Confidence:</strong> Speculation — this is Tyler&rsquo;s characterization of other outlets&rsquo; motives; no specific article, video, or author is named.</li>
+<li><strong>Category:</strong> Other</li>
+<li><strong>Source:</strong> Tyler&rsquo;s analysis of press and YouTube coverage of the Dota 2 patch.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — collect the coverage Tyler is describing and compare its claims against the Dota 2 patch strings.</li>
+</ul>
+
+<h3 id="dark-carnival-update-ships-strings-for-all-in-development-valve-projects">Dark Carnival update ships strings for all in-development Valve projects</h3>
+
+<ul>
+<li><strong>Description:</strong> After Dark Carnival released, Tyler says it contained &ldquo;a significant amount of new strings related to all currently in-development projects at Valve,&rdquo; and that smaller surrounding events appear to point at the same story.</li>
+<li><strong>Confidence:</strong> Fact — the strings come from a released, datamined update; the grouping of them into one narrative is Tyler&rsquo;s interpretation.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Datamine of the released Dota 2 Dark Carnival update.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — enumerate the new strings in the shipped build and separate HLX-branch entries from other projects.</li>
+</ul>
+
+<h3 id="hlx-rendering-and-gpu-driven-effects-strings">HLX rendering and GPU-driven effects strings</h3>
+
+<ul>
+<li><strong>Description:</strong> The HLX strings Tyler reads include subpixel anti-aliasing exclusive to HLX, GPU-driven particle effects with dynamic flashlight radii, Left 4 Dead&rsquo;s tone map controller, scene object meshlet visualization, a set of new mesh shader-related console variables, &ldquo;use world space up&rdquo; for detail prop models, and an &ldquo;only render in effects water pass&rdquo; addition to the HLX branch for both render models and render base Source 2.</li>
+<li><strong>Confidence:</strong> Fact — these are itemized strings Tyler reads from the datamine; his conclusion that they show a broad move toward GPU-driven rendering is inference.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of the Dota 2 Dark Carnival update, HLX branch strings.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — confirm each string in a Source 2 HLX branch build and check whether the anti-aliasing path is HLX-exclusive.</li>
+</ul>
+
+<h3 id="upscaling-support-beyond-fsr-in-source-2">Upscaling support beyond FSR in Source 2</h3>
+
+<ul>
+<li><strong>Description:</strong> A string indicates &ldquo;upscaling support for more than just FSR.&rdquo; Tyler recalls that last year&rsquo;s coverage described FSR 3 specifically implemented for HLX, and says the Dota 2 update now shows Source 2 supporting other forms of upscaling. He does not name which additional upscalers are present.</li>
+<li><strong>Confidence:</strong> Mixed — the string showing broader upscaling support is evidenced; the identity of the other upscalers and the reason for the change are not established.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of the Dota 2 Dark Carnival update, compared by Tyler with earlier HLX FSR 3 reporting.</li>
+<li><strong>Earlier mentions:</strong> Tyler explicitly cites his own earlier coverage from &ldquo;last year&rdquo; that FSR 3 was implemented for HLX; the change is that Source 2 now appears to support additional upscaling methods.</li>
+<li><strong>Verification:</strong> needs follow-up — search the build for DLSS, XeSS, TSR, or equivalent upscaler strings and confirm which are active in the HLX branch.</li>
+</ul>
+
+<h3 id="hlx-audio-strings-midi-beat-system-gpu-driven-hammer-audio-caption-and-chatter-variables">HLX audio strings: MIDI beat system, GPU-driven Hammer audio, caption and chatter variables</h3>
+
+<ul>
+<li><strong>Description:</strong> The datamine list includes a MIDI system with rhythmic beat patterns built into the engine, GPU-driven audio built within Hammer, and updates to closed captions and &ldquo;force combine chatter&rdquo; console variables.</li>
+<li><strong>Confidence:</strong> Fact — the strings are read from the update; what the MIDI system is used for is not explained.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of the Dota 2 Dark Carnival update, HLX branch strings.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — locate the MIDI and GPU audio strings in the build and check for associated tool or entity names that indicate their use.</li>
+</ul>
+
+<h3 id="hlx-water-and-fluid-simulation-strings">HLX water and fluid simulation strings</h3>
+
+<ul>
+<li><strong>Description:</strong> The list includes further refinement of water, a &ldquo;water material two,&rdquo; water parameters within post-processing fog scattering parameters, and a check for whether liquid spills are exposed to the sky. Tyler groups these with fluid simulation and water behavior work. A related entry disables non-static collision decay from wake motion.</li>
+<li><strong>Confidence:</strong> Fact — the strings are present in the datamine; their gameplay purpose is Tyler&rsquo;s inference.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of the Dota 2 Dark Carnival update, HLX branch strings.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — confirm the water material version, sky-exposure check, and fog scattering parameters in the HLX branch.</li>
+</ul>
+
+<h3 id="hlx-npc-and-animation-strings-vehicle-transitions-choreography-path-queries">HLX NPC and animation strings: vehicle transitions, choreography, path queries</h3>
+
+<ul>
+<li><strong>Description:</strong> The strings include animation events for NPCs entering and exiting vehicles, a movable surface graph for dynamic props and func_mover, an on-layer-cycle update for external choreography changed in the anim graph base, more choreography controllers, choreo strafe modes, a refactored precipitation V data file, and NPC animation handshakes and path queries.</li>
+<li><strong>Confidence:</strong> Fact — itemized strings from the update; the implication that they support more systemic NPC behavior is inference.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of the Dota 2 Dark Carnival update, HLX branch strings.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — verify the animation event, choreo strafe, and path query strings in the HLX branch and whether they are new or renamed.</li>
+</ul>
+
+<h3 id="hlx-physics-strings-deformable-geometry-ragdoll-mass-and-buoyancy-collision-and-gravity-attributes">HLX physics strings: deformable geometry, ragdoll mass and buoyancy, collision and gravity attributes</h3>
+
+<ul>
+<li><strong>Description:</strong> The list includes deformable geometry, optimizations for save/load systems, ragdolls gaining mass and buoyancy scales, a no-collision attribute and a zero-gravity attribute added to client physics, and zero-gravity particle attribute flags for HLX. Tyler notes that geometry, not just props, can now be deformed.</li>
+<li><strong>Confidence:</strong> Fact — the strings are read from the update; the scope of &ldquo;deformable geometry&rdquo; is not demonstrated.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of the Dota 2 Dark Carnival update, HLX branch strings.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — confirm the deformation, ragdoll buoyancy, and zero-gravity attribute entries and whether they touch world geometry or only props.</li>
+</ul>
+
+<h3 id="hlx-tooling-strings-large-tool-icon-set-dna-rig-saveload-optimizations">HLX tooling strings: large tool icon set, DNA rig, save/load optimizations</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler reads &ldquo;even more tool icons — like, a lot more tool icons,&rdquo; a &ldquo;DNA rig,&rdquo; deformable geometry, and save/load system optimizations, and remarks that the tools are approaching a commercial level, though he does not think Valve would sell them.</li>
+<li><strong>Confidence:</strong> Fact — the strings and icon entries are in the datamine; the commercial-quality characterization is Tyler&rsquo;s opinion.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of the Dota 2 Dark Carnival update, HLX branch strings.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — count the new tool icons and identify what the DNA rig is used for in the editor binaries.</li>
+</ul>
+
+<h3 id="dark-carnival-voice-cast-includes-half-life-actors">Dark Carnival voice cast includes Half-Life actors</h3>
+
+<ul>
+<li><strong>Description:</strong> In the first chapter of the released Dark Carnival visual novel, with later chapters releasing weekly, Merle Dandridge — the original voice of Alyx Vance — voices Legion Commander officially for Valve. Tyler notes later Legion Commander appearances in Artifact 1 and 2 and Underlords used other actors. Mike Shapiro, known for Barney Calhoun and the G-Man, returns as Oracle, and Harry S. Robbins voices Tinker, his first Tinker performance in some time. Tyler quotes Robbins from the VoG podcast saying Hollywood &ldquo;dues&rdquo; had previously been a barrier to returning to voice work.</li>
+<li><strong>Confidence:</strong> Fact — the cast appears in a released update, and the Robbins remarks are a direct podcast quote.</li>
+<li><strong>Category:</strong> Other</li>
+<li><strong>Source:</strong> Dark Carnival update credits and the VoG podcast interview with Harry S. Robbins.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the released update&rsquo;s credits and the podcast episode can be checked directly.</li>
+</ul>
+
+<h3 id="kane-parsons-tours-valve-and-posts-ambiguous-hints">Kane Parsons tours Valve and posts ambiguous hints</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says Kane Parsons, the Backrooms creator described as the youngest person to tour Valve, has been hinting at something through tweets and an Instagram photo of a hallway with Combine walls that Tyler does not recognize from the Valve offices. Tyler says Valve might let him stream a Half-Life Alyx beta build but hedges, &ldquo;I don&rsquo;t know,&rdquo; and notes Parsons also tweets about things unrelated to Valve.</li>
+<li><strong>Confidence:</strong> Mixed — the tour and social posts are observable; the interpretation that they hint at a Valve project is Tyler&rsquo;s inference, and he states uncertainty.</li>
+<li><strong>Category:</strong> Other</li>
+<li><strong>Source:</strong> Kane Parsons social media posts; Tyler&rsquo;s comparison with known Valve office interiors.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — confirm the tour, the location shown in the photo, and whether any Valve project involvement is documented.</li>
+</ul>
+
+<h3 id="steam-machine-launch-price-performance-and-changed-4k-60-advertising">Steam Machine launch: price, performance, and changed 4K 60 advertising</h3>
+
+<ul>
+<li><strong>Description:</strong> The Steam Machine has released to some buyers. Tyler is in the reservation queue and had not received an order email by the Friday he recorded, though emails went out Monday. He calls the machine expensive and underpowered, says the consensus is that it is less powerful than a base PlayStation 5 and more expensive, and notes Valve changed its advertising from games running at 4K 60 to games running &ldquo;up to 4K 60&rdquo; using FSR upscaling. He also says Valve will not manufacture as many as planned and that Linux market saturation will not occur.</li>
+<li><strong>Confidence:</strong> Mixed — the launch, reservation process, and advertising change are checkable; the performance verdict and market-saturation conclusion are assessment.</li>
+<li><strong>Category:</strong> Hardware</li>
+<li><strong>Source:</strong> Steam Machine launch and reservation emails; Valve&rsquo;s advertising copy; Tyler&rsquo;s assessment.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — archived versions of the advertising copy, independent benchmark results, and shipment/reservation data.</li>
+</ul>
+
+<h3 id="deadlocks-major-content-update-slowdown">Deadlock&rsquo;s major content update slowdown</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says the Deadlock team has no major content update coming soon, and that the gap between the &ldquo;big six hero&rdquo; update and the &ldquo;Old Gods&rdquo; update is now shorter than the time elapsed since Old Gods. He attributes to Yoshi, the team lead, the statement that a couple of big things are in the works but are not coming out anytime soon. Tyler speculates that the Deadlock and Dota 2 teams may overlap and that staff may have been pulled to Dark Carnival or another all-hands project.</li>
+<li><strong>Confidence:</strong> Mixed — the update spacing and Yoshi&rsquo;s statement are evidenced; the shared-team and all-hands explanations are explicitly speculative.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Deadlock update release dates and a public statement by team lead Yoshi; Tyler&rsquo;s inference.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — date the big six hero and Old Gods updates and locate Yoshi&rsquo;s statement in context.</li>
+</ul>
+
+<h3 id="ragnarok-described-as-a-rubicon-evolution-in-a-box3d-blog-post">Ragnarok described as a Rubicon evolution in a Box3D blog post</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler states that Ragnarok is not a new physics engine but an evolution, refactor, and optimization of Rubicon, the physics engine running in Source 2 since 2015. He quotes Erin Catto&rsquo;s Box3D announcement, in which Catto says his friend Dirk Gregorius shipped a custom physics engine in Half-Life Alyx called Rubicon, that Gregorius maintains a home version called Rubicon Light, and that Catto forked it into Unreal. The post continues: &ldquo;On the Valve side, Rubicon continues to evolve, and Dirk has developed optimizations similar to those in Box3D in a new engine called Ragnarok. Look for that in future Valve games.&rdquo;</li>
+<li><strong>Confidence:</strong> Fact — the claim rests on a named public blog post and a direct quotation.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Erin Catto&rsquo;s Box3D open-source physics engine announcement blog post, quoting Dirk Gregorius.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the Box3D blog post and its Ragnarok passage can be read directly.</li>
+</ul>
+
+<h3 id="tylers-inference-that-ragnarok-points-to-a-single-player-valve-game">Tyler&rsquo;s inference that Ragnarok points to a single-player Valve game</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says it is &ldquo;very odd&rdquo; for Catto to say Ragnarok will appear in &ldquo;future Valve games,&rdquo; because the projects currently in development at Valve, aside from one, are multiplayer and do not need finite physics for props and items. He frames this as rumor-mill reasoning and says everything discussed should be taken with a grain of salt until Valve speaks officially.</li>
+<li><strong>Confidence:</strong> Speculation — Tyler explicitly labels the reasoning as rumor-mill inference and attaches a caveat.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Tyler&rsquo;s inference from the Box3D blog post and his understanding of Valve&rsquo;s current project mix.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — no artifact ties Ragnarok to HLX; engine binaries or an official statement would be needed.</li>
+</ul>
+
+<h3 id="theory-that-hlx-was-decoupled-from-the-steam-machine-minimum-spec">Theory that HLX was decoupled from the Steam Machine minimum spec</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler proposes that Valve decoupled HLX from the Steam Machine because the machine will not reach the intended market saturation and is less powerful than a base PlayStation 5, so the minimum spec is no longer defined by what the Steam Machine can handle. He ties this to the datamined graphical upgrades and asks, &ldquo;Do you want my theory?&rdquo;</li>
+<li><strong>Confidence:</strong> Speculation — presented as Tyler&rsquo;s theory with no supporting document.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Tyler&rsquo;s inference from Steam Machine performance and the Dark Carnival datamine.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — official system requirements or developer statements would confirm or refute a spec change.</li>
+</ul>
+
+<h3 id="2025-release-expectations-and-the-reported-delay">2025 release expectations and the reported delay</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler recounts that insiders expected something major for HLX in the second half of 2025; around January or February people were hearing October, and around May to June people were hearing November. Nothing occurred, and he infers a meeting in October or November where the team decided the game was not ready and delayed it.</li>
+<li><strong>Confidence:</strong> Speculation — the timeline comes from unnamed insiders and Tyler&rsquo;s reconstruction; no document or named source is provided.</li>
+<li><strong>Category:</strong> Release date</li>
+<li><strong>Source:</strong> Unnamed insider chatter recounted by Tyler; Tyler&rsquo;s reconstruction of a decision meeting.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — named reporting or a Valve statement would be required; no artifact is cited.</li>
+</ul>
+
+<h3 id="final-hours-reprint-timing-treated-as-a-signal">Final Hours reprint timing treated as a signal</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says Valve &ldquo;couldn&rsquo;t even get the Final Hours reprint out in time&rdquo; and calls that, in his opinion, a signal that Valve had something planned for 2025.</li>
+<li><strong>Confidence:</strong> Mixed — the reprint&rsquo;s status is an observable publishing fact, but the interpretation that it signals a 2025 plan is Tyler&rsquo;s opinion.</li>
+<li><strong>Category:</strong> Other</li>
+<li><strong>Source:</strong> Tyler&rsquo;s observation about the Final Hours reprint schedule.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — confirm the reprint&rsquo;s announced and actual release dates.</li>
+</ul>
+
+<h3 id="hlx-still-in-development-and-occupying-an-entire-office-floor">HLX still in development and occupying an entire office floor</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says the game is &ldquo;very much still in development&rdquo; and, &ldquo;from what I&rsquo;m hearing,&rdquo; is taking up an entire floor of Valve&rsquo;s offices. He says it survived whatever Valve felt needed to be rebooted, argues that continuation past a semi-reboot indicates project strength, and says he does not think Valve knows a release date anymore.</li>
+<li><strong>Confidence:</strong> Speculation — sourced to unnamed people Tyler has spoken to, with no artifact; Tyler hedges throughout.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Tyler&rsquo;s unnamed sources and his assessment of Valve&rsquo;s development history.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — no public evidence of floor allocation; official confirmation or credible reporting would be needed.</li>
+</ul>
+
+<h3 id="chapter-rebuild-rumor-no-longer-believed">Chapter-rebuild rumor no longer believed</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler recalls that when he first discussed the rumor, he suggested a chapter was being rebuilt because it might not have been as good as the rest of the game. He now says, &ldquo;I&rsquo;m not under that impression anymore,&rdquo; based on people he has spoken to, and declines to repeat what he was told.</li>
+<li><strong>Confidence:</strong> Mixed — his change of position is stated directly, but the underlying sourcing is unnamed and the new claim is left unstated.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Tyler&rsquo;s earlier rumor discussion and unnamed contacts.</li>
+<li><strong>Earlier mentions:</strong> Tyler explicitly references his own earlier coverage of the rumor that a chapter was being rebuilt; the change is that he no longer believes that explanation.</li>
+<li><strong>Verification:</strong> needs follow-up — the revised claim is not specified, so no artifact can be checked.</li>
+</ul>
+
+<h3 id="valves-reported-reaction-to-dbrands-half-life-3-hint">Valve&rsquo;s reported reaction to Dbrand&rsquo;s Half-Life 3 hint</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says &ldquo;Valve sure did get very mad at Dbrand for hinting towards Half-Life 3,&rdquo; offered as an aside while discussing internal expectations.</li>
+<li><strong>Confidence:</strong> Speculation — asserted without a named document, statement, or dated incident.</li>
+<li><strong>Category:</strong> Marketing</li>
+<li><strong>Source:</strong> Tyler&rsquo;s account; no primary artifact cited.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — locate the Dbrand post and any Valve response or legal correspondence.</li>
+</ul>
+
+<h2 id="new-or-changed-in-this-video">New or changed in this video</h2>
+
+<ul>
+<li>New: an itemized list of HLX-branch strings from the released Dark Carnival update, including subpixel anti-aliasing exclusive to HLX, GPU-driven particles with dynamic flashlight radii, meshlet visualization and mesh shader variables, a MIDI beat system, GPU-driven Hammer audio, water material two, deformable geometry, ragdoll mass and buoyancy scales, zero-gravity and no-collision attributes, NPC vehicle animation events, choreography strafe modes, and a large set of new tool icons.</li>
+<li>Changed: upscaling support is no longer described as FSR-only; the new datamine shows Source 2 supporting more than FSR, whereas earlier coverage reported FSR 3 implemented for HLX.</li>
+<li>Changed: Tyler no longer believes his earlier chapter-rebuild explanation and says his sources point elsewhere, though he does not state the new claim.</li>
+<li>New: a public Box3D blog post names Ragnarok, ties it to Rubicon and Dirk Gregorius, and says to look for it in future Valve games.</li>
+<li>New: the claim that HLX occupies an entire floor of Valve&rsquo;s offices, attributed to unnamed sources.</li>
+<li>Recap: the 2025 October/November expectations and delay, the Dark Carnival voice-cast reunion, the Steam Machine launch, and Deadlock&rsquo;s slower update cadence are retold rather than newly evidenced.</li>
+<li>No official Valve statement about HLX is presented; the release-date and project-status conclusions remain speculation.</li>
+</ul>
+
+<h2 id="notable-quotes">Notable quotes</h2>
+
+<ul>
+<li>&ldquo;Why are you reading our variables?&rdquo; — the renamed Dota 2 variable that Tyler says was a Dota 2-specific joke, not a Half-Life message.</li>
+<li>&ldquo;Look for that in future Valve games.&rdquo; — Erin Catto&rsquo;s Box3D blog post on Ragnarok, quoted by Tyler.</li>
+<li>&ldquo;The game is very much still in development.&rdquo; — Tyler&rsquo;s summary of HLX&rsquo;s status.</li>
+<li>&ldquo;It&rsquo;s taking up an entire floor in their offices from what I&rsquo;m hearing.&rdquo; — Tyler&rsquo;s unnamed-source claim about the project&rsquo;s footprint.</li>
+<li>&ldquo;I don&rsquo;t think Valve knows anymore at this point.&rdquo; — Tyler&rsquo;s answer to when the game will release.</li>
+<li>&ldquo;Perfect is the enemy of good.&rdquo; — Tyler&rsquo;s message to Valve about internal expectations.</li>
+</ul>
+
+<h2 id="open-questions">Open questions</h2>
+
+<ul>
+<li>What release window, if any, Valve is currently targeting for HLX.</li>
+<li>Which upscalers beyond FSR the Source 2 build actually supports, and whether they are active in the HLX branch.</li>
+<li>What the &ldquo;semi-reboot&rdquo; changed and which chapter, if any, was rebuilt.</li>
+<li>Whether Ragnarok ships in HLX or only in a different future Valve game.</li>
+<li>What Kane Parsons&rsquo; relationship to Valve is, and whether the photographed hallway is a Valve space.</li>
+<li>Whether the Steam Machine&rsquo;s limited performance and supply changed HLX&rsquo;s minimum specification, as Tyler theorizes.</li>
+<li>What Tyler&rsquo;s sources said that made him abandon the chapter-rebuild explanation.</li>
+</ul>
+</main>
+<footer class="site-foot">
+<p>Independent research notes on Tyler McVicker's HLX coverage. Not affiliated
+with Valve or with Tyler McVicker.</p>
+<p><strong>HLX is a datamined codename.</strong> Tyler identifies it as
+Half-Life 3; Valve has never confirmed that, and no official release date,
+window or announcement exists.</p>
+</footer>
+</body>
+</html>

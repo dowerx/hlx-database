@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>17 New HLX Leaks, it’s Almost Here - HLX Files #11</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Research notes on Tyler McVicker's HLX coverage. Derived analysis only.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-bar">
+<a class="brand" href="index.html">HLX Research Database</a>
+<nav>
+<a href="claims.html">Claims</a>
+<a href="appendix-video-stats.html">Stats</a>
+<a href="sources/README.html">Sources</a>
+<a href="data.html">Data</a>
+</nav>
+</header>
+<p class="site-note">Derived analysis only. No transcripts, subtitle files or
+source video are hosted here; quotations are short and attributed, and every
+summary links to the original video.</p>
+<main>
+<h1 id="17-new-hlx-leaks-its-almost-here---hlx-files-11">17 New HLX Leaks, it&rsquo;s Almost Here - HLX Files #11</h1>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Video ID</td>
+<td><code>FUj4iMRKGqM</code></td>
+</tr>
+
+<tr>
+<td>URL</td>
+<td><a href="https://www.youtube.com/watch?v=FUj4iMRKGqM">https://www.youtube.com/watch?v=FUj4iMRKGqM</a></td>
+</tr>
+
+<tr>
+<td>Release date</td>
+<td>2025-05-28</td>
+</tr>
+
+<tr>
+<td>Duration</td>
+<td>10:25</td>
+</tr>
+
+<tr>
+<td>Series</td>
+<td>HLX Files #11</td>
+</tr>
+</tbody>
+</table>
+<p>| Summary status | <code>complete</code> |</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>Tyler skims what he considers the most important HLX-related findings from a Deadlock update and a Dota 2 update released over the previous month and a half. The findings center on a from-scratch Source 2 save/load rewrite, vehicle transport and meshlet attributes, electrical and elemental simulation, multithreaded physics, asynchronous AI, crouch/crawl states, expanded sight-and-sound AI, new entity flags, and a wind/fan system. He frames the work as late-cycle polish and says an announcement could come any day or a year from now, while explicitly discouraging expectations for Summer Game Fest. He also criticizes press outlets for attributing a Team Fortress 3 claim to him that he says he never made.</p>
+
+<h2 id="mentioned-events">Mentioned events</h2>
+
+<h3 id="hlx-announcement-timing-remains-unknown">HLX announcement timing remains unknown</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says there is no known announcement date for HLX and that it could be announced &ldquo;any day,&rdquo; tomorrow, or next year. He acknowledges Geoff Keighley&rsquo;s Summer Game Fest is approaching but says he does not think HLX will be there and that it is &ldquo;more than likely not going to happen&rdquo; at a specific showcase, advising viewers to keep expectations low.</li>
+<li><strong>Confidence:</strong> Speculation — Tyler repeatedly hedges (&ldquo;We don&rsquo;t know,&rdquo; &ldquo;it could also be next year,&rdquo; &ldquo;I don&rsquo;t think it&rsquo;ll be there&rdquo;) and presents no dated evidence or announcement plan.</li>
+<li><strong>Category:</strong> Release date</li>
+<li><strong>Source:</strong> Tyler&rsquo;s analysis of industry conversations and internal game code, with no named source or document.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> unverified — would require an official Valve announcement or a dated store/event listing.</li>
+</ul>
+
+<h3 id="source-2-saveload-system-rewritten-from-scratch">Source 2 save/load system rewritten from scratch</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler reports that HLX&rsquo;s save/load system is being &ldquo;completely rewritten from scratch&rdquo; rather than inherited from Source 1. He says the code is &ldquo;quite robust,&rdquo; that it would allow any entity within the state of the world to be edited in the save file &ldquo;if this code is to be believed at face value,&rdquo; and that the related code is only about two to three months old. He credits the finding to Kayla on his Discord server.</li>
+<li><strong>Confidence:</strong> Mixed — the existence of new save/load code is presented as a datamine finding, while the &ldquo;complete rewrite,&rdquo; its robustness, its age, and the entity-editing capability are Tyler&rsquo;s reading of that code.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of the Deadlock and Dota 2 updates described by Tyler; save/load findings credited to Kayla on Tyler&rsquo;s Discord server.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — inspect Source 2/HLX binaries and changelists for the new save/load code and timestamps; no build number or filename is given.</li>
+</ul>
+
+<h3 id="half-life-alyx-relied-on-source-1s-legacy-saveload">Half-Life: Alyx relied on Source 1&rsquo;s legacy save/load</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler states that, apart from Half-Life: Alyx, no other Source Engine game — especially those currently in development — supports a save/load system, and that Alyx effectively relied on Source 1&rsquo;s legacy system. He adds that no other in-development Source 2 game besides HLX would need a save/load system.</li>
+<li><strong>Confidence:</strong> Speculation — this is Tyler&rsquo;s technical and historical assertion without a cited artifact, build, or document.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Tyler&rsquo;s analysis of Source Engine and Source 2 game branches.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — compare save/load implementations across Source 2 titles and check Alyx&rsquo;s shipped code for legacy Source 1 save paths.</li>
+</ul>
+
+<h3 id="saveload-rewrite-treated-as-late-development-polish">Save/load rewrite treated as late-development polish</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler argues that a complete save/load rewrite does not change how the game plays and is the kind of work done at the end of development, comparable to FSR implementation. He says Valve could have relied on Source 1&rsquo;s legacy system during development and rewritten save/load once mechanics were finalized, making this a quality/polish step.</li>
+<li><strong>Confidence:</strong> Speculation — the inference about development phase is Tyler&rsquo;s, built on the datamined code rather than on a Valve statement or schedule.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Tyler&rsquo;s analysis of the save/load datamine and his earlier FSR coverage.</li>
+<li><strong>Earlier mentions:</strong> Explicitly references an earlier HLX Files video about FSR being implemented as evidence that Valve was nearing the end of development; the same end-of-development reasoning is now applied to save/load.</li>
+<li><strong>Verification:</strong> unverified — would require confirmation of the system&rsquo;s completion state or Valve&rsquo;s production schedule.</li>
+</ul>
+
+<h3 id="vehicle-attributes-and-two-way-playernpc-transport">Vehicle attributes and two-way player/NPC transport</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says Source 2 meshlet surface properties include attributes specifically related to vehicle-based gameplay, and that the code supports vehicle transportation for both the player and NPCs in either direction: the player can ride in vehicles driven by NPCs, and NPCs can ride in vehicles driven by the player.</li>
+<li><strong>Confidence:</strong> Mixed — the meshlet surface-property attributes are presented as datamined strings, while the two-way transport gameplay is Tyler&rsquo;s interpretation of what those attributes enable.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of the Deadlock and Dota 2 updates described by Tyler.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — search Source 2 meshlet/surface-property definitions and vehicle entity code for the cited attributes and passenger roles.</li>
+</ul>
+
+<h3 id="electrical-simulation-and-fire-water-and-ice-elements">Electrical simulation and fire, water, and ice elements</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler reports electrification strings for surfaces and props and describes electrical interactions as another simulated system alongside flammability and material deformation. He cites particle attribute flags including &ldquo;electrified,&rdquo; &ldquo;frozen,&rdquo; and &ldquo;fire sensor penetrates shattered glass,&rdquo; and says control of fire, electricity, water, and ice was attempted for Episode 3 and again for Half-Life 3 in 2013 and now appears to be in this game.</li>
+<li><strong>Confidence:</strong> Mixed — the electrification strings and particle attribute flags are presented as datamined facts, while the claim that full elemental control is &ldquo;definitely&rdquo; in HLX and the Episode <sup>3</sup>&frasl;<sub>2013</sub> history are Tyler&rsquo;s inference and recollection without cited evidence.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of the Deadlock and Dota 2 updates described by Tyler, plus Tyler&rsquo;s account of earlier Half-Life development history.</li>
+<li><strong>Earlier mentions:</strong> References the Episode 3 and 2013 Half-Life 3 elemental-system attempts without naming a specific prior video or document.</li>
+<li><strong>Verification:</strong> needs follow-up — locate the electrification strings and particle attribute flags in the updates, and find contemporaneous documentation for the Episode <sup>3</sup>&frasl;<sub>2013</sub> claims.</li>
+</ul>
+
+<h3 id="multithreaded-physics-and-asynchronous-ai">Multithreaded physics and asynchronous AI</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler lists multithreaded physics and asynchronous AI as optimization work that lets more of a computer&rsquo;s resources process the many simulated systems in the world. He clarifies that this means traditional game AI, not generative &ldquo;ChatGPT AI.&rdquo;</li>
+<li><strong>Confidence:</strong> Mixed — the systems are presented as datamined code, while the performance benefit and optimization framing are Tyler&rsquo;s explanation.</li>
+<li><strong>Category:</strong> Technology</li>
+<li><strong>Source:</strong> Datamine of the Deadlock and Dota 2 updates described by Tyler.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — inspect Source 2 physics and AI code for threading and asynchronous scheduling changes.</li>
+</ul>
+
+<h3 id="crawling-and-crouching-states-for-players-and-npcs">Crawling and crouching states for players and NPCs</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says the code includes crawling and crouching height for both the player and NPCs, along with the ability to force players into a specific crouch state for scripted sequences.</li>
+<li><strong>Confidence:</strong> Mixed — the height and state parameters are presented as datamined, while their intended use in scripted sequences is inferred.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of the Deadlock and Dota 2 updates described by Tyler.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — check player movement and NPC state definitions for crawl/crouch height and forced-crouch sequence parameters.</li>
+</ul>
+
+<h3 id="expanded-sight-and-sound-ai-added-to-base-npc-fgd">Expanded sight-and-sound AI added to base NPC FGD</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says Half-Life&rsquo;s longstanding sight-and-sound AI system, where gunfire in one room alerts enemies in others, is being made significantly more complex and is being added to the base default AI NPC FGD file.</li>
+<li><strong>Confidence:</strong> Mixed — the FGD file change is presented as a datamine finding, while &ldquo;significantly more complex&rdquo; is Tyler&rsquo;s characterization.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of the Deadlock and Dota 2 updates described by Tyler, specifically the base default AI NPC FGD file.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — inspect the base AI NPC FGD for new sight/sound response fields.</li>
+</ul>
+
+<h3 id="onstartdeath-and-addattribute-flags">OnStartDeath and AddAttribute flags</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler quotes new flag descriptions: &ldquo;OnStartDeath&rdquo; fires when an NPC has begun dying, before other death-related callbacks, and &ldquo;AddAttribute&rdquo; adds an attribute that AI and player entities can query when checking props for information, with examples such as &ldquo;dog toy&rdquo; or &ldquo;grabable resource.&rdquo;</li>
+<li><strong>Confidence:</strong> Fact — Tyler reads specific flag names and descriptions attributed to the datamined game files.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of the Deadlock and Dota 2 updates described by Tyler.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — locate OnStartDeath and AddAttribute in the relevant FGD or entity definition files.</li>
+</ul>
+
+<h3 id="navigation-cloth-and-hit-group-damage-flags">Navigation, cloth, and hit-group damage flags</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler lists additional flags: ground and air navigation flags, ray casting for cloth simulation, hit groups for gibs, damage levels for hit groups, and more destructibility based on which part of a model is hit, with the damage level displayed over time.</li>
+<li><strong>Confidence:</strong> Fact — specific flag and field descriptions are attributed to the datamined files, though Tyler does not name the file or build.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of the Deadlock and Dota 2 updates described by Tyler.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — search FGD/entity definitions for navigation, cloth ray-casting, hit-group, and per-part damage fields.</li>
+</ul>
+
+<h3 id="wind-system-and-fan-gameplay-element">Wind system and fan gameplay element</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says the wind system can interact with volumetric fog and flammability-based items, and that it appears to be placed in a fan system that can push players, NPCs, or items. He notes that fans existed in Half-Life 2 but that this implementation is present in the current code.</li>
+<li><strong>Confidence:</strong> Mixed — the wind/fan strings are presented as datamined, while the gameplay use of fans to push characters and objects is inferred.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of the Deadlock and Dota 2 updates described by Tyler.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — inspect wind controller and fan entity definitions for the cited interactions.</li>
+</ul>
+
+<h3 id="three-new-player-flags-suppress-save-in-vehicle-in-vehicle-transport">Three new player flags: suppress save, in vehicle, in vehicle transport</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler reports three new player flags added to the old Half-Life 2 list: &ldquo;suppress save,&rdquo; &ldquo;in vehicle,&rdquo; and &ldquo;in vehicle transport.&rdquo; He explains them as whether the player is in a place where saving is disallowed, is driving a vehicle, or is riding in a vehicle driven by someone else.</li>
+<li><strong>Confidence:</strong> Fact — the three flag names and their stated purposes are read from the datamined code.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of the Deadlock and Dota 2 updates described by Tyler.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — locate the three flags in the player entity definitions and confirm their save/vehicle behavior.</li>
+</ul>
+
+<h3 id="press-coverage-misrepresented-his-tfx-reporting-as-a-team-fortress-3-claim">Press coverage misrepresented his TFX reporting as a Team Fortress 3 claim</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says outlets quoted his coverage of a &ldquo;TFX&rdquo; code name as him saying Team Fortress 3 was in development, which he says he did not claim. He warns that reporters make assumptions not present in the original reporting, describes a game of telephone among outlets, and asks journalists to contact independent creators for context and to call out misattributed claims.</li>
+<li><strong>Confidence:</strong> Mixed — Tyler describes coverage he says he observed, but he names no outlet or article; his characterization of how the error spread is his account.</li>
+<li><strong>Category:</strong> Other</li>
+<li><strong>Source:</strong> Tyler&rsquo;s account of press coverage of his prior TFX video.</li>
+<li><strong>Earlier mentions:</strong> Explicitly references his earlier coverage of the &ldquo;TFX&rdquo; code name; he reiterates that TFX is a label he uses, not the actual code name, and that he did not claim Team Fortress 3.</li>
+<li><strong>Verification:</strong> needs follow-up — compare the published articles with the original TFX video and transcript.</li>
+</ul>
+
+<h2 id="new-or-changed-in-this-video">New or changed in this video</h2>
+
+<ul>
+<li>Reports a from-scratch Source 2 save/load rewrite, said to be two to three months old and capable of editing any world entity&rsquo;s state in the save file; finding credited to Kayla on Tyler&rsquo;s Discord.</li>
+<li>Adds vehicle-related meshlet surface attributes and two-way player/NPC vehicle transport to the HLX feature picture.</li>
+<li>Reports electrical simulation, electrification strings, and electrified/frozen particle flags, linking fire, electricity, water, and ice to Episode 3 and 2013 Half-Life 3 attempts.</li>
+<li>Lists multithreaded physics, asynchronous AI, crawling/crouching states, expanded sight-and-sound AI in the base NPC FGD, new OnStartDeath/AddAttribute flags, navigation/cloth/hit-group damage fields, a wind/fan system, and three new player flags.</li>
+<li>Reiterates that no announcement date is known and argues against expecting HLX at Summer Game Fest.</li>
+<li>Publicly clarifies that he did not claim Team Fortress 3 was in development, pushing back on press coverage of his TFX reporting.</li>
+<li>The episode is explicitly a skim of the most important findings, not exhaustive line-by-line coverage; Tyler says the project is late enough in development that full code review is no longer necessary.</li>
+</ul>
+
+<h2 id="notable-quotes">Notable quotes</h2>
+
+<ul>
+<li>&ldquo;It could be any day. Could be tomorrow, but it could also be next year.&rdquo; — On the unknown HLX announcement timing.</li>
+<li>&ldquo;This system is being completely rewritten from scratch and is quite robust.&rdquo; — On the new save/load system.</li>
+<li>&ldquo;All of this code related to a save and load system is only about 2 to 3 months old.&rdquo; — On the recency of the save/load work.</li>
+<li>&ldquo;The ability to control the elements quote unquote fire and electricity and water and ice was something that was originally tried for Episode 3 and then again for Half-Life 3 in 2013.&rdquo; — On the elemental simulation system.</li>
+<li>&ldquo;It is an anyday now thing.&rdquo; — Tyler&rsquo;s summary of how close he believes development is.</li>
+<li>&ldquo;I didn&rsquo;t say that.&rdquo; — On press claims that he predicted Team Fortress 3.</li>
+<li>&ldquo;Please just be a bit more careful when reading articles about this topic in particular.&rdquo; — On misattributed HLX reporting.</li>
+</ul>
+
+<h2 id="open-questions">Open questions</h2>
+
+<ul>
+<li>Which specific Deadlock and Dota 2 builds contained each finding; no build numbers or filenames are given.</li>
+<li>How the electrical, fire, water, and ice systems will be used in gameplay, and whether the Episode <sup>3</sup>&frasl;<sub>2013</sub> precedent can be documented.</li>
+<li>Whether the save/load rewrite supports save-anywhere or is restricted by the new &ldquo;suppress save&rdquo; flag in specific areas.</li>
+<li>Whether vehicle transport is fully simulated, scripted, or limited to specific sequences.</li>
+<li>What the video&rsquo;s title count of &ldquo;17&rdquo; leaks refers to, since only a subset of findings is discussed.</li>
+<li>When Valve will announce or release HLX, which Tyler explicitly says he does not know.</li>
+</ul>
+</main>
+<footer class="site-foot">
+<p>Independent research notes on Tyler McVicker's HLX coverage. Not affiliated
+with Valve or with Tyler McVicker.</p>
+<p><strong>HLX is a datamined codename.</strong> Tyler identifies it as
+Half-Life 3; Valve has never confirmed that, and no official release date,
+window or announcement exists.</p>
+</footer>
+</body>
+</html>

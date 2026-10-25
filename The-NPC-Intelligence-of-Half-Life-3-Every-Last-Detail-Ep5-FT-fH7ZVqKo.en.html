@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The NPC Intelligence of Half-Life 3: Every Last Detail - Ep5</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Research notes on Tyler McVicker's HLX coverage. Derived analysis only.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-bar">
+<a class="brand" href="index.html">HLX Research Database</a>
+<nav>
+<a href="claims.html">Claims</a>
+<a href="appendix-video-stats.html">Stats</a>
+<a href="sources/README.html">Sources</a>
+<a href="data.html">Data</a>
+</nav>
+</header>
+<p class="site-note">Derived analysis only. No transcripts, subtitle files or
+source video are hosted here; quotations are short and attributed, and every
+summary links to the original video.</p>
+<main>
+<h1 id="the-npc-intelligence-of-half-life-3-every-last-detail---ep5">The NPC Intelligence of Half-Life 3: Every Last Detail - Ep5</h1>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Video ID</td>
+<td><code>FT-fH7ZVqKo</code></td>
+</tr>
+
+<tr>
+<td>URL</td>
+<td><a href="https://www.youtube.com/watch?v=FT-fH7ZVqKo">https://www.youtube.com/watch?v=FT-fH7ZVqKo</a></td>
+</tr>
+
+<tr>
+<td>Release date</td>
+<td>2026-03-23</td>
+</tr>
+
+<tr>
+<td>Duration</td>
+<td>0:09:50</td>
+</tr>
+
+<tr>
+<td>Series</td>
+<td>Every Last Detail</td>
+</tr>
+</tbody>
+</table>
+<p>| Summary status | <code>complete</code> |</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>Episode 5 of the &ldquo;Every Last Detail&rdquo; series catalogues what Tyler describes as the traditional NPC artificial-intelligence systems present in Source 2 engine data associated with HLX. He walks through navigation spaces, moods, flinch and damage types, a destructible body-part system, entity modifiers, level-designer tuning options, base NPC VData schemas, abilities, schedules, and the rewritten squad system. Most claims are presented as findings from roughly five years of datamined engine and VData files rather than from official statements; Tyler explicitly notes uncertainty about what uses specific damage types and about the contents of NPC task lists. The overall tone is descriptive, with only a few clearly flagged inferences, such as a speculative link between sonic damage and houndeyes.</p>
+
+<h2 id="mentioned-events">Mentioned events</h2>
+
+<h3 id="npc-navigation-spaces-grids">NPC navigation spaces (grids)</h3>
+
+<ul>
+<li><strong>Description:</strong> NPC navigation in Source 2 has received &ldquo;significant overhauls and additions.&rdquo; NPCs support multiple navigation spaces, described as grids, allowing them to understand and move through on-ground, in-air, and underwater spaces, and to behave differently when on foot, swimming, or flying. Tyler characterizes this as &ldquo;extremely dynamic&rdquo; compared with Half-Life 2 or even Half-Life: Alyx.</li>
+<li><strong>Confidence:</strong> Fact — presented as a direct finding in the engine data (&ldquo;NPC navigation in Source 2 has received significant overhauls and additions&rdquo;).</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamined Source 2 engine files accumulated over roughly five years, as described by Tyler.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — confirmation would require the specific Source 2 navigation-space definitions or VData schema in an HLX build.</li>
+</ul>
+
+<h3 id="moving-platforms-gravity-shifting-spaces-and-crawling">Moving platforms, gravity-shifting spaces, and crawling</h3>
+
+<ul>
+<li><strong>Description:</strong> NPCs can traverse moving platforms and navigate gravity-shifting environments, described as places where one can &ldquo;seamlessly orbit around an object.&rdquo; NPCs can also crawl through spaces they cannot reach by crouching.</li>
+<li><strong>Confidence:</strong> Fact — stated as capabilities of the NPC system, without hedging.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamined Source 2 engine files described by Tyler.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — would require the corresponding NPC movement/navigation definitions in engine data.</li>
+</ul>
+
+<h3 id="mood-system-and-mood-files">Mood system and mood files</h3>
+
+<ul>
+<li><strong>Description:</strong> Moods are described as subtle visual flair used to vary NPC animation: facial expressions, eye looks, and gestures. NPCs have assigned mood files, and moods affect animations in &ldquo;very subtle ways.&rdquo;</li>
+<li><strong>Confidence:</strong> Fact — described as an implemented system with per-NPC assigned mood files; no hedge offered.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamined Source 2 engine/VData files described by Tyler.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — a mood VData file or NPC mood assignment entry would confirm it.</li>
+</ul>
+
+<h3 id="four-new-flinch-damage-types">Four new flinch damage types</h3>
+
+<ul>
+<li><strong>Description:</strong> Flinching is an NPC&rsquo;s small body-movement reaction to taking damage. Many flinch types carried over from Half-Life 2, and flinches are categorized as small, stationary, and large. Four new damage types have been added: burn damage, sonic primary damage, sonic secondary damage, and Newton damage. Tyler states plainly, &ldquo;We don&rsquo;t know what makes use of these types.&rdquo;</li>
+<li><strong>Confidence:</strong> Fact — the damage-type list is presented as read from engine data; Tyler explicitly acknowledges the unknown usage rather than filling the gap.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamined Source 2 engine files described by Tyler.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — the damage-type enumeration and any referencing entities or weapons in engine data would confirm it.</li>
+</ul>
+
+<h3 id="speculative-link-between-sonic-damage-and-houndeyes">Speculative link between sonic damage and houndeyes</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler speculates that the new sonic primary and sonic secondary damage types likely relate to houndeyes, which he says the channel has previously argued are likely to return in HLX. No evidence tying houndeyes to those damage types is offered.</li>
+<li><strong>Confidence:</strong> Speculation — explicitly framed as &ldquo;speculation&rdquo;; Tyler concedes the usage of the damage types is unknown.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Tyler&rsquo;s inference from the existence of sonic damage types in the datamined engine data.</li>
+<li><strong>Earlier mentions:</strong> References the earlier, unnamed claim that houndeyes are likely returning in HLX; no new evidence is added and that claim is unchanged.</li>
+<li><strong>Verification:</strong> needs follow-up — a houndeye entity, ability, or damage-type assignment in HLX data would confirm it.</li>
+</ul>
+
+<h3 id="destructible-npc-body-part-system">Destructible NPC body-part system</h3>
+
+<ul>
+<li><strong>Description:</strong> Valve has expanded Half-Life: Alyx&rsquo;s limited destructible mechanics (shooting a Combine grunt&rsquo;s backpack to make it explode, shooting off antlion legs to make them vulnerable) into a full game system. The destructible part system allows every body part to be destroyed — legs, arms, head, chest, gear, and so on. An NPC&rsquo;s behavior and animation may change depending on which part is missing; destroying certain parts can kill immediately; some parts can only be destroyed when gibbing the NPC into a pile of gibs.</li>
+<li><strong>Confidence:</strong> Fact — presented as a system read from the engine data, with the Alyx precedents cited as background.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamined Source 2 engine files; comparison to Half-Life: Alyx mechanics by Tyler.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — destructible-part definitions and hitgroup-to-destruction mappings in HLX data would confirm it.</li>
+</ul>
+
+<h3 id="comparison-to-doom-eternal-weak-point-system">Comparison to Doom Eternal weak-point system</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says the destructible part system &ldquo;could be very similar to Doom Eternal&rsquo;s destructible demon weak point system,&rdquo; based on his current understanding.</li>
+<li><strong>Confidence:</strong> Speculation — hedged as &ldquo;as far as we understand it, this could be very similar to.&rdquo;</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Tyler&rsquo;s comparison between the datamined system and Doom Eternal.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — gameplay-facing implementation details in HLX would show whether parts act as weak points.</li>
+</ul>
+
+<h3 id="entity-modifiers">Entity modifiers</h3>
+
+<ul>
+<li><strong>Description:</strong> Modifiers are effects applied to entities — NPCs, objects, or the player — that depict events or change behavior. Modifiers found in the code include entering or exiting a vehicle, forcing an alert state on an NPC, and disabling crouching between NPCs. Tyler&rsquo;s example: a stun grenade could apply stun, increased &ldquo;mouth sensitivity,&rdquo; and disarm to the player. NPC abilities can also receive modifiers.</li>
+<li><strong>Confidence:</strong> Fact — Tyler states these modifiers were &ldquo;found in the code.&rdquo;</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamined Source 2 engine code described by Tyler.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — the modifier enumeration in engine data would confirm it.</li>
+</ul>
+
+<h3 id="level-designer-npc-tuning-controls">Level-designer NPC tuning controls</h3>
+
+<ul>
+<li><strong>Description:</strong> Level designers can more finely tune NPCs in a level: forcing them to aim their weapons, forcing them to use specific movement gates, spawning them already hunting the player, and restricting their interest to specific points in the map.</li>
+<li><strong>Confidence:</strong> Fact — described as available level-authoring controls, without hedging.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamined Source 2 engine/VData files described by Tyler.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — the corresponding entity I/O or spawnflag definitions would confirm it.</li>
+</ul>
+
+<h3 id="expanded-sound-reaction-system">Expanded sound-reaction system</h3>
+
+<ul>
+<li><strong>Description:</strong> NPCs react to different sound types. The system existed in Half-Life 2 but has been expanded to include reactions to glass breaking, physics objects moving, warnings from friendly NPCs, and food, the latter of which Tyler suggests is likely tied to Xen creatures seeking food.</li>
+<li><strong>Confidence:</strong> Mixed — the expanded reaction categories are described as engine data; the food/Xen-creature explanation is Tyler&rsquo;s inference (&ldquo;likely tied to&rdquo;).</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamined Source 2 engine files described by Tyler; Xen-creature motivation is Tyler&rsquo;s inference.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — sound-event response tables and any Xen creature references in NPC data would confirm it.</li>
+</ul>
+
+<h3 id="base-npc-vdata-schema-and-hitgroup-damage">Base NPC VData schema and hitgroup damage</h3>
+
+<ul>
+<li><strong>Description:</strong> A VData file exists for base NPC behavior, representing a base NPC schema that almost every NPC in the game derives from. NPCs can be restricted to specific navigation spaces (for example only ground or only water). Damage taken varies by hit location — chest, head, stomach, arms, legs — and those values fluctuate with the game&rsquo;s difficulty setting.</li>
+<li><strong>Confidence:</strong> Fact — presented as a file read from the data; Tyler references having covered it in the earlier mechanics video.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamined base NPC VData file described by Tyler.</li>
+<li><strong>Earlier mentions:</strong> Explicitly cites &ldquo;the mechanics video&rdquo; in this series, where the base NPC behavior VData file was previously discussed; no change to that earlier description is noted.</li>
+<li><strong>Verification:</strong> needs follow-up — the base NPC VData file and its difficulty-scaled hitgroup multipliers would confirm it.</li>
+</ul>
+
+<h3 id="vehicle-hit-temporary-ragdoll-and-partial-engine-removal">Vehicle-hit temporary ragdoll and partial engine removal</h3>
+
+<ul>
+<li><strong>Description:</strong> NPCs can enter a temporary ragdoll state when hit by a vehicle and do not necessarily die, unlike the Hunters in Episode 2; vehicle damage must pass a threshold to kill. The duration of the temporary ragdoll scales with damage — a crate causes a short ragdoll, a car much longer. Tyler notes some of this material &ldquo;was removed from the engine files semi-recently,&rdquo; but says that does not mean it was cut from the game.</li>
+<li><strong>Confidence:</strong> Mixed — the ragdoll/threshold behavior is described as engine data; the interpretation of the recent removal is Tyler&rsquo;s own reasoning.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamined Source 2 engine files described by Tyler, including observation of recent file removals.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — comparing current and earlier engine builds for the vehicle-ragdoll entries would show what was removed.</li>
+</ul>
+
+<h3 id="npcv-vdata-file-from-aperture-desk-job-march-2022">NPCV VData file from Aperture Desk Job (March 2022)</h3>
+
+<ul>
+<li><strong>Description:</strong> A second, &ldquo;more robust&rdquo; NPC VData file was found in Aperture Desk Job around March 2022. Tyler argues Valve has &ldquo;evolved even more&rdquo; since that file is nearly four years old.</li>
+<li><strong>Confidence:</strong> Mixed — the file&rsquo;s provenance and approximate date are stated as a discovery; the conclusion about further evolution is Tyler&rsquo;s inference (&ldquo;it is actually guaranteed&rdquo;).</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Datamined files from Aperture Desk Job (March 2022 build), as described by Tyler.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — locating the NPCV VData in Aperture Desk Job build files would confirm provenance; later HLX builds would show subsequent changes.</li>
+</ul>
+
+<h3 id="abilities-system-and-npc-schedules">Abilities system and NPC schedules</h3>
+
+<ul>
+<li><strong>Description:</strong> NPCs have a list of abilities; &ldquo;abilities&rdquo; is the game&rsquo;s term for held weapons and their configuration, including equipped weapon and firing mode. NPCs can also have schedules composed of many tasks. Tyler says the specific tasks are &ldquo;completely unknown to us&rdquo; and suggests they are things the NPC sets out to do, such as walking around or reaching a position, possibly comparable to Red Dead Redemption 2 NPCs.</li>
+<li><strong>Confidence:</strong> Mixed — the abilities definition and the existence of schedules/tasks are described as engine data; the content of the tasks and the RDR2 comparison are explicitly speculation.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamined Source 2 engine/VData files described by Tyler; RDR2 comparison is Tyler&rsquo;s inference.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — schedule and task definitions in HLX data would confirm what tasks exist.</li>
+</ul>
+
+<h3 id="dynamic-throwingcatching-and-ally-health-regeneration">Dynamic throwing/catching and ally health regeneration</h3>
+
+<ul>
+<li><strong>Description:</strong> NPCs can dynamically throw and catch items; this existed in Half-Life 2 only as scripted sequences, whereas here any NPC can perform the actions on its own. Ally NPCs can regenerate health, and the time required to heal one point of health depends on the difficulty setting.</li>
+<li><strong>Confidence:</strong> Fact — described as implemented capabilities in the data, with the Half-Life 2 contrast noted for context.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamined Source 2 engine/VData files described by Tyler.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — ability and health-regeneration definitions in HLX data would confirm it.</li>
+</ul>
+
+<h3 id="rewritten-npc-squad-system-and-squad-slots">Rewritten NPC squad system and squad slots</h3>
+
+<ul>
+<li><strong>Description:</strong> NPC squads retain much of Half-Life 2&rsquo;s functionality but were rewritten entirely to use the new ability system. Some abilities require a claimable squad slot. The slots listed are a blank slot, three separate squad attack slots, a sound investigation slot, an exclusive hand-sign slot, an exclusive reload slot, two weapon pickup slots, and one special attack slot.</li>
+<li><strong>Confidence:</strong> Fact — the slot enumeration is presented as read from engine data.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamined Source 2 engine files described by Tyler.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — squad slot definitions in engine data would confirm the list and count.</li>
+</ul>
+
+<h3 id="ability-constraints-proximity-range-cooldowns-and-priority">Ability constraints: proximity, range, cooldowns, and priority</h3>
+
+<ul>
+<li><strong>Description:</strong> Some abilities require that a squadmate not be within range of the enemy — for example, an NPC may throw a grenade only if a squadmate is not close to the target. Abilities can have minimum and maximum ranges, can go on cooldown shared between squadmates, and NPCs may have to wait a set time before using their next ability. NPCs can also be prioritized over one another. Tyler quotes the engine directly: &ldquo;useful to put all grenades thrown on a shared cooldown, for example.&rdquo;</li>
+<li><strong>Confidence:</strong> Fact — includes a direct quotation attributed to the engine&rsquo;s own comments.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamined Source 2 engine code, including an in-code comment quoted by Tyler.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — the squad ability constraint code and its comment would confirm the quotation.</li>
+</ul>
+
+<h3 id="ability-sound-maps">Ability sound maps</h3>
+
+<ul>
+<li><strong>Description:</strong> The game contains a map of ability sounds. Tyler lists the sound-list categories: empty, single, reload, melee hit, melee hit wound, melee hit player, special, announce, target reacquired, and interrupt. From this he concludes HLX NPCs use guns and melee weapons, have special attacks, can be interrupted at any time, and can lose or reacquire targets dynamically.</li>
+<li><strong>Confidence:</strong> Mixed — the sound-list enumeration is presented as data; the conclusions drawn about NPC capabilities are Tyler&rsquo;s inference, delivered casually (&ldquo;Duh&rdquo;).</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamined sound-map entries for NPC abilities described by Tyler; capability conclusions are Tyler&rsquo;s inference.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — the ability sound map and the ability definitions it references would confirm the categories and implied capabilities.</li>
+</ul>
+
+<h3 id="difficulty-scaled-damage-from-all-sources">Difficulty-scaled damage from all sources</h3>
+
+<ul>
+<li><strong>Description:</strong> Damage dealt to NPCs and by NPCs varies with difficulty, and this applies to physics damage and damage from any other source, not only weapon damage.</li>
+<li><strong>Confidence:</strong> Fact — stated as a property of the damage system, consistent with the earlier hitgroup difficulty scaling.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamined Source 2 engine/VData files described by Tyler.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — difficulty-scaled damage tables in HLX data would confirm the scope.</li>
+</ul>
+
+<h3 id="enemy-tracking-last-known-vs-last-seen-position-and-deliberate-misses">Enemy tracking: last known vs. last seen position, and deliberate misses</h3>
+
+<ul>
+<li><strong>Description:</strong> NPCs track enemy location using last known position and last seen position — if a target hides behind a corner, the last seen position is just before the corner and the last known position is behind it. NPCs can also be manipulated to miss shots and hit &ldquo;interesting targets&rdquo; for visual flair.</li>
+<li><strong>Confidence:</strong> Fact — described as engine-level tracking and aiming parameters.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamined Source 2 engine files described by Tyler.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — the corresponding NPC memory and aiming-error parameters would confirm it.</li>
+</ul>
+
+<h3 id="dropping-picking-up-and-destroying-abilities">Dropping, picking up, and destroying abilities</h3>
+
+<ul>
+<li><strong>Description:</strong> NPCs can drop and pick up abilities, which can be destroyed entirely or dropped on the floor. Tyler&rsquo;s example is an ally dropping their current weapon and picking up a different one.</li>
+<li><strong>Confidence:</strong> Fact — described as implemented behavior without hedging.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamined Source 2 engine/VData files described by Tyler.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — ability drop/pickup/destroy definitions in HLX data would confirm it.</li>
+</ul>
+
+<h2 id="new-or-changed-in-this-video">New or changed in this video</h2>
+
+<ul>
+<li>First consolidated catalogue of HLX&rsquo;s &ldquo;traditional&rdquo; NPC AI systems in this series, covering navigation spaces, moods, flinch types, destructible parts, modifiers, level-designer tuning, base VData schema, abilities, schedules, and squads.</li>
+<li>Reports four previously uncatalogued damage types — burn, sonic primary, sonic secondary, and Newton — with usage acknowledged as unknown.</li>
+<li>Reports the destructible body-part system as a generalized successor to the limited Half-Life: Alyx mechanics.</li>
+<li>Adds a dated data point: a more robust NPC VData file from Aperture Desk Job, around March 2022.</li>
+<li>Notes that some vehicle-ragdoll functionality was removed from engine files &ldquo;semi-recently,&rdquo; which complicates treating file absence as a cut.</li>
+<li>Restates earlier claims (houndeye return, base NPC VData from the mechanics video) without adding evidence.</li>
+</ul>
+
+<h2 id="notable-quotes">Notable quotes</h2>
+
+<ul>
+<li>&ldquo;NPCs now support different navigation spaces, aka grids, by which they can move around in the world.&rdquo; — Framing the overhaul of Source 2 NPC navigation.</li>
+<li>&ldquo;We don&rsquo;t know what makes use of these types&rdquo; — Acknowledging the unknown purpose of the four new flinch damage types.</li>
+<li>&ldquo;this is a direct quote from the engine &hellip; useful to put all grenades thrown on a shared cooldown, for example&rdquo; — Quoting an in-code comment about squad ability cooldowns.</li>
+<li>&ldquo;it is actually guaranteed that Valve has actually evolved even more than what we have here since this is already nearly 4 years old&rdquo; — Reasoning about the age of the Aperture Desk Job NPCV file.</li>
+<li>&ldquo;Anyways, that&rsquo;s everything I know about HLX&rsquo;s traditional artificial intelligence for NPCs.&rdquo; — Closing the episode&rsquo;s scope.</li>
+</ul>
+
+<h2 id="open-questions">Open questions</h2>
+
+<ul>
+<li>What entities or weapons use burn, sonic primary, sonic secondary, and Newton damage?</li>
+<li>What do the specific NPC schedule tasks do, and how closely do they resemble Red Dead Redemption 2&rsquo;s NPC routines?</li>
+<li>Was the vehicle-ragdoll code removed from the engine files permanently, or relocated/refactored?</li>
+<li>How much has the NPCV schema changed since the March 2022 Aperture Desk Job build?</li>
+<li>Does the destructible part system function as a weak-point mechanic in actual combat, as Doom Eternal&rsquo;s does?</li>
+<li>Which NPCs are excluded from the base NPC schema that &ldquo;almost every&rdquo; NPC derives from?</li>
+</ul>
+</main>
+<footer class="site-foot">
+<p>Independent research notes on Tyler McVicker's HLX coverage. Not affiliated
+with Valve or with Tyler McVicker.</p>
+<p><strong>HLX is a datamined codename.</strong> Tyler identifies it as
+Half-Life 3; Valve has never confirmed that, and no official release date,
+window or announcement exists.</p>
+</footer>
+</body>
+</html>

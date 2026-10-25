@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The New Technology of Half-Life 3: Every Last Detail - Ep6</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Research notes on Tyler McVicker's HLX coverage. Derived analysis only.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-bar">
+<a class="brand" href="index.html">HLX Research Database</a>
+<nav>
+<a href="claims.html">Claims</a>
+<a href="appendix-video-stats.html">Stats</a>
+<a href="sources/README.html">Sources</a>
+<a href="data.html">Data</a>
+</nav>
+</header>
+<p class="site-note">Derived analysis only. No transcripts, subtitle files or
+source video are hosted here; quotations are short and attributed, and every
+summary links to the original video.</p>
+<main>
+<h1 id="the-new-technology-of-half-life-3-every-last-detail---ep6">The New Technology of Half-Life 3: Every Last Detail - Ep6</h1>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Video ID</td>
+<td><code>w14ZUG1EKio</code></td>
+</tr>
+
+<tr>
+<td>URL</td>
+<td><a href="https://www.youtube.com/watch?v=w14ZUG1EKio">https://www.youtube.com/watch?v=w14ZUG1EKio</a></td>
+</tr>
+
+<tr>
+<td>Release date</td>
+<td>2026-04-16</td>
+</tr>
+
+<tr>
+<td>Duration</td>
+<td>10:08</td>
+</tr>
+
+<tr>
+<td>Series</td>
+<td>Every Last Detail, Episode 6</td>
+</tr>
+</tbody>
+</table>
+<p>| Summary status | <code>complete</code> |</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>Tyler inventories Source 2 engine-level features he expects to appear in HLX, covering hair strand simulation, VData-driven content, procedural audio, Speech Graphics lip-syncing, temporal anti-aliasing and upscalers, weather and wind, ray tracing, AI level of detail, distance fields, mesh shaders, Pulse scripting, and Animgraph 2. The episode is primarily a technical roundup rather than a new leak: several systems have been discussed before, while the freshest specifics are Animgraph 2&rsquo;s shipping dates in Deadlock and Counter-Strike 2 and the December 2025 Dota 2 authoring tools. Tyler is confident about features visible in engine and shipped-game files, but hedges on HLX-specific use, the scope of ray tracing, and his font theory. No release date, build number, or new HLX asset is presented.</p>
+
+<h2 id="mentioned-events">Mentioned events</h2>
+
+<h3 id="source-2-hair-strand-simulation">Source 2 hair strand simulation</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says Source 2 includes an in-depth hair strand simulation system comparable to Unreal Engine 4 or 5. It can target very high hair follicle counts and move or change in response to environmental effects such as wind. He does not name an HLX character, asset, or build that uses it.</li>
+<li><strong>Confidence:</strong> Fact — described as an existing Source 2 capability with no hedging, though no specific file or build is named in the transcript.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Tyler&rsquo;s review of Source 2 engine features and files.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — locate hair strand simulation code and settings in Source 2 builds, then check for HLX character assets using it.</li>
+</ul>
+
+<h3 id="vdata-drives-hlx-weapons-npcs-crates-and-grenades">VData drives HLX weapons, NPCs, crates, and grenades</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler describes VData as a data-driven system that lets developers iterate on game mechanics without recompiling game code. He says it is core to modern Source 2 games and underlies most of Deadlock, where every hero and ability is stored in VData files for quick iteration, patching, and modding. He states that this carries over to HLX and that &ldquo;we know for a fact&rdquo; weapons, NPCs, crates, crate items, and grenades are editable by the end user without recompilation. He cites a community recreation of Neon Prime, built from leftovers in early Deadlock versions, as a demonstration of the capability.</li>
+<li><strong>Confidence:</strong> Mixed — the HLX asset categories are explicitly asserted as fact and Deadlock&rsquo;s VData use is visible in a shipped game, but the claim that the Neon Prime recreation would have been impossible without VData is Tyler&rsquo;s inference.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Deadlock shipped game files and prior VData datamines, plus the community Neon Prime recreation mod cited by Tyler.</li>
+<li><strong>Earlier mentions:</strong> References prior VData discussion (&ldquo;as we&rsquo;ve discussed many times&rdquo;) but does not name a specific earlier video.</li>
+<li><strong>Verification:</strong> needs follow-up — inspect Deadlock/HLX VData files for weapon, NPC, crate, crate item, and grenade definitions, and check the Neon Prime recreation mod&rsquo;s implementation.</li>
+</ul>
+
+<h3 id="procedural-sound-generation-at-runtime">Procedural sound generation at runtime</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says Source 2 can now procedurally generate sounds at runtime, including mixing sound effects, looping sounds without audible repetition, and modulating sounds by distance. He says &ldquo;we know for a fact&rdquo; that one generated sound is wind in a vehicle, producing the whoosh heard when passing an object at high speed.</li>
+<li><strong>Confidence:</strong> Fact — the vehicle-wind example is explicitly labeled as confirmed (&ldquo;we know for a fact&rdquo;), and the other capabilities are stated directly.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Tyler&rsquo;s analysis of Source 2 audio code and files.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — find the procedural audio system and vehicle wind generator in Source 2 files and confirm runtime behavior.</li>
+</ul>
+
+<h3 id="speech-graphics-lip-sync-middleware-support">Speech Graphics lip-sync middleware support</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler reports that Source 2 has gained support for a third-party lip-syncing solution called Speech Graphics, previously used in Resident Evil Village, The Last of Us Part 2, and Split Fiction. He says this lets Valve automate lip-syncing of voice lines to in-game characters, which he believes Valve had done manually until now.</li>
+<li><strong>Confidence:</strong> Mixed — the middleware integration and its prior shipped games are named specifically, but the claim about Valve&rsquo;s previous manual workflow is hedged (&ldquo;I guess&rdquo;).</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Source 2 middleware integration files and the named Speech Graphics credits in other games.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — confirm Speech Graphics SDK references in Source 2 and any HLX voice-line pipeline documentation.</li>
+</ul>
+
+<h3 id="temporal-anti-aliasing-and-upscaler-foundation">Temporal anti-aliasing and upscaler foundation</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says Source 2 now supports temporal anti-aliasing, a modern technique used in many engines and the basis for image upscalers such as Nvidia DLSS, AMD FSR, and Intel XeSS. He adds that Deadlock supports DLSS 4 and FSR 3 in Vulkan and FSR 2.1 in DirectX 11, while XeSS support exists in the engine but does not currently work in Deadlock.</li>
+<li><strong>Confidence:</strong> Fact — shipping Deadlock options and engine support are stated directly without hedging.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Deadlock graphics settings and Source 2 rendering code.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — check Deadlock&rsquo;s current graphics menu and Source 2 renderer for each upscaler path.</li>
+</ul>
+
+<h3 id="weather-precipitation-and-wind-systems">Weather, precipitation, and wind systems</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says several weather effects are being worked on. Precipitation was updated to use the new VData system, and he says it is easy to assume rain and snow could appear in the game. The volumetric fog that Valve used heavily in Half-Life: Alyx was updated to be affected by wind. Wind is new engine functionality that can affect grass, trees, and hair, and it has end-user settings for direction, speed, and turbulence.</li>
+<li><strong>Confidence:</strong> Mixed — the VData precipitation update and fog/wind interaction are presented as file findings, while the appearance of rain and snow in HLX is explicitly an assumption.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Source 2 weather, particle, and wind system files.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — inspect the precipitation entity, volumetric fog, and wind controller definitions; no HLX map or weather sequence is shown.</li>
+</ul>
+
+<h3 id="ray-tracing-added-to-source-2-in-late-2025">Ray tracing added to Source 2 in late 2025</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says ray tracing support was seemingly added to the engine late in 2025, unrelated to the map-lighting baking process. He says the scope of Source 2&rsquo;s ray tracing inclusion is unknown but that he hopes it will most likely be an optional feature.</li>
+<li><strong>Confidence:</strong> Mixed — the addition is attributed to engine files, but the timing is qualified with &ldquo;seemingly,&rdquo; the scope is explicitly unknown, and optional status is Tyler&rsquo;s assumption.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Tyler&rsquo;s analysis of Source 2 engine files.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — locate ray tracing code and settings in Source 2 builds and determine when they appeared and whether they are optional.</li>
+</ul>
+
+<h3 id="ray-tracing-preview-in-new-mapping-tools">Ray tracing preview in new mapping tools</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says the end-user level tools descended from Hammer are likely to support ray tracing to preview lighting in maps before the lightmap is baked. He notes that previewed ray-traced lighting and the final baked lightmap are different systems and the preview will not be completely accurate. According to the files, the new mapping tools appear to support ray tracing specifically in the map preview.</li>
+<li><strong>Confidence:</strong> Mixed — the file-based tool support is presented as evidence, while the accuracy caveat and the extent of end-user access are Tyler&rsquo;s interpretation.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Source 2 mapping tool files, as described by Tyler.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — inspect the new Source 2 map editor for ray-traced preview options and compare preview output with baked lighting.</li>
+</ul>
+
+<h3 id="ai-level-of-detail-for-npcs">AI level of detail for NPCs</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler describes AI level of detail as an optimization that lowers NPC senses and features based on line of sight or distance from the player. He argues it would make no sense in released Source 2 multiplayer games because players can be anywhere at any time, and calls it &ldquo;very much an optimization move for a single player game.&rdquo;</li>
+<li><strong>Confidence:</strong> Mixed — the system&rsquo;s behavior is described from engine code, while the single-player-only rationale is Tyler&rsquo;s inference.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Tyler&rsquo;s analysis of Source 2 AI code.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — find AI LOD fields in Source 2 NPC definitions and any HLX use.</li>
+</ul>
+
+<h3 id="distance-fields-for-ambient-occlusion-shadows-and-reflections">Distance fields for ambient occlusion, shadows, and reflections</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says distance fields are used for ambient occlusion, shadows, and reflections. They store surfaces in a grid and use the distance between surfaces to produce a good-looking, reasonably performant shadow and lighting bake, running much better than ray tracing. Deadlock uses distance fields for character shadows, and Tyler says they have been heavily implemented in Source 2 far beyond what Deadlock currently uses.</li>
+<li><strong>Confidence:</strong> Mixed — the engine and Deadlock usage are presented as established, while &ldquo;far more than Deadlock&rdquo; comes from Tyler&rsquo;s reading of the files and the performance comparison is his characterization.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Source 2 rendering code and Deadlock&rsquo;s shipped character shadows.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — inspect distance field settings and usage in Source 2 and compare with Deadlock&rsquo;s implementation.</li>
+</ul>
+
+<h3 id="mesh-shaders-for-large-triangle-batches">Mesh shaders for large triangle batches</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler explains mesh shaders as a modern graphics shader that lets the GPU efficiently process large batches of triangles in a scene, useful for highly detailed scenes, objects, or models.</li>
+<li><strong>Confidence:</strong> Fact — presented as an existing engine capability without hedging; no HLX-specific use is named.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Tyler&rsquo;s review of Source 2 rendering features.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — confirm mesh shader paths in the Source 2 renderer and any HLX assets designed around them.</li>
+</ul>
+
+<h3 id="pulse-visual-scripting">Pulse visual scripting</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler describes Pulse as a visual scripting system similar to Unreal Engine Blueprints or Scratch, evolving from Source 1&rsquo;s VScript, which was used in Team Fortress 2 for modes such as Versus Saxton Hale and Zombie Infection. He says Valve uses Pulse for UI and map events, that HLX scripted sequences are most likely handled by it, and that Deadlock&rsquo;s new lobby hideout uses Pulse for all player interactions.</li>
+<li><strong>Confidence:</strong> Mixed — Pulse&rsquo;s role in Deadlock and its UI/map-event use are stated as established, while the HLX scripted-sequence use is explicitly &ldquo;most likely.&rdquo;</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Source 2 Pulse tooling, Deadlock&rsquo;s lobby hideout, and the historical Team Fortress 2 VScript usage.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — inspect Pulse graphs in Deadlock&rsquo;s hideout and in HLX map/UI assets.</li>
+</ul>
+
+<h3 id="animgraph-2-architecture-and-file-format">Animgraph 2 architecture and file format</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says Animgraph 2 is the new animation resolve system intended to replace Animgraph 1, which was not networked efficiently in multiplayer titles and caused large bandwidth consumption. Instead of one Animgraph file containing animation and skeleton data in the VModel, Animgraph 2 stores animations in separate <code>VNM clip</code> files and skeletons in <code>VNM skull</code> files, so they no longer need to be present in the VModel. Skeletons support bone-level LOD, with significantly fewer bones at low LOD levels. Graphs can have multiple variations: core graphs contain purely resolve logic, while specified variations can reference overridden animation clips and overrideable graphs. The state-machine resolve is completely different and lacks some Animgraph 1 features for optimization.</li>
+<li><strong>Confidence:</strong> Fact — specific file extensions, data layout, and graph behavior are described as facts from the engine and tooling.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Source 2 animation tooling and Animgraph 2 file definitions.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — inspect <code>VNM clip</code>/<code>VNM skull</code> formats and Animgraph 2 graph definitions in Source 2 tools.</li>
+</ul>
+
+<h3 id="animgraph-2-shipped-in-deadlock-and-counter-strike-2">Animgraph 2 shipped in Deadlock and Counter-Strike 2</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says Animgraph 2 was used in Deadlock for the Candle Troopers and some heroes as of July 28, and that it shipped in Counter-Strike 2 on July 29, 2025 for view models. He says it is planned for CS2 player models as of the video&rsquo;s writing and may already have shipped. The year for the Deadlock date is not stated in the transcript, but the surrounding CS2 date is 2025.</li>
+<li><strong>Confidence:</strong> Fact — dated shipping milestones and named games/content are given. The possibility that CS2 player models have already shipped is Tyler&rsquo;s uncertainty.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Deadlock and Counter-Strike 2 build contents.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — check CS2 and Deadlock builds around July 28–29, 2025, and inspect current CS2 player models for Animgraph 2.</li>
+</ul>
+
+<h3 id="dota-2-december-2025-animgraph-2-authoring-tools">Dota 2 December 2025 Animgraph 2 authoring tools</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says a Dota 2 update in December 2025 adds a &ldquo;create default AnimGraph 2&rdquo; option. It can create an AnimGraph 2 graph, convert a render mesh file into an AnimGraph 2 skeleton, and convert all animation sequences referenced in a model into Animgraph 2 clips. The clip creator also respects the subtractions used to create additive animations and anim events, converting them to a new legacy format. The same update adds AnimGraph 2 list and skeleton list support directly into Model Doc so newly authored Source 2 models can reference Animgraph 2 resources. Hammer also adds an AnimGraph 2 identifier field to replace the studio model system for dynamic models, letting a <code>prop_dynamic</code> entity run an Animgraph 2 identifier.</li>
+<li><strong>Confidence:</strong> Fact — a named update and specific tool options, fields, and conversions are described.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Dota 2 December 2025 update tooling and Source 2 Model Doc/Hammer changes.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — inspect the Dota 2 update&rsquo;s tools, Model Doc lists, and Hammer entity fields.</li>
+</ul>
+
+<h3 id="animgraph-2-editors-being-folded-into-model-doc">Animgraph 2 editors being folded into Model Doc</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says multiple editors related to Animgraph 2 have appeared over about a year: the Animgraph 2 editor, skeleton editor, clip editor, and IK rig editor. He says it seems Valve is effectively trying to incorporate all of them into Model Doc over time.</li>
+<li><strong>Confidence:</strong> Speculation — the editors are named, but the consolidation into Model Doc is Tyler&rsquo;s read (&ldquo;it seems as if&rdquo;).</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Tyler&rsquo;s analysis of Source 2 editor tooling over roughly a year.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — track Model Doc and animation editor builds over time for merged functionality.</li>
+</ul>
+
+<h3 id="early-hlx-animgraph-2-use-in-nav-link-transitions">Early HLX AnimGraph 2 use in nav link transitions</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says animations and anim graph parameters between nav link transitions and movements were an HLX concept developed very early, between July and October 2020. Nav link transitions have an option to use Animgraph 2 graphs alongside existing Animgraph 1 parameters, which he says means something in HLX could be using Animgraph 2. He also cites a save/restore option named <code>CAnimGraph2 save resource ops</code> recently linked in the schema system as further evidence.</li>
+<li><strong>Confidence:</strong> Mixed — the nav link option and schema entry are presented as file findings, while the 2020 development window and the conclusion that HLX uses Animgraph 2 are Tyler&rsquo;s inference and recollection.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Source 2 nav link and schema files, plus Tyler&rsquo;s account of HLX development history.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — inspect nav link transition options and the <code>CAnimGraph2 save resource ops</code> schema entry, and find 2020-era HLX references.</li>
+</ul>
+
+<h3 id="datamined-source-2-tool-icon-assets">Datamined Source 2 tool icon assets</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler lists engine-level tool icon assets found through datamines over the previous five years: orientated mesh, nav space flight, nav space, nav space water, nav walkable, AI goal siege, ambient NPC manager, auto aim crosshair, voice acting database, VData, Pulse, smart prop asset type, response rules, response template, script doctor, ignore NPC, ignore NPC and player, navspace clip, audio mod, light probe volume, Speech Graphics, AI scripted move to, filter model, spawn volume, spawn destination, break me, science, vista, V Pulse outliner, destructible asset, breakable asset, zen asset, terrain tool, build break master, new face poser icons, AI goal lead distances, and VMMD.</li>
+<li><strong>Confidence:</strong> Fact — presented as datamined tool icons accumulated over five years; no individual filenames or build numbers are given.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamined Source 2/HLX tool icon assets collected over five years.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — locate the icon assets in Source 2 tool directories and map each to its corresponding tool or entity system.</li>
+</ul>
+
+<h3 id="gordin-font-commissioned-for-half-life-2s-20th-anniversary">Gordin font commissioned for Half-Life 2&rsquo;s 20th anniversary</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says that for Half-Life 2&rsquo;s 20th anniversary, Valve commissioned a brand-new font called Gordin. He doubts Valve paid for a new font solely for that anniversary and thinks it will be reused for HLX.</li>
+<li><strong>Confidence:</strong> Mixed — the commission and font name are stated as fact, while reuse in HLX is explicitly Tyler&rsquo;s speculation (&ldquo;I think&rdquo;).</li>
+<li><strong>Category:</strong> Other</li>
+<li><strong>Source:</strong> Valve&rsquo;s Half-Life 2 20th anniversary materials and Tyler&rsquo;s inference.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — check Gordin font files, licensing, and any HLX UI or marketing assets using it.</li>
+</ul>
+
+<h2 id="new-or-changed-in-this-video">New or changed in this video</h2>
+
+<ul>
+<li>Frames the episode as a broad Source 2 engine-feature inventory for HLX rather than a new leak or build report; no release date, build number, or new HLX asset is given.</li>
+<li>Adds a detailed Animgraph 2 timeline: Deadlock&rsquo;s Candle Troopers and some heroes as of July 28, CS2 view models on July 29, 2025, and planned CS2 player models.</li>
+<li>Reports Dota 2&rsquo;s December 2025 update adding AnimGraph 2 creation, mesh-to-skeleton and sequence-to-clip conversion, Model Doc resource lists, and a Hammer AnimGraph 2 identifier field for <code>prop_dynamic</code>.</li>
+<li>Reports ray tracing support apparently added to Source 2 in late 2025 and ray-traced lighting preview in the new mapping tools, both with explicit uncertainty about scope and accuracy.</li>
+<li>Adds hair strand simulation, runtime procedural audio (including vehicle wind), Speech Graphics lip-sync support, and temporal anti-aliasing to the feature list.</li>
+<li>Reiterates previously covered VData, Pulse, wind, volumetric fog, AI LOD, distance fields, and mesh shaders, with new detail on precipitation moving to VData and wind affecting fog, grass, trees, and hair.</li>
+<li>Repeats the claim that HLX content categories such as weapons, NPCs, crates, crate items, and grenades are VData-editable without recompilation, now stated as fact.</li>
+<li>Revisits the Gordin font theory: commissioned for Half-Life 2&rsquo;s 20th anniversary, speculated to be reused for HLX.</li>
+</ul>
+
+<h2 id="notable-quotes">Notable quotes</h2>
+
+<ul>
+<li>&ldquo;We know for a fact that weapons, NPCs, crates, crate items, grenades&hellip; [are] editable by the end user without a recompilation required.&rdquo; — On VData-driven HLX content.</li>
+<li>&ldquo;Source 2 is now able to procedurally generate sounds at runtime.&rdquo; — On runtime procedural audio.</li>
+<li>&ldquo;This is very much an optimization move for a single player game.&rdquo; — On AI level of detail.</li>
+<li>&ldquo;We don&rsquo;t know Source 2&rsquo;s scope of ray tracing&rsquo;s inclusion, but we can hopefully assume that it&rsquo;ll most likely be an optional feature.&rdquo; — On ray tracing.</li>
+<li>&ldquo;Animgraph 2 is now shipped in Counter-Strike 2 as of July 29th, 2025 for view models.&rdquo; — On Animgraph 2 deployment.</li>
+<li>&ldquo;It seems as if Valve is effectively trying to incorporate all of them into model doc over time.&rdquo; — On the Animgraph 2-related editors.</li>
+<li>&ldquo;I think this is going to be reused for HLX.&rdquo; — On the Gordin font.</li>
+</ul>
+
+<h2 id="open-questions">Open questions</h2>
+
+<ul>
+<li>What scope ray tracing has in Source 2 and whether it will be optional or required for any HLX rendering path.</li>
+<li>Whether Animgraph 2 has shipped for Counter-Strike 2 player models since the video&rsquo;s recording.</li>
+<li>Whether rain and snow actually appear in HLX, beyond precipitation&rsquo;s move to VData.</li>
+<li>Which HLX characters, if any, use the hair strand simulation and at what follicle counts.</li>
+<li>Whether Gordin is reused for HLX branding or UI, and under what license.</li>
+<li>What the listed tool icons correspond to in practice, particularly entries such as &ldquo;VMMD,&rdquo; &ldquo;build break master,&rdquo; and &ldquo;zen asset.&rdquo;</li>
+<li>Which Source 2, Deadlock, CS2, or Dota 2 builds contained each cited change; no build numbers or filenames are given.</li>
+</ul>
+</main>
+<footer class="site-foot">
+<p>Independent research notes on Tyler McVicker's HLX coverage. Not affiliated
+with Valve or with Tyler McVicker.</p>
+<p><strong>HLX is a datamined codename.</strong> Tyler identifies it as
+Half-Life 3; Valve has never confirmed that, and no official release date,
+window or announcement exists.</p>
+</footer>
+</body>
+</html>

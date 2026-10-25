@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HLX Development Might Have Hit a New Stage - HLX Files #15</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Research notes on Tyler McVicker's HLX coverage. Derived analysis only.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-bar">
+<a class="brand" href="index.html">HLX Research Database</a>
+<nav>
+<a href="claims.html">Claims</a>
+<a href="appendix-video-stats.html">Stats</a>
+<a href="sources/README.html">Sources</a>
+<a href="data.html">Data</a>
+</nav>
+</header>
+<p class="site-note">Derived analysis only. No transcripts, subtitle files or
+source video are hosted here; quotations are short and attributed, and every
+summary links to the original video.</p>
+<main>
+<h1 id="hlx-development-might-have-hit-a-new-stage---hlx-files-15">HLX Development Might Have Hit a New Stage - HLX Files #15</h1>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Video ID</td>
+<td><code>qKR-G1EuYyg</code></td>
+</tr>
+
+<tr>
+<td>URL</td>
+<td><a href="https://www.youtube.com/watch?v=qKR-G1EuYyg">https://www.youtube.com/watch?v=qKR-G1EuYyg</a></td>
+</tr>
+
+<tr>
+<td>Release date</td>
+<td>2025-10-29</td>
+</tr>
+
+<tr>
+<td>Duration</td>
+<td>18:22</td>
+</tr>
+
+<tr>
+<td>Series</td>
+<td>HLX Files #15</td>
+</tr>
+</tbody>
+</table>
+<p>| Summary status | <code>complete</code> |</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>After roughly a two-month hiatus, Tyler returns with a mixed batch of datamine findings, hoax debunkings, and hardware context. He argues that recent Counter-Strike 2 update strings — destructible hit groups, destruction death behavior, liquid spills, and sound absorption — represent late-stage refactoring and optimization of systems whose functions have existed for about two years, while the new &ldquo;science assets&rdquo; icon is treated as either an older stray asset or unrelated to HLX. He dismisses the 4chan concept-art drop as AI-generated and the Mike Shapiro &ldquo;Valve opening&rdquo; story as invented, explains away a Half-Life 2 SteamDB changelist as a mod update, and relays a hearsay rumor that trailer work is underway. Overall he is confident about the datamine-derived facts but explicitly hedges the timeline and trailer claims, tentatively pointing to November for a possible Steam Frame announcement rather than a Game Awards reveal.</p>
+
+<h2 id="mentioned-events">Mentioned events</h2>
+
+<h3 id="ibex-controller-backend-update-on-steam">Ibex controller backend update on Steam</h3>
+
+<ul>
+<li><strong>Description:</strong> Minutes before recording, a Steam backend update was pushed and reportedly caught by &ldquo;Bradley,&rdquo; revealing the codename &ldquo;Ibex&rdquo; controller — described as effectively a Steam Deck without a screen. Tyler says it is one of the products to be released alongside the Steam Frame VR headset.</li>
+<li><strong>Confidence:</strong> Mixed — the backend update and codename are presented as a concrete Steam database find; the &ldquo;Steam Deck without a screen&rdquo; characterization and launch pairing are Tyler&rsquo;s interpretation.</li>
+<li><strong>Category:</strong> Hardware</li>
+<li><strong>Source:</strong> Steam backend/SteamDB update spotted shortly before recording, relayed by Tyler.</li>
+<li><strong>Earlier mentions:</strong> Prior channel coverage referenced: Tyler says Ibex is &ldquo;the thing that we&rsquo;ve been talking about for years,&rdquo; but no episode is named.</li>
+<li><strong>Verification:</strong> needs follow-up — a public Steam depot/manifest entry or Valve announcement naming Ibex would confirm the codename and product type.</li>
+</ul>
+
+<h3 id="steam-frame-announcement-expected-within-weeks">Steam Frame announcement expected within weeks</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says the announcement of Valve&rsquo;s next VR headset, the Steam Frame, &ldquo;seems to be very close, like within weeks,&rdquo; and that the Ibex controller will launch alongside it.</li>
+<li><strong>Confidence:</strong> Speculation — stated as an expectation (&ldquo;seems to be very close&rdquo;) without a cited source or date.</li>
+<li><strong>Category:</strong> Hardware</li>
+<li><strong>Source:</strong> Tyler&rsquo;s inference from the timing of the Ibex backend update.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — an official Valve announcement or credible shipping/regulatory filing would confirm the timing.</li>
+</ul>
+
+<h3 id="hlx-may-use-steam-frame-features-despite-not-being-a-vr-title">HLX may use Steam Frame features despite not being a VR title</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler states HLX is not a VR title, but suggests it may take advantage of Steam Frame features such as playing the entire Steam library in a large virtual theater with added depth, &ldquo;like if it was a 3D television.&rdquo; He compares this to Valve announcing a flagship VR title alongside the Index.</li>
+<li><strong>Confidence:</strong> Speculation — explicitly framed as a possible reason Valve would mention HLX alongside VR hardware (&ldquo;most likely due to&hellip;&rdquo;).</li>
+<li><strong>Category:</strong> Technology</li>
+<li><strong>Source:</strong> Tyler&rsquo;s analysis of Valve&rsquo;s Index-era announcement pattern and Steam Frame marketing.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> unverified — Steam Frame feature documentation or an HLX store listing mentioning such support would confirm it.</li>
+</ul>
+
+<h3 id="destructible-hit-groups-replace-destructible-part-damage-level-strings">Destructible hit groups replace &ldquo;destructible part damage level&rdquo; strings</h3>
+
+<ul>
+<li><strong>Description:</strong> A string that once read &ldquo;destructible part damage level change&rdquo; now reads &ldquo;destructible hit group damage level change&rdquo;; damage parts are now called damage hit groups. Tyler links this to critical-damage percentage (a chance to destroy the damage level regardless of damage pass-through type) and headshot damage as a damage type. He says HLX hit groups must cover many non-humanoid model forms, unlike CS2&rsquo;s essentially always-bipedal humanoid hit groups, and mentions &ldquo;Zen gorillas&rdquo; (which he corrects to a tentacle beast).</li>
+<li><strong>Confidence:</strong> Mixed — the string change is a datamine fact; the interpretation of dynamic multi-model hit groups and the Zen creature example are Tyler&rsquo;s inference.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of a Counter-Strike 2 update string change.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — the string diff in the CS2 build&rsquo;s files and HLX model/entity data showing non-humanoid hit group definitions would confirm it.</li>
+</ul>
+
+<h3 id="the-game-awards-2025-will-not-host-the-hlx-reveal">The Game Awards 2025 will not host the HLX reveal</h3>
+
+<ul>
+<li><strong>Description:</strong> The Game Awards account tweeted asking about dream game sequel announcements and dream world premieres for the December 11, 2025 show; top replies were Half-Life related. Tyler says this is not a hint and that Valve will announce the game themselves in a tweet rather than at the show: &ldquo;Do not get your hopes up for the game awards.&rdquo;</li>
+<li><strong>Confidence:</strong> Speculation — a confident prediction about Valve&rsquo;s marketing plans with no cited evidence.</li>
+<li><strong>Category:</strong> Marketing</li>
+<li><strong>Source:</strong> The Game Awards tweets and Tyler&rsquo;s analysis of Valve&rsquo;s announcement habits.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> unverified — the December 11, 2025 ceremony lineup or a Valve self-published announcement would confirm or refute it.</li>
+</ul>
+
+<h3 id="re-entrant-resource-system-cleanup-strings-indicate-late-stage-optimization">Re-entrant resource-system cleanup strings indicate late-stage optimization</h3>
+
+<ul>
+<li><strong>Description:</strong> Strings such as &ldquo;Re-entrant call to see resource system block until manifest loaded while already in frame update&rdquo; and &ldquo;Re-entrant call to see resource system frame update&rdquo; are described as resource cleanup strings for an automated engine process that frees system resources. Tyler calls this &ldquo;late game development stuff&rdquo; and says the specifics are unimportant.</li>
+<li><strong>Confidence:</strong> Mixed — the strings are datamined; &ldquo;late stage development function&rdquo; is Tyler&rsquo;s reading of their purpose.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of engine strings, likely from a Counter-Strike 2 update.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — locating the strings in Source 2 engine binaries and comparing with earlier builds would show when the cleanup pass was added.</li>
+</ul>
+
+<h3 id="4chan-concept-art-leak-is-ai-generated-and-fake">4chan concept-art leak is AI-generated and fake</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler revisits a 4chan claim of concept art for the next Half-Life game and calls it entirely AI-generated and fake. He argues real concept art is functional, citing an implausible hairstyle variant sheet with minute differences, and describes the images as likely trace-overs mixed with AI nonsense. He declines to discuss story spoilers and says hoaxes do not reduce the odds of the game shipping or prove it never existed.</li>
+<li><strong>Confidence:</strong> Mixed — the existence of the posted images is concrete; the determination that they are fake/AI-generated is Tyler&rsquo;s visual analysis, not a primary artifact.</li>
+<li><strong>Category:</strong> Other</li>
+<li><strong>Source:</strong> 4chan concept-art post and Tyler&rsquo;s analysis of the images.</li>
+<li><strong>Earlier mentions:</strong> Tyler references prior coverage of the hoax (&ldquo;Remember when this happened?&rdquo;), without naming an episode.</li>
+<li><strong>Verification:</strong> needs follow-up — provenance of the images or Valve confirmation would settle authenticity; no such evidence is presented.</li>
+</ul>
+
+<h3 id="asynchronous-particle-wind-simulation-strings">Asynchronous particle wind simulation strings</h3>
+
+<ul>
+<li><strong>Description:</strong> Strings listed include impulse wind speed, &ldquo;C per particle float input MC_FL_windspeedimpulse,&rdquo; wobble radius, &ldquo;MC_FL_wobbleimpulseiswind&rdquo; boolean, and &ldquo;MC_B is radial wind.&rdquo; Tyler describes this as asynchronous particle simulation where particles are simulated separately but as a group, react individually to simulated wind, affect each other, and can affect the wind itself.</li>
+<li><strong>Confidence:</strong> Mixed — the parameter names are datamined facts; the description of the asynchronous simulation behavior is Tyler&rsquo;s technical interpretation.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of particle-system strings from a recent update.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — engine source or particle editor documentation exposing these parameters would confirm the behavior.</li>
+</ul>
+
+<h3 id="sound-absorption-refactor-in-the-surface-property-system">Sound absorption refactor in the surface property system</h3>
+
+<ul>
+<li><strong>Description:</strong> Absorption coefficients in code refer to sound absorption, not liquid/material absorption — the dampening effect of materials on sound waves. Previously separate surface attributes were set per frequency band (high, mid, low); now sound absorption, scattering, and transmission based on material properties are refactored into one cleaner, cheaper, more optimized system. Tyler notes absorption and transmission no longer use separate frequency band ranges.</li>
+<li><strong>Confidence:</strong> Mixed — the refactor is evidenced by the datamined strings; the claim that it is an optimization step and how it behaves is Tyler&rsquo;s interpretation.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of surface-property/audio strings and Tyler&rsquo;s analysis.</li>
+<li><strong>Earlier mentions:</strong> Earlier episodes&rsquo; discussion of the surface property system is referenced (&ldquo;we have discussed at length&rdquo;), but no episode is named.</li>
+<li><strong>Verification:</strong> needs follow-up — comparing old and new surface property definitions in engine files/builds would confirm the merge of frequency-band attributes.</li>
+</ul>
+
+<h3 id="mike-shapiro-prepare-for-the-valve-opening-reddit-story-is-false">Mike Shapiro &ldquo;Prepare for the Valve opening&rdquo; Reddit story is false</h3>
+
+<ul>
+<li><strong>Description:</strong> A Reddit user claimed to have met Mike Shapiro — voice of Barney Calhoun and the G-Man — at a convention, and that Shapiro smiled and said &ldquo;Prepare for the Valve opening,&rdquo; then ignored a request to explain. Tyler flatly rejects it: &ldquo;Mike didn&rsquo;t say that,&rdquo; and notes how often he is asked about the story.</li>
+<li><strong>Confidence:</strong> Unclear — the underlying encounter is unverifiable hearsay, and Tyler&rsquo;s denial is asserted without cited evidence.</li>
+<li><strong>Category:</strong> Other</li>
+<li><strong>Source:</strong> Reddit anecdote as read by Tyler; Tyler&rsquo;s denial.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — comment from Shapiro or the original poster, or corroborating convention footage, would settle it.</li>
+</ul>
+
+<h3 id="liquid-spill-strings-and-expiration-time-optimization">Liquid spill strings and expiration-time optimization</h3>
+
+<ul>
+<li><strong>Description:</strong> Strings include &ldquo;C_OP_game_liquid_spill,&rdquo; a C particle function renderer, &ldquo;liquid contents&rdquo; (negative for water, positive for oil, zero for none), &ldquo;M_FL expiration time&rdquo; for contribution amount, and a particle field scalar amount attribute. Tyler explains that expiration time controls how long spilled liquid is rendered/simulated before despawning, and that the amount field covers quantities from a gallon to a swimming pool to an eyedropper. He speculates the game will feature odd oil/water/wood/metal/fire physics puzzles that may grow tedious on replays, &ldquo;like the seesaw puzzle, but for a new generation.&rdquo;</li>
+<li><strong>Confidence:</strong> Mixed — the strings and their literal meanings are datamined evidence; the puzzle-design expectation is speculation.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of liquid/particle strings from a recent update; Tyler&rsquo;s analysis.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — HLX map/entity data placing liquid volumes and spill emitters would support the gameplay inference.</li>
+</ul>
+
+<h3 id="half-life-2-steamdb-changelist-traced-to-a-mod-update">Half-Life 2 SteamDB changelist traced to a mod update</h3>
+
+<ul>
+<li><strong>Description:</strong> SteamDB identified a changelist number for Half-Life 2 and an associated unknown app ID, prompting HLX speculation. Tyler says changelists can result from trivial changes such as a store tag update, and that this one came from a mod updating on Steam that required Half-Life 2. He calls it normal daily Steam activity and reiterates, &ldquo;The game is still in development.&rdquo;</li>
+<li><strong>Confidence:</strong> Fact — Tyler cites SteamDB&rsquo;s identification and the mod dependency as the explanation.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> SteamDB changelist tracking and the associated mod&rsquo;s Steam update.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified in principle — the SteamDB changelist and the mod&rsquo;s update history can be checked directly, though no links are given in the transcript.</li>
+</ul>
+
+<h3 id="destruction-death-behavior-flag-in-latest-counter-strike-update">Destruction death behavior flag in latest Counter-Strike update</h3>
+
+<ul>
+<li><strong>Description:</strong> New flags cover hit groups, damage, kill, and triggers that change behavior on death, including &ldquo;destruction death behavior&rdquo; with options do not kill, kill, gib, or remove, plus &ldquo;MC_B keep loaded ammo.&rdquo; Tyler says these come from the latest Counter-Strike update but are unrelated to Counter-Strike; they enable Doom-style destructible enemies whose body parts can be shot off, damage can trigger map events, and corpses can still react to later damage. He stresses the functions have been evidenced for about two years and this is a tool cleanup/refactor, not their introduction.</li>
+<li><strong>Confidence:</strong> Mixed — the flags and options are datamined facts; the HLX gameplay interpretation and &ldquo;refactor&rdquo; framing are Tyler&rsquo;s analysis.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of the latest Counter-Strike 2 update; Tyler&rsquo;s analysis of earlier HLX evidence.</li>
+<li><strong>Earlier mentions:</strong> References roughly two years of prior evidence of these functions on the channel, without naming an episode.</li>
+<li><strong>Verification:</strong> needs follow-up — diffing the CS2 build strings against older builds and finding HLX entity definitions using the flags would confirm the refactor claim.</li>
+</ul>
+
+<h3 id="radius-damage-for-destructible-parts">Radius damage for destructible parts</h3>
+
+<ul>
+<li><strong>Description:</strong> A string reading &ldquo;MC_B debug destructible parts radius damage&rdquo; prompts Tyler to ask whether destroying certain model parts causes splash damage in a radius around the model.</li>
+<li><strong>Confidence:</strong> Speculation — posed as an open question based on a single debug string.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of a Counter-Strike 2 update string.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — implementation code or HLX entity data defining radius damage on part destruction would confirm it.</li>
+</ul>
+
+<h3 id="new-science-assets-icon-in-counter-strike-tools">New &ldquo;science assets&rdquo; icon in Counter-Strike tools</h3>
+
+<ul>
+<li><strong>Description:</strong> A small new icon labeled &ldquo;science assets&rdquo; appeared in the Counter-Strike update of October 15, used by Valve&rsquo;s tools to denote a group of assets marked &ldquo;science.&rdquo; Tyler says its meaning is completely unknown and rejects the &ldquo;Portal 3&rdquo; reading. He thinks it is an older asset that slipped into the update, or belongs to an unrelated project; either way he does not read it as evidence the game is not asset-locked, since everything else points to polishing, optimizing, and refactoring.</li>
+<li><strong>Confidence:</strong> Mixed — the icon&rsquo;s appearance in the October 15 update is a datamined fact; the &ldquo;older asset&rdquo; and timeline conclusions are inference.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Datamine of the October 15 Counter-Strike 2 update tools; Tyler&rsquo;s analysis.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — checking whether the icon exists in older tool builds would confirm or refute the &ldquo;slipped in&rdquo; explanation.</li>
+</ul>
+
+<h3 id="rumor-that-hlx-trailer-work-is-underway">Rumor that HLX trailer work is underway</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler relays a current rumor that work on the trailer is occurring, prefacing it heavily as hearsay that should be taken with a grain of salt. He argues Valve makes trailers close to launch — as with Half-Life: Alyx, roughly two months before release — rather than over a year ahead like publicly owned AAA studios, and expects the announcement and launch to be close together.</li>
+<li><strong>Confidence:</strong> Speculation — explicitly labeled hearsay/rumor, with no artifact or named source.</li>
+<li><strong>Category:</strong> Marketing</li>
+<li><strong>Source:</strong> Unnamed rumor circulating in the community, relayed by Tyler; comparison to Half-Life: Alyx&rsquo;s marketing.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — a trailer asset leak, Valve rating filing, or official announcement would confirm it.</li>
+</ul>
+
+<h3 id="raising-the-bar-reprint-timed-to-half-life-hype">Raising the Bar reprint timed to Half-Life hype</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler notes Valve announced last year a coffee-table reprint of Raising the Bar with new chapters relating to the episodes, shipping this year, and expects Valve to want to sell it while enthusiasm for a new Half-Life game peaks. Combined with the Steam Frame, he suggests tentatively getting excited for November while staying &ldquo;very chill&rdquo; about &ldquo;a possible thing happening soon, maybe.&rdquo;</li>
+<li><strong>Confidence:</strong> Speculation — the book&rsquo;s announcement is stated as fact but the sales-timing motive and November window are Tyler&rsquo;s expectation.</li>
+<li><strong>Category:</strong> Business/legal</li>
+<li><strong>Source:</strong> Valve&rsquo;s Raising the Bar reprint announcement; Tyler&rsquo;s inference.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — a shipping date/store listing for the reprint and any November Valve announcements would test the timing claim.</li>
+</ul>
+
+<h2 id="new-or-changed-in-this-video">New or changed in this video</h2>
+
+<ul>
+<li>A Steam backend update revealed the &ldquo;Ibex&rdquo; controller codename minutes before recording, presented as launching with the Steam Frame.</li>
+<li>New Counter-Strike 2 update strings (October 15) show &ldquo;destructible hit group damage level,&rdquo; destruction death behavior flags, liquid-spill expiration fields, and a new &ldquo;science assets&rdquo; tool icon.</li>
+<li>The sound absorption/transmission system is described as refactored from per-frequency-band surface attributes into a single material-based system.</li>
+<li>A Half-Life 2 SteamDB changelist and unknown app ID are explicitly debunked as a mod update rather than HLX activity.</li>
+<li>The 4chan concept-art leak is assessed as AI-generated fake, and the Mike Shapiro convention story is denied.</li>
+<li>A new, explicitly hearsay rumor that trailer work is underway is introduced, with a tentative November window rather than a Game Awards reveal.</li>
+<li>Tyler downgrades the significance of the &ldquo;science assets&rdquo; icon, arguing it does not show the game is still far from asset lock.</li>
+</ul>
+
+<h2 id="notable-quotes">Notable quotes</h2>
+
+<ul>
+<li>&ldquo;Imagine a Steam Deck without a screen, and that&rsquo;s a controller.&rdquo; — Describing the Ibex controller found in the Steam backend.</li>
+<li>&ldquo;This is a late stage development function.&rdquo; — On the re-entrant resource-system cleanup strings.</li>
+<li>&ldquo;Just because the community is pulling hoaxes doesn&rsquo;t mean that Valve has changed or shifted in any capacity.&rdquo; — On the fake concept art.</li>
+<li>&ldquo;Mike didn&rsquo;t say that.&rdquo; — Rejecting the Mike Shapiro &ldquo;Valve opening&rdquo; anecdote.</li>
+<li>&ldquo;This once again is a tool cleanup.&rdquo; — On the destruction death behavior flags, which he says existed for about two years.</li>
+<li>&ldquo;This is hearsay. It&rsquo;s a rumor.&rdquo; — Prefacing the trailer-work claim.</li>
+</ul>
+
+<h2 id="open-questions">Open questions</h2>
+
+<ul>
+<li>What &ldquo;science assets&rdquo; denotes in Valve&rsquo;s tools, and whether the icon is old or newly created.</li>
+<li>Whether the destruction death behavior flags and hit group refactor are in active HLX use or only engine-side preparation.</li>
+<li>What the &ldquo;Zen gorilla&rdquo;/tentacle beast reference corresponds to in HLX enemy design.</li>
+<li>Whether trailer work is actually occurring and when any announcement or launch would follow.</li>
+<li>Whether the Steam Frame and Ibex launch timing will overlap with any HLX marketing.</li>
+</ul>
+</main>
+<footer class="site-foot">
+<p>Independent research notes on Tyler McVicker's HLX coverage. Not affiliated
+with Valve or with Tyler McVicker.</p>
+<p><strong>HLX is a datamined codename.</strong> Tyler identifies it as
+Half-Life 3; Valve has never confirmed that, and no official release date,
+window or announcement exists.</p>
+</footer>
+</body>
+</html>

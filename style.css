@@ -1,0 +1,183 @@
+/* Stylesheet for the generated HLX research site.
+   Copied verbatim into dist/style.css by build-site.py. */
+
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff;
+  --fg: #1b1f24;
+  --muted: #5c6570;
+  --line: #d9dee5;
+  --soft: #f5f6f8;
+  --accent: #a4262c;
+  --code-bg: #f1f3f5;
+  --bar: #14181d;
+  --bar-fg: #f2f4f7;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #101317;
+    --fg: #dfe4ea;
+    --muted: #9aa4b0;
+    --line: #2b333c;
+    --soft: #171c22;
+    --accent: #ff8a80;
+    --code-bg: #1a2027;
+    --bar: #05070a;
+    --bar-fg: #eef1f5;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif;
+  overflow-wrap: break-word;
+}
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { text-decoration-thickness: 2px; }
+
+/* ---------- chrome ---------- */
+
+.site-bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1.25rem;
+  padding: 0.7rem 1.25rem;
+  background: var(--bar);
+  color: var(--bar-fg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.site-bar .brand {
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--bar-fg);
+  text-decoration: none;
+}
+
+.site-bar nav { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+.site-bar nav a {
+  color: var(--bar-fg);
+  opacity: 0.75;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.site-bar nav a:hover { opacity: 1; text-decoration: underline; }
+
+.site-note {
+  margin: 0;
+  padding: 0.55rem 1.25rem;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--muted);
+  background: var(--soft);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-foot {
+  margin-top: 4rem;
+  padding: 1.5rem 1.25rem 3rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.site-foot p { margin: 0.5rem 0; }
+.site-foot strong { color: var(--fg); }
+
+/* ---------- content ---------- */
+
+main {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 1rem;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.25;
+  margin: 2.2rem 0 0.75rem;
+  font-weight: 650;
+}
+
+h1 { font-size: 2rem; margin-top: 0.5rem; }
+h2 { font-size: 1.45rem; padding-bottom: 0.3rem; border-bottom: 1px solid var(--line); }
+h3 { font-size: 1.15rem; }
+h4 { font-size: 1rem; }
+
+p, ul, ol, blockquote, table, pre { margin: 0 0 1rem; }
+li { margin: 0.25rem 0; }
+
+hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
+
+blockquote {
+  margin-left: 0;
+  padding: 0.25rem 0 0.25rem 1rem;
+  border-left: 3px solid var(--line);
+  color: var(--muted);
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.88em;
+  background: var(--code-bg);
+  padding: 0.12em 0.35em;
+  border-radius: 3px;
+}
+
+pre {
+  background: var(--code-bg);
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+pre code { background: none; padding: 0; font-size: 0.85rem; }
+
+/* Tables are the main content type here; let them scroll instead of
+   squeezing 10 columns into a phone. */
+
+table {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  width: 100%;
+}
+
+thead th {
+  text-align: left;
+  background: var(--soft);
+  border-bottom: 2px solid var(--line);
+  white-space: nowrap;
+}
+
+th, td {
+  padding: 0.45rem 0.7rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+tbody tr:nth-child(even) { background: color-mix(in srgb, var(--soft) 55%, transparent); }
+
+img { max-width: 100%; height: auto; }
+
+@media (max-width: 40rem) {
+  body { font-size: 15px; }
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.25rem; }
+  main { padding: 1.25rem 0.9rem 1rem; }
+}

@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Ultimate Half-Life 3 Deep Dive: Every Last Detail - Ep1</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Research notes on Tyler McVicker's HLX coverage. Derived analysis only.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-bar">
+<a class="brand" href="index.html">HLX Research Database</a>
+<nav>
+<a href="claims.html">Claims</a>
+<a href="appendix-video-stats.html">Stats</a>
+<a href="sources/README.html">Sources</a>
+<a href="data.html">Data</a>
+</nav>
+</header>
+<p class="site-note">Derived analysis only. No transcripts, subtitle files or
+source video are hosted here; quotations are short and attributed, and every
+summary links to the original video.</p>
+<main>
+<h1 id="the-ultimate-half-life-3-deep-dive-every-last-detail---ep1">The Ultimate Half-Life 3 Deep Dive: Every Last Detail - Ep1</h1>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Video ID</td>
+<td><code>cH71Bn8VUAg</code></td>
+</tr>
+
+<tr>
+<td>URL</td>
+<td><a href="https://www.youtube.com/watch?v=cH71Bn8VUAg">https://www.youtube.com/watch?v=cH71Bn8VUAg</a></td>
+</tr>
+
+<tr>
+<td>Release date</td>
+<td>2026-01-29</td>
+</tr>
+
+<tr>
+<td>Duration</td>
+<td>24:00</td>
+</tr>
+
+<tr>
+<td>Series</td>
+<td>Every Last Detail, Episode 1</td>
+</tr>
+</tbody>
+</table>
+<p>| Summary status | <code>complete</code> |</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>Episode 1 of Tyler McVicker&rsquo;s &ldquo;Every Last Detail&rdquo; series sets up a multi-part chronology of HLX, the codename he identifies as Half-Life 3, drawn from Valve&rsquo;s own public Source 2 builds and patches. The video argues that because Valve does not fork Source 2 per title, engine features developed for one game appear across Dota 2, Deadlock, Counter-Strike 2 and others, making patch comparison a viable way to observe internal projects. Roughly half the runtime is a dated timeline of HLX-related findings from 2019 to November 2025; the second half is a debunk section rejecting open-world, VR, voxel-destruction and day/night-cycle readings, with Tyler asserting that HLX is a non-VR, non-open-world, largely traditionally lit Half-Life game. Tyler presents the timeline as artifact-based but repeatedly hedges on inference, and offers no release date.</p>
+
+<h2 id="mentioned-events">Mentioned events</h2>
+
+<h3 id="source-2s-shared-non-forked-engine-model">Source 2&rsquo;s shared, non-forked engine model</h3>
+
+<ul>
+<li><strong>Description:</strong> Source 2 began around 2009, near the time of Left 4 Dead 2, and evolved from what Tyler calls an unfinished mess partly to blame for Valve&rsquo;s dark times into an easy-to-use engine. Valve does not fork Source 2 per project: engine code pulled to build any one game is the same across all titles, so a system built for Deadlock can be adopted by Dota with little work compared with porting between branches. The stated downside is that features built for an unannounced project are eventually folded into the base engine of shipped games.</li>
+<li><strong>Confidence:</strong> Speculation — Tyler&rsquo;s characterization of Valve&rsquo;s engineering practice; no document, branch listing, or artifact is cited for the no-fork claim.</li>
+<li><strong>Category:</strong> Technology</li>
+<li><strong>Source:</strong> Tyler&rsquo;s analysis of how Valve develops Source 2.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — comparing engine depot or branch structure across shipped Source 2 titles would confirm or refute the shared-code claim.</li>
+</ul>
+
+<h3 id="patch-diffing-methodology-and-scope-of-the-series">Patch-diffing methodology and scope of the series</h3>
+
+<ul>
+<li><strong>Description:</strong> Because Valve&rsquo;s Source 2 multiplayer titles are actively updated, comparing each patch of Dota 2, Deadlock and Counter-Strike 2 against its previous version exposes newly added engine functionality; cross-referencing across the library over months or years yields a technical picture of internal Valve projects. Tyler says this is how HLX became known, and that the series will cover every significant HLX finding from the previous five years, all derived from publicly available Valve software and patches rather than internal sources, leaks or rumors.</li>
+<li><strong>Confidence:</strong> Mixed — the artifacts cited later in the video are public builds, but the claim that patch comparison alone yields reliable internal-project knowledge is Tyler&rsquo;s methodological assertion.</li>
+<li><strong>Category:</strong> Technology</li>
+<li><strong>Source:</strong> Tyler&rsquo;s description of his own research method.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — the method is reproducible in principle by diffing public builds, though the interpretive conclusions are not directly checkable.</li>
+</ul>
+
+<h3 id="terminology-primer-vdata-fgd-io-schemas-hint-nodes">Terminology primer: VData, FGD, I/O, schemas, hint nodes</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler defines VData as designer-driven gameplay data that lets designers add or modify mechanics without code, noting that post-2021 Source 2 games are heavily VData-driven, including Aperture Desk Job, Counter-Strike 2, Deadlock and Dota in some instances. FGD (Forge Game Data) is a plain-text entity definition file used by modeldoc, the Pulse editor, VData and Hammer, listing available entities (NPC, item, weapon types, physics props) and their customizable flags. I/O are entity commands used by level designers as basic logic in the map editor. Schemas are class descriptions exposing systems, properties and tools in human-readable form. Hint nodes give NPCs location information for reacting to the environment.</li>
+<li><strong>Confidence:</strong> Fact — these are definitions of documented Source 2 tooling conventions, verifiable in shipped tools.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Source 2 tooling conventions as described by Tyler.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the file types and concepts can be inspected in shipped Source 2 game tools.</li>
+</ul>
+
+<h3 id="january-2019-alyx-narrative-pivot-gman-saves-eli">January 2019 Alyx narrative pivot: GMan saves Eli</h3>
+
+<ul>
+<li><strong>Description:</strong> Quoting Geoff Keighley&rsquo;s &ldquo;The Final Hours of Half-Life: Alyx,&rdquo; Tyler recounts that in January 2019 Eric Wolpaw, on an elevator ride to the Valve offices, suggested to artist Jim Murray (described as a British comic book artist known for work on 2000 AD and Judge Dredd) that the GMan take the player to the end of Half-Life 2: Episode Two and save Eli&rsquo;s life; Wolpaw first called the idea ridiculous, then allowed it might work. On January 21, 2019 the four-person story team pitched the retcon to the larger team in the fishbowl room, framing it as option A with an option B ready if rejected; the pitch was received as a bold idea that added levity against the game&rsquo;s horror elements.</li>
+<li><strong>Confidence:</strong> Fact — direct quotation from a published book by Geoff Keighley, with names, dates and locations.</li>
+<li><strong>Category:</strong> Lore</li>
+<li><strong>Source:</strong> &ldquo;The Final Hours of Half-Life: Alyx&rdquo; by Geoff Keighley, quoted in the video.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — check the quoted passage in The Final Hours of Half-Life: Alyx.</li>
+</ul>
+
+<h3 id="gabe-newell-approves-the-eli-retcon-episode-two-death-backstory">Gabe Newell approves the Eli retcon; Episode Two death backstory</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler describes the Gabe Newell approval step and its origin: in the final months of Episode Two production in 2007 the team planned to end on a gag with Lamarr, Kleiner&rsquo;s pet headcrab, floating in orbit outside the White Forest rocket, but Newell wanted a bigger shock and a major character death to pay off in Episode Three. Writer Marc Laidlaw drafted plans to kill Dr. Kleiner before the team settled on Eli Vance. The Alyx team did not know whether Newell would accept resurrecting Eli; he listened and delivered the verdict that Eli Vance can live.</li>
+<li><strong>Confidence:</strong> Fact — drawn from the same published Final Hours account, including Newell&rsquo;s quoted verdict.</li>
+<li><strong>Category:</strong> Lore</li>
+<li><strong>Source:</strong> &ldquo;The Final Hours of Half-Life: Alyx,&rdquo; quoted in the video.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — check the Final Hours passage on the Episode Two ending and the Eli decision.</li>
+</ul>
+
+<h3 id="alyxs-story-changes-broke-the-planned-index-launch">Alyx&rsquo;s story changes broke the planned Index launch</h3>
+
+<ul>
+<li><strong>Description:</strong> The plan had been to ship Half-Life: Alyx alongside Valve&rsquo;s Index headset, but the new narrative and art requirements — rebuilding the White Forest base from Episode Two and creating three new character models (an older Eli Vance, Dog, and Gordon Freeman) for a post-credits tease — made a joint launch untenable unless Index slipped six months or more. Greg Coomer is quoted on wanting a joint reveal; Index&rsquo;s roadmap called for an April announcement and June release while Alyx, best case, would not be ready until November. Index consequently shipped at $999 for the full kit with no flagship game.</li>
+<li><strong>Confidence:</strong> Fact — specific figures ($999, April/June/November schedule) and a named quote attributed to the Final Hours account.</li>
+<li><strong>Category:</strong> Business/legal</li>
+<li><strong>Source:</strong> &ldquo;The Final Hours of Half-Life: Alyx,&rdquo; quoted in the video; Index pricing.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — Index&rsquo;s $999 launch price and the Final Hours account of the schedule are checkable.</li>
+</ul>
+
+<h3 id="hlx-greenlit-around-completion-of-half-life-alyxs-ending">HLX greenlit around completion of Half-Life: Alyx&rsquo;s ending</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler states that HLX was decided on at the same time that HLVR&rsquo;s ending was fully completed, tying the project&rsquo;s start to the finalization of Alyx&rsquo;s narrative.</li>
+<li><strong>Confidence:</strong> Speculation — hedged with &ldquo;apparently,&rdquo; with no artifact, document or date offered.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Tyler&rsquo;s inference from the Final Hours account and HLX tracking.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — no public artifact is identified that would date an HLX greenlight.</li>
+</ul>
+
+<h3 id="vdata-system-created-before-august-12-2020">VData system created before August 12, 2020</h3>
+
+<ul>
+<li><strong>Description:</strong> The VData designer-driven data system existed before August 12, 2020, and according to tools asset metadata is first publicly referenced in a Dota 2 update on September 4, 2020.</li>
+<li><strong>Confidence:</strong> Fact — dated metadata reference in a public Dota 2 update is named as the evidence.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Tools asset metadata from a September 4, 2020 Dota 2 update.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the September 4, 2020 Dota 2 update can be inspected for VData asset metadata.</li>
+</ul>
+
+<h3 id="garry-newman-receives-source-2-sandbox-access-september-22-2020">Garry Newman receives Source 2 Sandbox access, September 22, 2020</h3>
+
+<ul>
+<li><strong>Description:</strong> On September 22, 2020 Garry Newman, creator of Garry&rsquo;s Mod, was given access to Source 2 for Sandbox, known through an accidental public repository commit. The earliest Sandbox builds contained console helpers for HLX; developers had scrubbed references to Citadel, which became Deadlock, but did not clean HLX.</li>
+<li><strong>Confidence:</strong> Fact — an accidental public commit and the contents of distributed Sandbox builds are the named evidence.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Accidental public repository commit and datamine of early Sandbox builds.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — early Sandbox build contents and the repository commit can be inspected.</li>
+</ul>
+
+<h3 id="hlx-in-production-before-september-22-2020">HLX in production before September 22, 2020</h3>
+
+<ul>
+<li><strong>Description:</strong> Because the earliest Sandbox builds, dated September 2020, already contained uncleaned HLX console helpers, Tyler concludes HLX was in production before September 22, 2020.</li>
+<li><strong>Confidence:</strong> Mixed — the presence of HLX helpers in the September builds is artifact-based; the production-start date is Tyler&rsquo;s inference from that presence.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Tyler&rsquo;s inference from datamined early Sandbox builds.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — earlier internal build dates or additional pre-September artifacts would tighten the start date.</li>
+</ul>
+
+<h3 id="first-public-hlx-reference-artifact-foundry-box-creature-animgraph-october-9-2020">First public HLX reference: Artifact Foundry box creature animgraph, October 9, 2020</h3>
+
+<ul>
+<li><strong>Description:</strong> In an October 9, 2020 update to Artifact Foundry (the short-lived Artifact 2.0), the box creature test model used across Source 2 games for animation and rendering testing had an HLX-specific animgraph baked in, indicating animations were being attached to the model for testing under the HLX codename. The box creature itself was added to Source 2 in June 2020, and the September Sandbox builds lack the HLX animgraph, leading Tyler to date the HLX animation tests between September 23 and October 9, 2020.</li>
+<li><strong>Confidence:</strong> Mixed — the HLX-named animgraph in the Artifact Foundry update is a concrete artifact; the September 23–October 9 date range is Tyler&rsquo;s inference from the absence of the file in September builds.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Datamine of an October 9, 2020 Artifact Foundry update and comparison with September 2020 Sandbox builds.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the Artifact Foundry update contents can be checked directly; the date window remains inferential.</li>
+</ul>
+
+<h3 id="codename-hlx-becomes-public-knowledge-march-25-2021">Codename HLX becomes public knowledge, March 25, 2021</h3>
+
+<ul>
+<li><strong>Description:</strong> The HLX codename was not publicly known until March 25, 2021, when it was accidentally mentioned in both a <code>demo_info.txt</code> file and a diagnostic soundevent file.</li>
+<li><strong>Confidence:</strong> Fact — two named filenames and a specific date are given as the evidence.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Datamine of files dated March 25, 2021.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the named files can be checked for the HLX string and date.</li>
+</ul>
+
+<h3 id="former-employee-résumé-unannounced-project-20202023">Former employee résumé: unannounced project, 2020–2023</h3>
+
+<ul>
+<li><strong>Description:</strong> A former Valve employee&rsquo;s résumé states that between 2020 and 2023 they worked on &ldquo;level design, layouts, lighting, combat encounters, and puzzles for an unannounced project.&rdquo; Tyler cites this as the earliest public résumé reference to work of this kind.</li>
+<li><strong>Confidence:</strong> Fact — a named résumé with a quoted role description and date range.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Former Valve employee résumé (2020).</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — the résumé itself does not name HLX, so attribution to HLX is Tyler&rsquo;s inference; an archived copy of the résumé and corroborating dates would help.</li>
+</ul>
+
+<h3 id="april-2021-public-sandbox-developer-builds-and-refactored-hlx-helpers">April 2021 public Sandbox developer builds and refactored HLX helpers</h3>
+
+<ul>
+<li><strong>Description:</strong> In April 2021 the first Sandbox developer builds were released publicly, built from a September 2020 version of Source 2, containing HLX console helpers almost identical to those shipped with HLVR earlier in 2020 but refactored so HLX could use them as well.</li>
+<li><strong>Confidence:</strong> Fact — build contents and their Source 2 base version are named.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Datamine of April 2021 Sandbox developer builds.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the builds and their HLX helper strings can be inspected.</li>
+</ul>
+
+<h3 id="facepunch-developers-save-file-explanation-for-hlx">Facepunch developers&rsquo; &ldquo;save file&rdquo; explanation for HLX</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler states that members of the Facepunch development team told him personally that HLX referred to nothing more than save-file-related codenames.</li>
+<li><strong>Confidence:</strong> Mixed — the private statements are reported as direct communication, but their content is contradicted by the artifacts Tyler later presents, and no documentary support is offered.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Tyler&rsquo;s account of conversations with Facepunch developers.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — no public artifact validates or invalidates the private claim; the later HLX-named engine content is the counter-evidence Tyler relies on.</li>
+</ul>
+
+<h3 id="aperture-desk-job-mature-vdata-stray-files-and-an-hlx-content-directory-march-1-2022">Aperture Desk Job: mature VData, stray files, and an HLX content directory (March 1, 2022)</h3>
+
+<ul>
+<li><strong>Description:</strong> Aperture Desk Job, released March 1, 2022, shipped new VData versions of NPC and AI concepts including &ldquo;NPC abilities,&rdquo; plus VData files Tyler says should not have been present: weapons, precipitation, AI squad modes and NPC modifiers, with further definitions in the game&rsquo;s schema. This showed VData was mature enough to handle such systems after about a year and a half of development. The game also references a content HLX directory.</li>
+<li><strong>Confidence:</strong> Fact — shipped game files and a named HLX directory reference.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of Aperture Desk Job (March 1, 2022).</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — Aperture Desk Job&rsquo;s VData and content paths can be inspected.</li>
+</ul>
+
+<h3 id="dota-2-user-command-protobuf-and-vehicle-entity-june-9-2022">Dota 2 user command protobuf and vehicle entity (June 9, 2022)</h3>
+
+<ul>
+<li><strong>Description:</strong> On June 9, 2022 a new user command protobuf was found in the Dota 2 engine alongside vehicle schemas and a new vehicle entity.</li>
+<li><strong>Confidence:</strong> Fact — specific file types and a dated engine update are named.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of the June 9, 2022 Dota 2 engine update.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the Dota 2 update contents can be checked.</li>
+</ul>
+
+<h3 id="greg-coomer-famitsu-interview-august-4-2022">Greg Coomer Famitsu interview (August 4, 2022)</h3>
+
+<ul>
+<li><strong>Description:</strong> During the Japanese rollout of the Steam Deck, Greg Coomer told Famitsu in an August 4, 2022 interview that Valve has &ldquo;a lot of games in development&rdquo; and that Half-Life: Alyx is a sign Valve has more to say about the world of Half-Life.</li>
+<li><strong>Confidence:</strong> Fact — named interview, outlet and date.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Famitsu interview with Greg Coomer, August 4, 2022.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the Famitsu interview is published.</li>
+</ul>
+
+<h3 id="build-breakmaster-asset-leak-july-11-2023">&ldquo;Build Breakmaster&rdquo; asset leak (July 11, 2023)</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler cites an asset called the &ldquo;Build Breakmaster&rdquo; that accidentally leaked on July 11, 2023. The video does not describe the asset&rsquo;s contents or explain how it relates to HLX.</li>
+<li><strong>Confidence:</strong> Fact — a dated leaked asset is named, though its HLX relevance is not argued.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Leaked Valve asset, July 11, 2023.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — the asset and its provenance need to be located; the video supplies no further identifiers.</li>
+</ul>
+
+<h3 id="mike-morasky-interview-with-a-portal-modder-october-7-2023">Mike Morasky interview with a Portal modder (October 7, 2023)</h3>
+
+<ul>
+<li><strong>Description:</strong> Valve composer Mike Morasky gave an October 7, 2023 interview to a Portal modder in which he said he took existing material and &ldquo;pushed [it] just a little further,&rdquo; using it in both the Half-Life games and the Portal games. Tyler offers no explicit conclusion from the quote.</li>
+<li><strong>Confidence:</strong> Unclear — the transcript preserves only a fragment of the answer and the video does not state what the quote is meant to establish.</li>
+<li><strong>Category:</strong> Other</li>
+<li><strong>Source:</strong> Interview with Mike Morasky, October 7, 2023.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — the full interview would clarify whether the remark concerns reused or reworked music.</li>
+</ul>
+
+<h3 id="half-life-25th-anniversary-november-16-2023">Half-Life 25th anniversary (November 16, 2023)</h3>
+
+<ul>
+<li><strong>Description:</strong> For Half-Life&rsquo;s 25th anniversary Valve released a full documentary, an update to the original game, and new content in the form of new deathmatch levels — behavior Tyler frames as Valve becoming far more comfortable discussing and celebrating the franchise.</li>
+<li><strong>Confidence:</strong> Fact — public anniversary release with named components.</li>
+<li><strong>Category:</strong> Marketing</li>
+<li><strong>Source:</strong> Official Valve 25th anniversary release, November 16, 2023.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the anniversary documentary, update and deathmatch maps are public.</li>
+</ul>
+
+<h3 id="hlx-sound-containers-and-a-dedicated-test-sound-stack-february-7-2024">HLX sound containers and a dedicated test sound stack (February 7, 2024)</h3>
+
+<ul>
+<li><strong>Description:</strong> On February 7, 2024 new sound events for sound containers were added that mention HLX, use HLX&rsquo;s own sound stack types, and include a brand-new test sound stack specifically for HLX.</li>
+<li><strong>Confidence:</strong> Fact — dated engine additions with HLX-named types are cited.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of a February 7, 2024 Source 2 update.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the sound event and sound stack entries can be inspected in the relevant build.</li>
+</ul>
+
+<h3 id="may-2024-deadlock-build-datamine-zen-gorilla-feral-manhacks-off-world-pentatanks">May 2024 Deadlock build datamine: Zen gorilla, feral manhacks, off-world pentatanks</h3>
+
+<ul>
+<li><strong>Description:</strong> After Valve&rsquo;s attempt to keep Deadlock in a closed beta failed, builds began circulating in May 2024 and were data mined. Tyler says a significant amount of HLX-related information came from these builds, including the Zen gorilla, feral manhacks, and off-world pentatanks.</li>
+<li><strong>Confidence:</strong> Fact — datamined build contents are named, including specific entities.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Datamine of Deadlock builds distributed in May 2024.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the Deadlock build contents can be checked for the named entities.</li>
+</ul>
+
+<h3 id="hlx-reference-in-a-motion-vector-shader-july-5-2024">HLX reference in a motion vector shader (July 5, 2024)</h3>
+
+<ul>
+<li><strong>Description:</strong> A new HLX reference was found inside a motion vector shader in a July 5, 2024 Deadlock update.</li>
+<li><strong>Confidence:</strong> Fact — specific file type, date and update are named.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of a July 5, 2024 Deadlock update.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the shader file can be inspected in the Deadlock update.</li>
+</ul>
+
+<h3 id="project-white-sands-in-a-voice-actresss-portfolio-august-4-2024">Project White Sands in a voice actress&rsquo;s portfolio (August 4, 2024)</h3>
+
+<ul>
+<li><strong>Description:</strong> On August 4, 2024 &ldquo;Project White Sands&rdquo; was found in a voice actress&rsquo;s portfolio, prompting community speculation that HLX was Half-Life 3 and could release soon after. Tyler states that White Sands was a voice-actor code name for Deadlock, as confirmed by the voice actors themselves, and separately asserts that HLX is Half-Life 3 and is in development.</li>
+<li><strong>Confidence:</strong> Mixed — the portfolio listing and the voice actors&rsquo; confirmation concern White Sands/Deadlock; the identification of HLX as Half-Life 3 is asserted without a cited artifact in this video.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Voice actress portfolio (August 4, 2024) and subsequent voice actor statements.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — the portfolio listing and voice actor confirmations can be checked; the HLX = Half-Life 3 equation rests on the video&rsquo;s own prior tracking.</li>
+</ul>
+
+<h3 id="new-deadlock-debug-overlays-october-24-2024">New Deadlock debug overlays (October 24, 2024)</h3>
+
+<ul>
+<li><strong>Description:</strong> New debug overlays were added in an October 24, 2024 Deadlock update. The video lists this among HLX-relevant findings without describing the overlays or their HLX connection.</li>
+<li><strong>Confidence:</strong> Unclear — the update is dated, but the transcript does not explain what the overlays show or why they matter to HLX.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Datamine of an October 24, 2024 Deadlock update.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — the overlays&rsquo; names and contents would need to be inspected.</li>
+</ul>
+
+<h3 id="half-life-2-20th-anniversary-and-the-expanded-raising-the-bar-november-15-2024">Half-Life 2 20th anniversary and the expanded Raising the Bar (November 15, 2024)</h3>
+
+<ul>
+<li><strong>Description:</strong> For Half-Life 2&rsquo;s 20th anniversary Valve released a documentary that said more about the franchise&rsquo;s future and promised that Raising the Bar, the 2004 book on Half-Life 2&rsquo;s development, would be reprinted and expanded with new material on Half-Life 2 and the episodes, including Episode 3, with a promised release in 2025.</li>
+<li><strong>Confidence:</strong> Fact — official announcement with a named book, scope and promised year.</li>
+<li><strong>Category:</strong> Marketing</li>
+<li><strong>Source:</strong> Official Valve Half-Life 2 20th anniversary announcement, November 15, 2024.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — the 2025 release promise can be checked against whether the expanded edition actually shipped.</li>
+</ul>
+
+<h3 id="gabe-follower-reports-external-playtests-december-28-2024">Gabe Follower reports external playtests (December 28, 2024)</h3>
+
+<ul>
+<li><strong>Description:</strong> On December 28, 2024 Gabe Follower reported that Valve had begun playtesting with friends and family and with external people, which Tyler reads as indicating the game had entered late production cycles.</li>
+<li><strong>Confidence:</strong> Mixed — the playtest report is attributed to a named reporter; the &ldquo;late production&rdquo; conclusion is Tyler&rsquo;s inference.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Gabe Follower report, December 28, 2024.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — the report is secondhand and no artifact is presented; corroborating playtest accounts would help.</li>
+</ul>
+
+<h3 id="unidentified-december-31-2024-reference">Unidentified December 31, 2024 reference</h3>
+
+<ul>
+<li><strong>Description:</strong> The transcript records only &ldquo;on December 31st of 2024, uh 197 happens,&rdquo; without identifying what &ldquo;197&rdquo; refers to. No subject, artifact or context survives in the transcript.</li>
+<li><strong>Confidence:</strong> Unclear — the passage is unintelligible as transcribed.</li>
+<li><strong>Category:</strong> Other</li>
+<li><strong>Source:</strong> Tyler&rsquo;s narration, as transcribed.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — re-listening to the segment or a corrected transcript is required to identify the event.</li>
+</ul>
+
+<h3 id="internal-valve-group-name-query-reveals-three-hlx-groups-january-7-2025">Internal Valve group-name query reveals three HLX groups (January 7, 2025)</h3>
+
+<ul>
+<li><strong>Description:</strong> On January 7, 2025 a Gabe Follower viewer found a method to query the names of Valve&rsquo;s internal groups. Valid returns included HLX, HLX Audio and HLX Artists, giving three distinct HLX groups known at that point; Tyler notes the method allowed testing arbitrary candidate group names against Valve&rsquo;s internal grouping system after extensive scripting.</li>
+<li><strong>Confidence:</strong> Mixed — the query method and returned names are described concretely, but the results are reported through a third party and no raw output is shown.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Query of Valve&rsquo;s internal group-name system, reported by a Gabe Follower viewer, January 7, 2025.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — reproducing the query or an archived result set would confirm the three group names.</li>
+</ul>
+
+<h3 id="hlx-fsr3-support-string-february-25-2025">HLX FSR3 support string (February 25, 2025)</h3>
+
+<ul>
+<li><strong>Description:</strong> A string added into Deadlock, &ldquo;R_HLX_FSR3_MinReactiveness,&rdquo; indicates HLX had FSR3 support.</li>
+<li><strong>Confidence:</strong> Fact — a named console/config string in a public Deadlock build.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of a February 25, 2025 Deadlock update.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the string can be checked in the Deadlock build.</li>
+</ul>
+
+<h3 id="thumper-confirmed-in-hlx-via-an-fgd-listing-july-28-2025">Thumper confirmed in HLX via an FGD listing (July 28, 2025)</h3>
+
+<ul>
+<li><strong>Description:</strong> On July 28, 2025 a Thumper was confirmed to have been added to HLX on the basis of an FGD listing shipped in a Counter-Strike 2 update.</li>
+<li><strong>Confidence:</strong> Fact — a named entity in a shipped FGD file is the stated evidence.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> FGD entity listing in a July 28, 2025 Counter-Strike 2 update.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the CS2 update&rsquo;s FGD files can be checked for the Thumper entry.</li>
+</ul>
+
+<h3 id="liquid-property-containers-with-oil-and-water-spill-rendering-august-18-2025">Liquid property containers with oil and water spill rendering (August 18, 2025)</h3>
+
+<ul>
+<li><strong>Description:</strong> On August 18, 2025 liquid property containers were added that specifically mention HLX and include rendering for both oil and water liquid spills.</li>
+<li><strong>Confidence:</strong> Fact — dated engine data with HLX-named containers and named rendering cases.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of an August 18, 2025 Source 2 update.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the container definitions can be inspected in the update.</li>
+</ul>
+
+<h3 id="steam-frame-team-confirms-hlx-is-not-vr-new-valve-hardware-announced-november-12-2025">Steam Frame team confirms HLX is not VR; new Valve hardware announced (November 12, 2025)</h3>
+
+<ul>
+<li><strong>Description:</strong> On November 12, 2025 the team behind the Steam Frame officially confirmed that HLX is not a VR game. Around this time Valve announced the Steam Machine, Steam Frame and Steam Controller. Tyler notes that current market conditions call into question whether that hardware is profitable or logical, but that at announcement Valve again paired hardware with a flagship game.</li>
+<li><strong>Confidence:</strong> Fact — an official statement from the Steam Frame team and a public hardware announcement.</li>
+<li><strong>Category:</strong> Hardware</li>
+<li><strong>Source:</strong> Official Valve statements and hardware announcement, November 12, 2025.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the announcement and the non-VR statement are public.</li>
+</ul>
+
+<h3 id="hlx-positioned-as-the-steam-machines-flagship-title">HLX positioned as the Steam Machine&rsquo;s flagship title</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler argues that because Valve likes to ship a flagship game alongside hardware, and HLX lines up with the Steam Machine, the two are likely paired.</li>
+<li><strong>Confidence:</strong> Speculation — explicitly framed as pattern-based expectation (&ldquo;as we stated earlier, Valve does like to have a flagship game with their hardware&rdquo;).</li>
+<li><strong>Category:</strong> Marketing</li>
+<li><strong>Source:</strong> Tyler&rsquo;s inference from Valve&rsquo;s hardware launch history.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — a launch bundle, store listing or Valve statement would confirm the pairing.</li>
+</ul>
+
+<h3 id="debunk-the-final-hours-2018-small-team-was-citadel-not-hlx">Debunk: the Final Hours&rsquo; 2018 small team was Citadel, not HLX</h3>
+
+<ul>
+<li><strong>Description:</strong> The Final Hours of Half-Life: Alyx mentions a small team that began development in 2018; Tyler says that team was working on Citadel, not HLX. He traces the codename line Citadel to Neon Prime to Shadow Line to Deadlock.</li>
+<li><strong>Confidence:</strong> Mixed — the 2018 team&rsquo;s existence comes from the published book; the Citadel attribution and the four-step codename lineage come from Tyler&rsquo;s tracking without a cited artifact here.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> &ldquo;The Final Hours of Half-Life: Alyx&rdquo; plus Tyler&rsquo;s codename tracking.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — datamined Deadlock predecessor codenames would confirm the Citadel/Neon Prime/Shadow Line chain.</li>
+</ul>
+
+<h3 id="debunk-hlx-will-not-have-a-daynight-cycle">Debunk: HLX will not have a day/night cycle</h3>
+
+<ul>
+<li><strong>Description:</strong> Day and night cycle references exist in Source 2 and have been speculated to belong to HLX, but Tyler says further investigation shows they relate to Dota 2&rsquo;s day/night cycle and nothing to do with HLX.</li>
+<li><strong>Confidence:</strong> Mixed — the presence of day/night code in Source 2 is factual; the attribution to Dota 2 and exclusion from HLX is Tyler&rsquo;s investigation-based inference.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Tyler&rsquo;s review of Source 2 day/night cycle references.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — tracing the specific day/night symbols to Dota 2 systems would confirm the attribution.</li>
+</ul>
+
+<h3 id="debunk-the-tracked-unknown-valve-app-is-the-deadlock-experimental-build">Debunk: the tracked unknown Valve app is the Deadlock experimental build</h3>
+
+<ul>
+<li><strong>Description:</strong> A new unknown Valve game app tracked by the community has been confirmed by leakers to be the Deadlock experimental app — the NDA version of Deadlock where most testing occurs. Tyler stresses it is not the same as the suspicious app ID SteamDB co-creator Xpaw reported finding in November, which remains unidentified.</li>
+<li><strong>Confidence:</strong> Mixed — the Deadlock experimental app identification rests on leaker confirmation; the Xpaw app ID is explicitly unresolved.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Leaker statements on the Deadlock experimental app and Xpaw&rsquo;s November app ID report.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — app metadata or package contents would confirm the experimental app; Xpaw&rsquo;s app ID remains an open question.</li>
+</ul>
+
+<h3 id="debunk-voxel-based-destruction-and-geometry-are-not-part-of-hlx">Debunk: voxel-based destruction and geometry are not part of HLX</h3>
+
+<ul>
+<li><strong>Description:</strong> Voxel-based destruction and voxel geometry, once speculated to be part of HLX, are not part of it. Tyler says that even if Valve experimented with them when they were first found in 2021, they were never included in the Half-Life tool set in Hammer and have seen no real updates since at least late 2021. The <code>create_iso_surface</code> command in one of the original 2021 Sandbox builds is how Hammer refers to voxels, and that command is absent from current Source 2 builds.</li>
+<li><strong>Confidence:</strong> Mixed — the absence of the command from current builds and the lack of Hammer support are checkable; the conclusion that HLX does not use voxels is an inference from that absence.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Comparison of 2021 Sandbox builds with current Source 2 tooling.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the command&rsquo;s presence in 2021 builds and absence now can be checked directly.</li>
+</ul>
+
+<h3 id="debunk-morasky-pinkerton-and-wolpaw-are-not-working-on-deadlock">Debunk: Morasky, Pinkerton and Wolpaw are not working on Deadlock</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler states that Mike Morasky is not writing the music for Deadlock and that Jay Pinkerton and Eric Wolpaw are not writing Deadlock&rsquo;s story — they are working on something else.</li>
+<li><strong>Confidence:</strong> Speculation — asserted confidently with no artifact, credit list or statement cited.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Tyler&rsquo;s assertion, with no named evidence.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — credits, interviews or datamined credits would confirm or refute the assignments.</li>
+</ul>
+
+<h3 id="hlx-is-not-a-vr-game-design-and-official-statement-evidence">HLX is not a VR game: design and official-statement evidence</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler argues HLX is not VR: Valve has gone on record multiple times saying it wanted to make a non-VR Half-Life game after finishing Half-Life: Alyx; HLX has significant drivable-vehicle functionality and Super Mario Galaxy-style gravity shifting, both uncomfortable to reproduce in VR and contrary to Valve&rsquo;s stated &ldquo;never move the player&rdquo; philosophy; there have been no VR improvements to Source 2 since Alyx; and Alyx&rsquo;s TAA-based anti-aliasing does not work well in VR.</li>
+<li><strong>Confidence:</strong> Mixed — the on-record statements, the absence of VR work, and the TAA implementation are evidenced; the design-comfort argument is inference.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Valve&rsquo;s public statements, Source 2 tooling comparison since Alyx, and Tyler&rsquo;s analysis.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — Valve&rsquo;s post-Alyx statements and the engine&rsquo;s VR-related changelogs would confirm the individual points.</li>
+</ul>
+
+<h3 id="vr-support-stripped-out-of-source-2-and-dota-2">VR support stripped out of Source 2 and Dota 2</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler cites the removal of VR plumbing as further evidence: <code>vr.dll</code>, the component that communicates with SteamVR in Source 2, was removed from Dota 2 in March 2023, and the VR fidelity levels configuration file was removed from Dota 2 in May 2025.</li>
+<li><strong>Confidence:</strong> Mixed — the two removals with dates are checkable file-level facts; their bearing on HLX is Tyler&rsquo;s inference.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Comparison of Dota 2 builds (March 2023 and May 2025).</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> verified — the presence and removal of these files can be checked across Dota 2 builds.</li>
+</ul>
+
+<h3 id="new-weapon-vdata-system-built-with-hlx-in-mind">New weapon VData system built with HLX in mind</h3>
+
+<ul>
+<li><strong>Description:</strong> A new weapon VData system developed with HLX in mind has properties for auto reloading, auto switching, and two-dimensional HUD positions similar to Half-Life 2 — which Tyler notes is not how weapons worked in Half-Life: Alyx.</li>
+<li><strong>Confidence:</strong> Mixed — the described weapon properties are datamined VData fields, but the &ldquo;for HLX&rdquo; attribution and the Alyx contrast are Tyler&rsquo;s interpretation.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamined weapon VData properties in Source 2 builds.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — inspecting the weapon VData schema would confirm the property names and defaults.</li>
+</ul>
+
+<h3 id="physics-object-pickup-matches-half-life-2">Physics-object pickup matches Half-Life 2</h3>
+
+<ul>
+<li><strong>Description:</strong> As of references added around December 2025, player interaction with physics objects in HLX works the same way objects were picked up in Half-Life 2.</li>
+<li><strong>Confidence:</strong> Mixed — the December 2025 references are artifact-based; the equivalence to Half-Life 2&rsquo;s pickup behavior is Tyler&rsquo;s reading.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of December 2025 Source 2 references to player physics interaction.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — the specific interaction code and its parameters would need inspection.</li>
+</ul>
+
+<h3 id="drivable-vehicles-and-super-mario-galaxy-style-gravity-shifting">Drivable vehicles and Super Mario Galaxy-style gravity shifting</h3>
+
+<ul>
+<li><strong>Description:</strong> HLX has significant functionality for drivable vehicles and for gravity shifting described as based on Super Mario Galaxy.</li>
+<li><strong>Confidence:</strong> Speculation — stated as a feature claim without a named artifact in this passage; the only related evidence earlier in the video is the June 2022 vehicle entity and schemas.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Tyler&rsquo;s assertions from HLX tracking; related vehicle entity datamine (June 9, 2022).</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — entity, schema or VData entries for drivable vehicles and gravity volumes would substantiate the claim.</li>
+</ul>
+
+<h3 id="hlx-is-not-an-open-world-game">HLX is not an open-world game</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler rejects the open-world reading on technical grounds: Hammer&rsquo;s walk limit is still 16,384 units, tiny relative to an open-world map; Source 2&rsquo;s baked light maps have been overhauled multiple times since Alyx and remain central to its optimization, with no traditional global illumination; although HLX appears to support ray tracing in the tools, Source 2 is a baked-lightmap engine first; Neon Prime was lit mostly by dynamic lighting and light probes, and Deadlock introduced distance fields but still has only baked indirect lighting. At most HLX is &ldquo;open linear,&rdquo; comparable to Doom 2016&rsquo;s Foundry level or open-ended Uncharted 4 levels.</li>
+<li><strong>Confidence:</strong> Mixed — the 16,384-unit limit and the lighting architecture are checkable engine facts; the open-world exclusion and the &ldquo;open linear&rdquo; comparison are Tyler&rsquo;s inference.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Inspection of Hammer limits and Source 2 lighting systems, plus Tyler&rsquo;s analysis.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — map compilation limits and lighting documentation would confirm the technical premises; the level-design conclusion is not directly testable.</li>
+</ul>
+
+<h2 id="new-or-changed-in-this-video">New or changed in this video</h2>
+
+<ul>
+<li>Establishes a full HLX chronology from 2019 to November 2025 in one place, including several dated engine findings: the October 9, 2020 Artifact Foundry box creature animgraph, the February 7, 2024 HLX sound stacks, the February 25, 2025 FSR3 string, the July 28, 2025 Thumper FGD entry, and the August 18, 2025 liquid property containers.</li>
+<li>Dates the earliest public HLX codename reference to October 9, 2020, while distinguishing it from the March 25, 2021 date when the codename became publicly known.</li>
+<li>Adds a consolidated debunk section: no day/night cycle, no voxel destruction, no open world, no VR, and the tracked unknown app identified as the Deadlock experimental build rather than Xpaw&rsquo;s unidentified app ID.</li>
+<li>States that the Final Hours&rsquo; 2018 small team was Citadel, not HLX, and traces the Citadel → Neon Prime → Shadow Line → Deadlock lineage.</li>
+<li>Reports an official November 12, 2025 statement from the Steam Frame team that HLX is not a VR game, alongside the Steam Machine, Steam Frame and Steam Controller announcements.</li>
+<li>Labels the HLX–Steam Machine flagship pairing explicitly as pattern-based expectation rather than evidence.</li>
+</ul>
+
+<h2 id="notable-quotes">Notable quotes</h2>
+
+<ul>
+<li>&ldquo;This is not a discussion of internal sources, nefarious leaks, or rumors.&rdquo; — Tyler on the sourcing standard for the series.</li>
+<li>&ldquo;HLX is Half-Life 3. HLX is in development.&rdquo; — Tyler&rsquo;s flat assertion during the Project White Sands discussion.</li>
+<li>&ldquo;Project White Sands was a voice actor code name for Deadlock&rdquo; — Tyler correcting the community&rsquo;s reading of the August 2024 portfolio find.</li>
+<li>&ldquo;Eli Vance can live.&rdquo; — Gabe Newell&rsquo;s verdict as quoted from The Final Hours of Half-Life: Alyx.</li>
+<li>&ldquo;HLX will not have a day and night cycle.&rdquo; — opening of the debunk section.</li>
+<li>&ldquo;HLX is also not an open world game.&rdquo; — framing of the lighting and walk-limit argument.</li>
+</ul>
+
+<h2 id="open-questions">Open questions</h2>
+
+<ul>
+<li>What &ldquo;197&rdquo; refers to in the December 31, 2024 passage, which the transcript renders unintelligibly.</li>
+<li>What the &ldquo;Build Breakmaster&rdquo; asset of July 11, 2023 actually is, and how it connects to HLX.</li>
+<li>What specific HLX content the October 24, 2024 Deadlock debug overlays exposed.</li>
+<li>What Xpaw&rsquo;s November suspicious app ID corresponds to, which the video leaves unidentified.</li>
+<li>Whether the expanded Raising the Bar actually shipped in its promised 2025 window.</li>
+<li>No release date or launch window for HLX is offered anywhere in the video.</li>
+<li>No evidence is presented in this episode for the HLX = Half-Life 3 identification beyond the video&rsquo;s own prior tracking.</li>
+</ul>
+</main>
+<footer class="site-foot">
+<p>Independent research notes on Tyler McVicker's HLX coverage. Not affiliated
+with Valve or with Tyler McVicker.</p>
+<p><strong>HLX is a datamined codename.</strong> Tyler identifies it as
+Half-Life 3; Valve has never confirmed that, and no official release date,
+window or announcement exists.</p>
+</footer>
+</body>
+</html>

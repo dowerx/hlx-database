@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Enemies &amp; Locations of Half-Life 3: Every Last Detail - Ep4</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Research notes on Tyler McVicker's HLX coverage. Derived analysis only.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-bar">
+<a class="brand" href="index.html">HLX Research Database</a>
+<nav>
+<a href="claims.html">Claims</a>
+<a href="appendix-video-stats.html">Stats</a>
+<a href="sources/README.html">Sources</a>
+<a href="data.html">Data</a>
+</nav>
+</header>
+<p class="site-note">Derived analysis only. No transcripts, subtitle files or
+source video are hosted here; quotations are short and attributed, and every
+summary links to the original video.</p>
+<main>
+<h1 id="the-enemies-locations-of-half-life-3-every-last-detail---ep4">The Enemies &amp; Locations of Half-Life 3: Every Last Detail - Ep4</h1>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Video ID</td>
+<td><code>Q9ug2VyTPlo</code></td>
+</tr>
+
+<tr>
+<td>URL</td>
+<td><a href="https://www.youtube.com/watch?v=Q9ug2VyTPlo">https://www.youtube.com/watch?v=Q9ug2VyTPlo</a></td>
+</tr>
+
+<tr>
+<td>Release date</td>
+<td>2026-03-08</td>
+</tr>
+
+<tr>
+<td>Duration</td>
+<td>8:18</td>
+</tr>
+
+<tr>
+<td>Series</td>
+<td>Every Last Detail</td>
+</tr>
+</tbody>
+</table>
+<p>| Summary status | <code>complete</code> |</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>Episode 4 of Tyler McVicker&rsquo;s &ldquo;Miro board&rdquo; series catalogs enemy, NPC, and location references found in HLX data, framed as light spoilers. It walks through creature names recovered from strings and hint nodes (Houndeye, Xen Gorilla, Xen Jellyfish, Xen Swooper, Feral Manhack, Kush Child, Howler, Flitter, Harvest Man Baby) and Combine units (Charger, snipers, penta tank, workers, Storks), then discusses Xen, the Combine off-world, and a foundry as likely visitable places. The video also describes new hint-node-driven gameplay behaviors: designer-placed shield deployments, dynamic sniper positions, NPC-run holdouts, and NPCs dynamically picking up and dropping physics props. Tyler&rsquo;s confidence is mixed: the existence of strings and hint nodes is presented as datamined evidence, while interpretations of what the creatures are and which locations the player visits are explicitly speculative.</p>
+
+<h2 id="mentioned-events">Mentioned events</h2>
+
+<h3 id="houndeye-references-in-strings-and-icon">Houndeye references in strings and icon</h3>
+
+<ul>
+<li><strong>Description:</strong> Houndeyes are referenced through strings and an icon in HLX data. Tyler cites string examples such as &ldquo;Houndeye item attach&rdquo; and &ldquo;monster item attach,&rdquo; and infers from these that items can be attached to Houndeyes.</li>
+<li><strong>Confidence:</strong> Mixed — the strings and icon are presented as datamined artifacts, but the item-attachment behavior is Tyler&rsquo;s inference (&ldquo;based on this, we can assume that items can be attached to Houndeyes&rdquo;).</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> HLX datamine of strings and an icon (examples given: <code>houndeye_item_attach</code>, <code>monster_item_attach</code>); Tyler&rsquo;s inference from those strings.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — locating the exact string keys and icon in HLX build files would confirm the reference; attachment behavior would require entity or code evidence.</li>
+</ul>
+
+<h3 id="xen-gorilla">Xen Gorilla</h3>
+
+<ul>
+<li><strong>Description:</strong> The Xen Gorilla is referenced by the hint node &ldquo;Xen Gorilla retreat spot&rdquo; and has an associated tentacle particle effect. Tyler says its appearance is unknown, but he is &ldquo;pretty sure it doesn&rsquo;t actually look like a gorilla&rdquo; and instead is &ldquo;some sort of tentacle beast.&rdquo;</li>
+<li><strong>Confidence:</strong> Mixed — the hint node name and tentacle particle effect are datamined; the tentacle-beast interpretation is speculation.</li>
+<li><strong>Category:</strong> Lore</li>
+<li><strong>Source:</strong> HLX hint-node datamine (<code>Xen Gorilla retreat spot</code>) and associated particle effect; Tyler&rsquo;s interpretation.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — finding the hint node and particle asset in HLX files would confirm the reference; the creature&rsquo;s model or concept art would confirm its appearance.</li>
+</ul>
+
+<h3 id="xen-jellyfish">Xen Jellyfish</h3>
+
+<ul>
+<li><strong>Description:</strong> The Xen Jellyfish is described as looking for food and trying to reach for food. Tyler says Xen Jellyfish are likely ambient NPCs rather than an enemy the player fights, but that this ambient NPC has AI routines for looking for and reaching for food.</li>
+<li><strong>Confidence:</strong> Mixed — the AI routines are described as present in data; the &ldquo;likely ambient NPC, not an enemy&rdquo; conclusion is Tyler&rsquo;s inference.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> HLX NPC/AI datamine referenced by Tyler; Tyler&rsquo;s analysis of its role.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — inspecting the Xen Jellyfish AI task list and spawn/classification data would confirm the foraging behavior and whether it is treated as an enemy.</li>
+</ul>
+
+<h3 id="xen-swooper">Xen Swooper</h3>
+
+<ul>
+<li><strong>Description:</strong> The Xen Swooper was found in hint nodes. It has a circling center, looks for food, and can have predetermined landing spots. Tyler describes it as &ldquo;some sort of floating flying flocking type creature&rdquo; likely similar to existing Xen fauna.</li>
+<li><strong>Confidence:</strong> Mixed — hint-node fields (circling center, landing spots) are datamined; the flocking-creature characterization is inference.</li>
+<li><strong>Category:</strong> Lore</li>
+<li><strong>Source:</strong> HLX hint-node datamine; Tyler&rsquo;s analysis.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — locating the Swooper hint nodes and associated AI parameters in HLX data would confirm the circling and landing behavior.</li>
+</ul>
+
+<h3 id="combine-charger-shield-deployment-spots">Combine Charger shield deployment spots</h3>
+
+<ul>
+<li><strong>Description:</strong> The Combine Charger is identified as the shield enemy from Half-Life: Alyx. In HLX, level designers can make Chargers deploy their shields at designated, predetermined spots, which Tyler states was not a feature in Half-Life: Alyx.</li>
+<li><strong>Confidence:</strong> Mixed — the designer-placed deployment capability is presented as datamined; the comparison to Alyx&rsquo;s behavior is Tyler&rsquo;s assessment.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> HLX hint-node/level-design datamine; comparison to Half-Life: Alyx.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — finding the Charger shield-deployment hint node or entity input in HLX files would confirm it; Alyx behavior would need comparison against Alyx&rsquo;s shipped entities.</li>
+</ul>
+
+<h3 id="feral-manhacks">Feral Manhacks</h3>
+
+<ul>
+<li><strong>Description:</strong> Feral Manhacks are described as completely new. A hint node named &ldquo;feral manhack drag towards&rdquo; indicates they can drag things toward themselves. Tyler says their nature is unclear but relays heavy speculation that they are not corrupted mechanical manhacks, but rather a biological manhack equivalent for levels or areas where a mechanical manhack would not be deployed but a similar flying enemy archetype is needed.</li>
+<li><strong>Confidence:</strong> Mixed — the hint node is datamined evidence; the biological interpretation is explicitly attributed to speculation.</li>
+<li><strong>Category:</strong> Lore</li>
+<li><strong>Source:</strong> HLX hint-node datamine (<code>feral manhack drag towards</code>); community speculation relayed by Tyler.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — the Feral Manhack entity definition, model, and AI tasks in HLX data would confirm behavior and whether it is mechanical or biological.</li>
+</ul>
+
+<h3 id="combine-snipers-with-dynamic-positions">Combine snipers with dynamic positions</h3>
+
+<ul>
+<li><strong>Description:</strong> Combine snipers are likely to return. Tyler presumes that, unlike Half-Life 2 snipers, they will take part in the active battlefield rather than only hiding in windows and being vulnerable to grenades. The hint node &ldquo;combine sniping position&rdquo; is a dynamic position, allowing level designers to define multiple positions a sniper can move between so it is not pinned to one location and can move with active combat.</li>
+<li><strong>Confidence:</strong> Mixed — the dynamic sniping-position hint node is datamined; the prediction about battlefield participation is Tyler&rsquo;s inference (&ldquo;we can presume&rdquo;).</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> HLX hint-node datamine (<code>combine sniping position</code>); Tyler&rsquo;s analysis.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — checking whether the hint node supports multiple linked positions and whether sniper NPC AI uses them would confirm the behavior.</li>
+</ul>
+
+<h3 id="combine-signal-and-fallback-hint-nodes">Combine signal and fallback hint nodes</h3>
+
+<ul>
+<li><strong>Description:</strong> Two further Combine-related hint nodes are &ldquo;combine signal&rdquo; and &ldquo;combine fallback.&rdquo; Tyler says they reveal little: combine signal might be a point where Combine soldiers call for backup, and fallback appears to be a retreat spot used when soldiers are overwhelmed or taking too many casualties.</li>
+<li><strong>Confidence:</strong> Speculation — Tyler explicitly hedges (&ldquo;might be,&rdquo; &ldquo;seems to be&rdquo;) and states the nodes &ldquo;don&rsquo;t tell us much.&rdquo;</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> HLX hint-node datamine; Tyler&rsquo;s interpretation.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — locating these hint nodes and any AI code that queries them would establish their actual function.</li>
+</ul>
+
+<h3 id="the-combine-off-world-as-place-of-origin">The Combine off-world as place of origin</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler separates the &ldquo;off-world&rdquo; from the Xen border world and notes heavy speculation that the off-world is where the Combine originate. He supports the concept&rsquo;s existence with Overwatch announcements from the games, quoting lines about rule-breaking Civil Protection officers facing &ldquo;permanent off-world assignment&rdquo; and citizens facing &ldquo;permanent off-world relocation.&rdquo;</li>
+<li><strong>Confidence:</strong> Mixed — the off-world&rsquo;s existence in Combine vocabulary is supported by shipped game dialogue; the claim that it is the Combine&rsquo;s origin is explicitly labeled speculation.</li>
+<li><strong>Category:</strong> Lore</li>
+<li><strong>Source:</strong> Half-Life 2-era Overwatch/public-address dialogue quoted by Tyler; community speculation on Combine origins.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — HLX data tying off-world assets to Combine forces would strengthen the origin claim; the quoted announcements are verifiable in shipped Half-Life games.</li>
+</ul>
+
+<h3 id="off-world-penta-tank">Off-world penta tank</h3>
+
+<ul>
+<li><strong>Description:</strong> An off-world &ldquo;penta tank&rdquo; is referenced. Tyler says its appearance is unknown beyond having five legs, and that it is either a sentry turret itself or can contain a sentry turret that is piloted by an enemy, by the player, or operates by itself.</li>
+<li><strong>Confidence:</strong> Mixed — the penta tank&rsquo;s existence is datamined; its form and turret functionality are explicitly uncertain (&ldquo;We&rsquo;re not sure what the penta tank looks like&rdquo;).</li>
+<li><strong>Category:</strong> Lore</li>
+<li><strong>Source:</strong> HLX datamine referenced by Tyler; Tyler&rsquo;s inference.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — the penta tank entity, model, and any turret attachment/pilot logic in HLX files would confirm its design and function.</li>
+</ul>
+
+<h3 id="off-world-workers">Off-world workers</h3>
+
+<ul>
+<li><strong>Description:</strong> Off-world workers are referenced with predetermined work spots and return spots. Tyler compares them to Vortigaunt workers in the Black Mesa &ldquo;Interloper&rdquo; chapter and notes that a Combine worker was supposed to be significantly more robust in Half-Life: Alyx&rsquo;s original story, pointing to the &ldquo;He&rsquo;s Still Kicking It&rdquo; guys in Alyx as a comparison.</li>
+<li><strong>Confidence:</strong> Mixed — the worker hint-node behavior is datamined; the comparisons to Interloper and Alyx&rsquo;s cut/revised worker concept are Tyler&rsquo;s analysis.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> HLX hint-node datamine (work spots, return spots); Half-Life: Alyx development comparisons cited by Tyler.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — worker entity and hint-node definitions in HLX data would confirm the work/return loop; Alyx&rsquo;s original worker design would need developer accounts or leaked design material.</li>
+</ul>
+
+<h3 id="off-world-storks">Off-World Storks</h3>
+
+<ul>
+<li><strong>Description:</strong> Off-World Storks have &ldquo;restock and deployment points,&rdquo; but Tyler states he does not know what that means.</li>
+<li><strong>Confidence:</strong> Unclear — the hint-node fields are reported from data, but Tyler explicitly says their purpose is unknown.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> HLX hint-node datamine; Tyler&rsquo;s commentary.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — locating the Stork entity/hint nodes and any restock or deployment logic would clarify the mechanic.</li>
+</ul>
+
+<h3 id="the-fly-guy">The fly guy</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler mentions the already-familiar &ldquo;fly guy&rdquo; enemy type and says he suspects it is a jet-packed Combine Officer.</li>
+<li><strong>Confidence:</strong> Speculation — signaled by &ldquo;I suspect.&rdquo;</li>
+<li><strong>Category:</strong> Lore</li>
+<li><strong>Source:</strong> Tyler&rsquo;s analysis of prior HLX references.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — the fly guy&rsquo;s entity data, model, and equipment would confirm or refute the jet-packed Officer idea.</li>
+</ul>
+
+<h3 id="the-kush-child">The Kush Child</h3>
+
+<ul>
+<li><strong>Description:</strong> The Kush Child has a water source and can find water sources in the world. Tyler notes some have compared it to the Kush Toy, which he says looks similar to the blob creature originally cut from Episode 3.</li>
+<li><strong>Confidence:</strong> Mixed — the water-finding behavior is presented as datamined; the Kush Toy and cut Episode 3 blob comparisons are speculation by Tyler and others.</li>
+<li><strong>Category:</strong> Lore</li>
+<li><strong>Source:</strong> HLX datamine referenced by Tyler; community comparison to the Kush Toy; Episode 3 cut-content comparison.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — Kush Child AI tasks and model assets would confirm water-seeking behavior and appearance; the Episode 3 blob comparison would require cut-content references.</li>
+</ul>
+
+<h3 id="the-howler">The Howler</h3>
+
+<ul>
+<li><strong>Description:</strong> All that is known about the Howler is that it can change the target it throws objects at while howling. Tyler links it visually to the blob cut from Episode 3 via the Kush Toy comparison.</li>
+<li><strong>Confidence:</strong> Mixed — the target-changing throw behavior is presented as datamined; the visual comparison is inference.</li>
+<li><strong>Category:</strong> Lore</li>
+<li><strong>Source:</strong> HLX datamine referenced by Tyler; cut-content comparison.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — Howler AI/attack code and model assets in HLX data would confirm the behavior and appearance.</li>
+</ul>
+
+<h3 id="the-flitter">The Flitter</h3>
+
+<ul>
+<li><strong>Description:</strong> The Flitter (&ldquo;f-l-i-t-t-e-r&rdquo;) has no creature attached to its name in the data. Tyler says it &ldquo;sounds eerily similar to ant lion behaviors,&rdquo; since Flitters can burrow either in a hole or in pipes.</li>
+<li><strong>Confidence:</strong> Mixed — the burrowing capability is reported from data; the antlion behavioral comparison is Tyler&rsquo;s inference.</li>
+<li><strong>Category:</strong> Lore</li>
+<li><strong>Source:</strong> HLX datamine referenced by Tyler; Tyler&rsquo;s analysis.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — Flitter entity/AI definitions and any burrow-hole or pipe hint nodes would confirm the behavior and clarify what the creature is.</li>
+</ul>
+
+<h3 id="the-harvest-man-baby">The Harvest Man Baby</h3>
+
+<ul>
+<li><strong>Description:</strong> The only known detail about the Harvest Man Baby is that it can chirp. Tyler repeats this for emphasis and compares the sound to a chick or &ldquo;a little baby chicken.&rdquo;</li>
+<li><strong>Confidence:</strong> Fact — stated as the entirety of the datamined information, with no interpretation offered beyond the sound comparison.</li>
+<li><strong>Category:</strong> Lore</li>
+<li><strong>Source:</strong> HLX datamine referenced by Tyler (sound/entity data).</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — the Harvest Man Baby entity and its sound event in HLX files would confirm the chirp.</li>
+</ul>
+
+<h3 id="antlion-return-and-hlx-thumper-entries">Antlion return and HLX thumper entries</h3>
+
+<ul>
+<li><strong>Description:</strong> Antlions are referenced in HLX data. Tyler cites FGT (entity-definition) entries for thumpers specifically intended for HLX that were quickly renamed after being discovered, and concludes antlions are likely making a return.</li>
+<li><strong>Confidence:</strong> Mixed — the thumper entries and their renaming are presented as datamined; the antlion-return conclusion is inference.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> HLX entity-definition (FGD, transcribed as &ldquo;FGT&rdquo;) datamine; Tyler&rsquo;s analysis.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — locating current thumper entity definitions and antlion references in HLX files would confirm the return; the renaming claim would need version history or discovery timestamps.</li>
+</ul>
+
+<h3 id="xen-as-a-visitable-location">Xen as a visitable location</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says Xen is &ldquo;absolutely a thing,&rdquo; citing the gravity elements already known and the new Xen-specific NPCs such as Xen Gorillas and Xen Jellyfish. He concludes Xen is a place the player is likely to visit.</li>
+<li><strong>Confidence:</strong> Speculation — the assets are datamined, but the conclusion that the player visits Xen is Tyler&rsquo;s inference.</li>
+<li><strong>Category:</strong> Lore</li>
+<li><strong>Source:</strong> HLX datamine of Xen NPCs and gravity-related content; Tyler&rsquo;s analysis.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — HLX map, chapter, or scene data placing the player in Xen would confirm it.</li>
+</ul>
+
+<h3 id="the-combine-off-world-as-a-visitable-location">The Combine off-world as a visitable location</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says the Combine off-world is also a place the player is likely to visit, referring back to the off-world discussion earlier in the video.</li>
+<li><strong>Confidence:</strong> Speculation — no map or scene evidence is cited; the claim follows from the off-world assets and lore discussion.</li>
+<li><strong>Category:</strong> Lore</li>
+<li><strong>Source:</strong> Tyler&rsquo;s inference from HLX off-world references.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — HLX map or chapter data set in the off-world would confirm it.</li>
+</ul>
+
+<h3 id="the-foundry-location">The foundry location</h3>
+
+<ul>
+<li><strong>Description:</strong> The foundry is another referenced location, known only as a location. It has specific communication and welding spots for NPCs to perform ambient animations. Tyler adds that cremator factories were a heavily cut element from multiple Half-Life games, offered as context without further HLX evidence.</li>
+<li><strong>Confidence:</strong> Mixed — the foundry&rsquo;s existence and its communication/welding spots are presented as datamined; the cremator-factory aside is an unsupported historical assertion.</li>
+<li><strong>Category:</strong> Lore</li>
+<li><strong>Source:</strong> HLX hint-node/location datamine (communication and welding spots); Tyler&rsquo;s development-history commentary.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — foundry map or ambient-scene data in HLX would confirm the location and spots; the cremator-factory claim would need cut-content documentation.</li>
+</ul>
+
+<h3 id="holdout-positions-for-independent-npc-defense">Holdout positions for independent NPC defense</h3>
+
+<ul>
+<li><strong>Description:</strong> NPCs have a hint node called a holdout position. A holdout is a scenario in which a group defends itself from a swarm of enemies, comparable to the plaza scene with Alyx in Half-Life 2, except NPCs can do it independently. Tyler cites the holdout defensive position and the holdout power consumer in this scenario.</li>
+<li><strong>Confidence:</strong> Mixed — the holdout hint nodes are datamined; the description of how the scenario plays out is Tyler&rsquo;s interpretation.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> HLX hint-node datamine (<code>holdout position</code>, holdout power consumer); comparison to Half-Life 2&rsquo;s plaza sequence.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — holdout hint-node definitions and the AI/scenario logic that consumes them would confirm independent NPC defense.</li>
+</ul>
+
+<h3 id="dynamic-physics-prop-pickup-and-drop-off">Dynamic physics prop pickup and drop-off</h3>
+
+<ul>
+<li><strong>Description:</strong> Hint nodes &ldquo;physics prop pickup&rdquo; and &ldquo;physics prop drop-off&rdquo; mark spots where NPCs can pick up or drop off physics props. Tyler says NPCs can now dynamically pick up and put down any physics object, calling it a new capability, and says it will be elaborated on later in the series.</li>
+<li><strong>Confidence:</strong> Mixed — the hint nodes are datamined; the generalized &ldquo;any physics object&rdquo; capability is Tyler&rsquo;s characterization and is promised further coverage rather than demonstrated.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> HLX hint-node datamine (<code>physics prop pickup</code>, <code>physics prop drop-off</code>); Tyler&rsquo;s analysis.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — NPC prop-interaction code and the hint-node parameters would confirm whether arbitrary physics objects are supported.</li>
+</ul>
+
+<h2 id="new-or-changed-in-this-video">New or changed in this video</h2>
+
+<ul>
+<li>First catalog in this series of HLX enemy/NPC types recovered from strings and hint nodes, including Houndeye, Xen Gorilla, Xen Jellyfish, Xen Swooper, Feral Manhack, Kush Child, Howler, Flitter, Harvest Man Baby, penta tank, off-world workers, Off-World Storks, and the fly guy.</li>
+<li>New gameplay behaviors attributed to HLX hint nodes: designer-placed Combine Charger shield deployments (absent in Half-Life: Alyx), dynamic Combine sniper positions, NPC-run holdouts, and NPCs dynamically picking up/dropping physics props.</li>
+<li>Locations framed as likely player destinations: Xen, the Combine off-world, and the foundry.</li>
+<li>Antlion return suggested by HLX-specific thumper entity entries that were renamed after discovery.</li>
+<li>The video is largely a data catalog with interpretation; most creature identities and all location-visit conclusions remain speculative rather than confirmed.</li>
+</ul>
+
+<h2 id="notable-quotes">Notable quotes</h2>
+
+<ul>
+<li>&ldquo;These are very light spoilers discussing things like enemy types, NPC types, a few locations, and a little bit of a reference towards weapons.&rdquo; — Framing of the episode&rsquo;s spoiler scope.</li>
+<li>&ldquo;The Zen Gorilla &hellip; we&rsquo;re pretty sure it doesn&rsquo;t actually look like a gorilla, and instead is some sort of tentacle beast.&rdquo; — Hedged interpretation of the Xen Gorilla.</li>
+<li>&ldquo;We&rsquo;re not entirely sure what they&rsquo;re meant to be&rdquo; — On Feral Manhacks, before relaying community speculation.</li>
+<li>&ldquo;The Harvest Man Baby can chirp. We literally know nothing else other than the Harvest Man Baby can chirp.&rdquo; — The extent of known detail for that creature.</li>
+<li>&ldquo;NPCs can now dynamically pick up and put down any physics object. This is a new thing for us.&rdquo; — Claimed new physics-prop interaction capability.</li>
+<li>&ldquo;In the next episode, we&rsquo;ll go into the AI that we can expect out of these NPCs&rdquo; — Preview of episode 5.</li>
+</ul>
+
+<h2 id="open-questions">Open questions</h2>
+
+<ul>
+<li>What do the Xen Gorilla, Feral Manhack, Flitter, Kush Child, Howler, and penta tank actually look like, and are they biological, mechanical, or hybrid?</li>
+<li>What do Off-World Stork &ldquo;restock and deployment points&rdquo; do?</li>
+<li>Do Combine snipers actually fight in the open in HLX, or remain emplaced enemies with multiple firing positions?</li>
+<li>Are Xen, the Combine off-world, and the foundry playable chapter locations, or only referenced environments?</li>
+<li>What role does the foundry play, and is it connected to the cut cremator-factory content?</li>
+<li>How does the generalized NPC physics-prop pickup interact with combat and puzzle design?</li>
+<li>Which HLX build or datamine produced the cited strings, hint nodes, and entity entries, and when were the thumper entries renamed?</li>
+</ul>
+</main>
+<footer class="site-foot">
+<p>Independent research notes on Tyler McVicker's HLX coverage. Not affiliated
+with Valve or with Tyler McVicker.</p>
+<p><strong>HLX is a datamined codename.</strong> Tyler identifies it as
+Half-Life 3; Valve has never confirmed that, and no official release date,
+window or announcement exists.</p>
+</footer>
+</body>
+</html>

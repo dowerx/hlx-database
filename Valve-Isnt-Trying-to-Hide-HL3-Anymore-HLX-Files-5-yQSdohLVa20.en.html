@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valve Isn’t Trying to Hide HL3 Anymore - HLX Files #5</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Research notes on Tyler McVicker's HLX coverage. Derived analysis only.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-bar">
+<a class="brand" href="index.html">HLX Research Database</a>
+<nav>
+<a href="claims.html">Claims</a>
+<a href="appendix-video-stats.html">Stats</a>
+<a href="sources/README.html">Sources</a>
+<a href="data.html">Data</a>
+</nav>
+</header>
+<p class="site-note">Derived analysis only. No transcripts, subtitle files or
+source video are hosted here; quotations are short and attributed, and every
+summary links to the original video.</p>
+<main>
+<h1 id="valve-isnt-trying-to-hide-hl3-anymore---hlx-files-5">Valve Isn&rsquo;t Trying to Hide HL3 Anymore - HLX Files #5</h1>
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Video ID</td>
+<td><code>yQSdohLVa20</code></td>
+</tr>
+
+<tr>
+<td>URL</td>
+<td><a href="https://www.youtube.com/watch?v=yQSdohLVa20">https://www.youtube.com/watch?v=yQSdohLVa20</a></td>
+</tr>
+
+<tr>
+<td>Release date</td>
+<td>2024-11-22</td>
+</tr>
+
+<tr>
+<td>Duration</td>
+<td>8:58</td>
+</tr>
+
+<tr>
+<td>Series</td>
+<td>HLX Files #5</td>
+</tr>
+</tbody>
+</table>
+<p>| Summary status | <code>complete</code> |</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>Tyler argues that HLX (Half-Life 3) remains in active production despite Valve&rsquo;s attention on Deadlock, Dota 2, and Counter-Strike 2, and that each major content drop for those games carries new HLX-related hints. The central new item is a shipment of roughly 21 <code>.h</code> build files from Valve&rsquo;s cancelled voxel project &ldquo;Arty&rdquo; inside a Dota 2 update, which he treats as the most detailed look yet at that game and as evidence that Arty systems are being ported into HLX. He also catalogues NPC AI, level-streaming, and physics changes datamined from Dota 2, including a new <code>Point Orient</code> entity and a shotgun sound added to the Source 2 core. His tone is highly confident about the existence of the files, while the conclusions about how they are used in HLX are explicitly framed as inference.</p>
+
+<h2 id="mentioned-events">Mentioned events</h2>
+
+<h3 id="hlx-still-in-production-despite-other-valve-projects">HLX still in production despite other Valve projects</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler states that Valve is &ldquo;working diligently to get the next Half-Life game out the door&rdquo; and that every major content drop in Dota 2, Deadlock, or Counter-Strike 2 results in new hints for the next Half-Life game. He acknowledges employee time has gone to polishing Deadlock, finishing promised Dota 2 updates, and improving CS2, but maintains HLX/Half-Life 3 is &ldquo;absolutely still in production.&rdquo;</li>
+<li><strong>Confidence:</strong> Speculation — an assertion about production status and resourcing with no artifact presented in this segment; the supporting artifacts appear later in the video.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Tyler&rsquo;s analysis of Valve&rsquo;s release cadence and datamined content across Dota 2, Deadlock, and CS2.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — would require continued appearance of HLX assets in shipping builds or an official Valve statement.</li>
+</ul>
+
+<h3 id="burning-point-and-melting-point-surface-simulation">Burning-point and melting-point surface simulation</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler recalls previously discussing basic systems simulated in greater detail, such as the burning point and melting point of different surface types. He says the burning point of certain fuels &ldquo;is being referenced all over the place&rdquo; in the data.</li>
+<li><strong>Confidence:</strong> Mixed — the repeated references to fuel burning points are presented as datamined strings, while the interpretation that this forms a detailed material simulation is inference.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamined Source 2 / Dota 2 content referenced by Tyler.</li>
+<li><strong>Earlier mentions:</strong> Explicitly references his previous HLX Files discussion of simulated burning and melting points; this video adds that fuel burning points are now referenced widely.</li>
+<li><strong>Verification:</strong> needs follow-up — would require locating the specific fuel/burning-point keys in a shipping build.</li>
+</ul>
+
+<h3 id="shared-environments-as-pseudo-level-streaming">Shared environments as pseudo level streaming</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler describes &ldquo;shared environments&rdquo; as the space visible behind the player during a level transition, where parts of the previous level remain visible. He says it is a trick that previously involved copy-pasting map geometry and loading it twice, but now geometry is loaded once and the rest of the level is streamed, producing a seamless transition without duplicate loading.</li>
+<li><strong>Confidence:</strong> Mixed — the existence of shared-environment keys is presented as datamined; the description of the streaming implementation is Tyler&rsquo;s explanation.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of Source 2 content; Tyler&rsquo;s technical explanation.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — would require the relevant map/entity keys and a demonstration of the streaming behavior.</li>
+</ul>
+
+<h3 id="hopping-distance-and-turning-parameters-for-entities">Hopping distance and turning parameters for entities</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler reports that the &ldquo;hopping distance&rdquo; model now lets specific entities change their hopping distance, which he suggests is likely related to alien fauna or possibly a creature in Deadlock. He also lists turning speeds and turning distances as parameters in the same system.</li>
+<li><strong>Confidence:</strong> Mixed — the parameter names are presented as datamined, while the link to alien fauna or a Deadlock creature is explicitly hedged (&ldquo;likely,&rdquo; &ldquo;maybe&rdquo;).</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of a recent Dota 2 update.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — would require the entity schema showing per-entity hopping-distance overrides.</li>
+</ul>
+
+<h3 id="npc-sound-types-expanded-beyond-half-life-2">NPC sound types expanded beyond Half-Life 2</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says traditional game NPC AI (not LLM-based) is being worked on, and that several systems taken directly from Half-Life 2 are being amended rather than rewritten. NPC reaction sound types are copied wholesale from Half-Life 2 but are being added to, citing new &ldquo;warning friends&rdquo; and &ldquo;food&rdquo; sound types; he expects the food type to be more relevant to creature AI.</li>
+<li><strong>Confidence:</strong> Fact — specific sound-type entries are described as present in the datamined data, with Tyler&rsquo;s creature-AI reading flagged as an expectation.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of Source 2 NPC sound-type definitions.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — would require the sound-type enum/key list in a shipping build to confirm &ldquo;warning friends&rdquo; and &ldquo;food.&rdquo;</li>
+</ul>
+
+<h3 id="npc-standoff-behavior-keyed-to-entity-relationships">NPC standoff behavior keyed to entity relationships</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler describes standoff behavior for NPCs: a radius within which an NPC enters a standoff state with another NPC, determined by entity relationship types. Different entity types would have different relationships and therefore different standoff radii, with examples including headcrabs, zombies, bullsquids, houndeyes, humans, and Combine.</li>
+<li><strong>Confidence:</strong> Mixed — the standoff radius and relationship-type parameters are presented as datamined; the specific faction examples are Tyler&rsquo;s illustration.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of Source 2 NPC AI parameters.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — would require the relationship/standoff key values and the NPC type list they reference.</li>
+</ul>
+
+<h3 id="new-point-orient-entity-in-the-latest-dota-2-update">New <code>Point Orient</code> entity in the latest Dota 2 update</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says an entirely new entity called <code>Point Orient</code> was found in the latest Dota 2 update. It allows predetermined NPC orientation to be changed by map logic, which he says permits more realistic turning and may relate to the hopping-distance work.</li>
+<li><strong>Confidence:</strong> Fact — a named entity is reported from a specific datamined update; the connection to hopping distance is speculative.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Datamine of the latest Dota 2 update.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — would require the <code>Point Orient</code> entity definition and its input/key list in the Dota 2 build.</li>
+</ul>
+
+<h3 id="additional-simulations-fog-color-wind-speed-wheel-constraints-dynamic-props">Additional simulations: fog color, wind speed, wheel constraints, dynamic props</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler lists further systems found in the data: fog color changes, wind speed simulation, vehicle wheel constraint simulations, and static props being overwritten dynamically by map logic.</li>
+<li><strong>Confidence:</strong> Mixed — the individual features are described as found in the data, but no evidence or use case is shown for each.</li>
+<li><strong>Category:</strong> Engine feature</li>
+<li><strong>Source:</strong> Datamine of Source 2 / Dota 2 content.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — would require the corresponding console variables, entity keys, or constraint classes.</li>
+</ul>
+
+<h3 id="shotgun-sound-added-to-the-source-2-core">Shotgun sound added to the Source 2 core</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler reports that a shotgun sound was added &ldquo;into the core of Source 2,&rdquo; found in Dota 2 of all places, and says it sounds similar to the shotgun in Half-Life: Alyx. He reasons that adding it to the engine core means gun testing is happening at a very low level.</li>
+<li><strong>Confidence:</strong> Mixed — the sound asset&rsquo;s presence is presented as a datamine finding; the &ldquo;gun testing&rdquo; conclusion is Tyler&rsquo;s inference.</li>
+<li><strong>Category:</strong> Technology</li>
+<li><strong>Source:</strong> Datamine of a Dota 2 update&rsquo;s Source 2 core assets.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — would require locating the sound asset in the Source 2 core content and comparing it with the Half-Life: Alyx shotgun.</li>
+</ul>
+
+<h3 id="arty-h-build-files-shipped-in-a-dota-2-update">Arty <code>.h</code> build files shipped in a Dota 2 update</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says that in the latest Dota 2 update — the one that added the bird — &ldquo;somebody screwed up and shipped the symbols of Arty.&rdquo; He counts 21 <code>.h</code> files (not <code>.pdb</code> files), describing them as build files that are &ldquo;as close as you can get to the source code without it actually being source code,&rdquo; exposing class names, function names, and variable names. He notes the code spells the project &ldquo;arty&rdquo; rather than &ldquo;Arti.&rdquo;</li>
+<li><strong>Confidence:</strong> Fact — a concrete file count and file type are reported from a specific shipping update; Tyler states the files are present.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Datamine of the latest Dota 2 update&rsquo;s shipped files.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — would require enumerating the <code>.h</code> files in the Dota 2 depot and confirming their Arty-related contents.</li>
+</ul>
+
+<h3 id="background-on-the-cancelled-arty-project">Background on the cancelled Arty project</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler explains that Arty was a cancelled Valve game developed after the cancellation of Left 4 Dead 3, while Valve waited for Source 2 to become feature-complete. He describes it as an entirely voxel-based engine with player destruction, akin to a basic immersive sim with large procedural destruction potential, and says the only prior evidence came from The Final Hours of Half-Life: Alyx — story treatments, screenshots, and general developer descriptions.</li>
+<li><strong>Confidence:</strong> Mixed — the Final Hours material is a named prior source, while the engine and gameplay characterization is Tyler&rsquo;s synthesis of the newly shipped files.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> The Final Hours of Half-Life: Alyx plus the newly datamined Arty <code>.h</code> files.</li>
+<li><strong>Earlier mentions:</strong> References prior community knowledge of Arty from The Final Hours of Half-Life: Alyx; the new files greatly expand what is known.</li>
+<li><strong>Verification:</strong> needs follow-up — would require cross-checking the <code>.h</code> file contents against the Final Hours descriptions.</li>
+</ul>
+
+<h3 id="hlx-to-feature-voxel-based-destruction-source-2-voxel-work-reassigned-from-neon-prime">HLX to feature voxel-based destruction; Source 2 voxel work reassigned from Neon Prime</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says the community previously speculated that voxel work in Source 2 was for Neon Prime, but concludes &ldquo;it had to do with HLX&rdquo; and that Half-Life 3 &ldquo;is going to have voxel based destruction in some form.&rdquo; He argues Valve would reuse Arty&rsquo;s existing voxel technology rather than rewrite it.</li>
+<li><strong>Confidence:</strong> Speculation — stated forcefully (&ldquo;why not take the things that they had already worked on&rdquo;), but based on inference from reused technology rather than a direct HLX artifact.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Tyler&rsquo;s inference from Source 2 voxel code and the Arty file leak.</li>
+<li><strong>Earlier mentions:</strong> Explicitly revisits the earlier community claim that Source 2 voxel work was for Neon Prime and reverses that attribution.</li>
+<li><strong>Verification:</strong> needs follow-up — would require HLX-specific voxel destruction code or assets, not shared engine tech.</li>
+</ul>
+
+<h3 id="arty-systems-ported-into-hlx">Arty systems ported into HLX</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says the leaked files include NPC spawners, gun logic, game mode info, and multiplayer logic, and that these systems from the old game are being ported into the modern Source 2 engine. He specifically names vehicle simulation, buoyancy simulation, fluid simulation, and voxel destructibility as systems previously assumed novel to Half-Life 3 that appear to have originated in Arty.</li>
+<li><strong>Confidence:</strong> Mixed — the presence of these systems in the Arty files is treated as evidenced; that they are being ported into HLX is inference from their appearance in current Source 2 content.</li>
+<li><strong>Category:</strong> Development state</li>
+<li><strong>Source:</strong> Datamine of Arty <code>.h</code> files shipped in a Dota 2 update.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — would require tracing specific classes from the Arty files into HLX-tagged Source 2 modules.</li>
+</ul>
+
+<h3 id="physical-fidelity-immersive-sim-elements-and-open-linear-structure">Physical fidelity, immersive-sim elements, and open-linear structure</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler says Valve is pushing &ldquo;physical fidelity&rdquo; rather than graphical fidelity, simulating many systems independently so they can interact, and describes the result as resembling a next-generation immersive sim. He says Half-Life 3 is not an immersive sim at its core but will have more immersive-sim elements than prior Half-Life games, citing the Quest NPC system, procedural generation, and side-level designs. He rejects the open-world reading and describes the structure as &ldquo;open linear,&rdquo; closer to Uncharted 4 than Fallout.</li>
+<li><strong>Confidence:</strong> Speculation — Tyler&rsquo;s interpretation of design direction, with explicit hedging (&ldquo;I don&rsquo;t think,&rdquo; &ldquo;I think&rdquo;); the Quest NPC and procedural-generation systems are referenced but not demonstrated.</li>
+<li><strong>Category:</strong> Gameplay</li>
+<li><strong>Source:</strong> Tyler&rsquo;s analysis of datamined systems and prior HLX reporting.</li>
+<li><strong>Earlier mentions:</strong> Addresses earlier community speculation that the game would be open world, which he says was a misunderstanding.</li>
+<li><strong>Verification:</strong> needs follow-up — would require map/level structure data or official material showing the quest and side-level systems.</li>
+</ul>
+
+<h3 id="hardware-expectations-and-steam-deck-viability">Hardware expectations and Steam Deck viability</h3>
+
+<ul>
+<li><strong>Description:</strong> Tyler raises the computer cost of running the game at a good frame rate, notes that Valve&rsquo;s games have historically run well from Half-Life 1 onward, and says Half-Life: Alyx now runs on a &ldquo;toaster&rdquo; while Half-Life 2 ran on almost anything. He expects HLX will more than likely run on the Steam Deck or possibly a Steam Deck 2.</li>
+<li><strong>Confidence:</strong> Speculation — an expectation about performance and hardware targets, with no specifications or requirements cited.</li>
+<li><strong>Category:</strong> Hardware</li>
+<li><strong>Source:</strong> Tyler&rsquo;s inference from Valve&rsquo;s historical performance record and the Steam Deck.</li>
+<li><strong>Earlier mentions:</strong> None identified in this video.</li>
+<li><strong>Verification:</strong> needs follow-up — would require official system requirements or a Steam Deck compatibility rating.</li>
+</ul>
+
+<h2 id="new-or-changed-in-this-video">New or changed in this video</h2>
+
+<ul>
+<li>New: approximately 21 <code>.h</code> build files from the cancelled Arty project were reportedly shipped in the latest Dota 2 update, providing class, function, and variable names for that game.</li>
+<li>New: a <code>Point Orient</code> entity, a Source 2 core shotgun sound, expanded NPC sound types (&ldquo;warning friends,&rdquo; &ldquo;food&rdquo;), standoff radii tied to entity relationships, and hopping-distance overrides are reported from the same update.</li>
+<li>Changed: the earlier community attribution of Source 2 voxel work to Neon Prime is reassigned to HLX, and voxel-based destruction is now presented as an HLX feature.</li>
+<li>Changed: the open-world reading of HLX is rejected in favor of an &ldquo;open linear&rdquo; structure with immersive-sim elements.</li>
+<li>Recap: burning/melting points, shared environments, and Half-Life 2-derived NPC systems were covered previously; this video adds new keys and entities rather than revisiting the core argument.</li>
+<li>Announced: a forthcoming dedicated report on Arty.</li>
+</ul>
+
+<h2 id="notable-quotes">Notable quotes</h2>
+
+<ul>
+<li>&ldquo;Valve is working diligently to get the next Half-Life game out the door.&rdquo; — framing of the video&rsquo;s thesis on HLX production status.</li>
+<li>&ldquo;Somebody screwed up and shipped the symbols of Arty.&rdquo; — introduction of the leaked Arty build files in the Dota 2 update.</li>
+<li>&ldquo;21 H files not PDBs — H files, meaning build files — meaning this is as close as you can get to the source code without it actually being source code for Arty.&rdquo; — scale and significance of the leak.</li>
+<li>&ldquo;HLX is Half-Life 3. Half-Life 3 is going to have voxel-based destruction in some form.&rdquo; — the video&rsquo;s central inference about HLX technology.</li>
+<li>&ldquo;A shotgun sound was added into the core of Source 2.&rdquo; — the low-level engine asset finding.</li>
+<li>&ldquo;I don&rsquo;t think Half-Life 3 is an immersive sim at its core, but I think it will have more immersive-sim elements than seen prior.&rdquo; — Tyler&rsquo;s hedged design characterization.</li>
+<li>&ldquo;It&rsquo;s open linear, more into Uncharted 4 and not at all like Fallout.&rdquo; — rejection of the open-world interpretation.</li>
+</ul>
+
+<h2 id="open-questions">Open questions</h2>
+
+<ul>
+<li>Which specific <code>.h</code> files were shipped, and what classes and functions do they contain beyond the categories Tyler names?</li>
+<li>How many of the Arty systems are confirmed to be compiled into HLX modules rather than merely present in shared Source 2 code?</li>
+<li>Does the <code>Point Orient</code> entity and the hopping-distance work belong to HLX, Deadlock, or Dota 2 itself?</li>
+<li>What is the intended scope and release timing of the promised Arty report?</li>
+<li>How would the reported physical simulations affect minimum hardware requirements and Steam Deck performance?</li>
+</ul>
+</main>
+<footer class="site-foot">
+<p>Independent research notes on Tyler McVicker's HLX coverage. Not affiliated
+with Valve or with Tyler McVicker.</p>
+<p><strong>HLX is a datamined codename.</strong> Tyler identifies it as
+Half-Life 3; Valve has never confirmed that, and no official release date,
+window or announcement exists.</p>
+</footer>
+</body>
+</html>
